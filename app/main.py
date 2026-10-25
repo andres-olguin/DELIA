@@ -26,5 +26,5 @@ def create_audit_log(log: schemas.AuditLogCreate, db: Session = Depends(get_db))
 
 @app.get("/audit/", response_model=list[schemas.AuditLogResponse])
 def get_audit_logs(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    logs = db.offset(skip).limit(limit).all()
+    logs = db.query(models.AuditLog).offset(skip).limit(limit).all()
     return logs
