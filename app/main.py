@@ -2,11 +2,15 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from . import models, schemas
 from .database import engine, get_db
+from .api import proxy  # 1. Importar el router del proxy
 
 # Crea las tablas en PostgreSQL automáticamente al arrancar
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="TALIA Proxy & Audit Middleware", version="1.0.0")
+
+# 2. Registrar el router del proxy
+app.include_router(proxy.router)
 
 @app.get("/")
 def read_root():
