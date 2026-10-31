@@ -34,3 +34,19 @@ Usar estado `EJECUTADO`, `NO EJECUTADO` o `INCOMPARABLE SIN SPANS`. Ningún valo
 
 ## Interpretación comercial obligatoria
 DELIA previamente registró recall **47,33 %** (79 FN de 150 positivos). Por ello, no se debe presentar como alternativa de seguridad equivalente ni ganar en detección regional sin repetir los ensayos. Hipótesis de mejora: CURP/RFC México, CI/NIT Bolivia, direcciones, negativos difíciles y integración efectiva del egress. Pruebas productivas, seguridad multitenant, precio y soporte: **NO VERIFICADOS**.
+
+## Runner Presidio preparado fuera de main (NO EJECUTADO)
+Se preparó `DELIA_evaluate_presidio_r4.py` y su patch `DELIA_presidio_runner_r4_NO_EJECUTADO.patch` como archivos de entrega local. **No se subió código al repositorio**, por el [bloqueo OPS-01](https://github.com/andres-olguin/DELIA/issues/18). El script pasó `python -m py_compile` y el .patch pasó `git apply --check` en snapshot local; **no se ejecutó Presidio** ni hay resultados.
+
+Tras corrección del ruleset y creación de rama nueva, en entorno de laboratorio sin datos reales:
+```bash
+git apply --check DELIA_presidio_runner_r4_NO_EJECUTADO.patch
+git apply DELIA_presidio_runner_r4_NO_EJECUTADO.patch
+python -m venv .venv
+# activar .venv según sistema
+python -m pip install presidio-analyzer spacy
+python -m spacy download es_core_news_sm
+python -m pip freeze > benchmarks/presidio_r4_pip_freeze.txt
+python benchmarks/evaluate_presidio_r4.py --dataset benchmarks/synthetic_pii_r3.jsonl --output benchmarks/presidio_r4_resultados.json
+```
+**NO EJECUTADOS** los comandos anteriores; precios, versiones efectivas y métricas no están fijados todavía. El runner registra versiones de Presidio/spaCy, modelo ES, etiquetas exactas de tipo+span y las métricas por país/entidad. Reconocedores locales personalizados **no incluidos**, para no convertir una comparación del baseline nativo en versión ajustada sin atribuirlo.
