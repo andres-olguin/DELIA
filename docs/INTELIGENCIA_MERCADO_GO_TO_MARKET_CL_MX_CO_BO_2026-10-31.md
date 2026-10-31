@@ -114,23 +114,23 @@
 - **Madurez:** ILIA 2026 sitúa el índice chileno en **71,4 puntos** (índice compuesto, no porcentaje). Una encuesta empresarial SONDA 2026 reportó **88 % en adopción/exploración** dentro de su muestra privada, no universo nacional. Son fenómenos no equivalentes; el censo de compañías con **APIs LLM en producción no está verificado** [F003] [F017].
 - **Regulación:** Ley 19.628 y reforma Ley 21.719; entrada en vigor señalada en texto de ley para el **1/12/2026**. El proyecto de aplazamiento Boletín **18.623-07** fue aprobado en general y particular en Senado el **28/10/2026**, **no implica promulgación** al corte. Verificar estado antes de usar argumento comercial de plazo. CMF evaluaba cambios a RAN 20-7 sobre servicios externos; un producto no proporciona cumplimiento normativo automáticamente [F007] [F009] [F010].
 - **Verticales a descubrir:** SaaS RR.HH., integradores IA, software contable y fintech. **Primer movimiento sugerido:** entrevistas en Chile aprovechando presencia operativa de MasterTech, sin presumir presupuesto.
-- **Fuentes primarias suficientes:** BCN, Senado, CMF, Banco Central, Economía, CORFO, ProChile (referencias numeradas).
+- **Fuentes principales contrastadas:** BCN, Senado, CMF, Banco Central, Economía, CORFO y ProChile; las encuestas privadas se identifican por separado.
 
-### México (fuentes primarias [F019]–[F028])
+### México (fuentes oficiales [F019]–[F027])
 
 - **Madurez:** INEGI Censos Económicos 2024 (dato 2023): **2,1 %** de unidades económicas que *ya usaban herramientas digitales* reportó «sistemas de IA»; **denominador no son todas las unidades económicas**. No representa adopción GenAI de 2026. Banxico recoge respuestas empresariales más recientes, pero con encuesta y definición distinta; comparar solo en sus marcos [F019] [F023].
 - **Regulación:** nueva LFPDPPP publicada en **marzo 2025**, con reforma en 2025; no usar como vigente el texto de 2010 ni la estructura institucional antigua sin verificar actualización. No existe obligación específica de usar DELIA [F024] [F025].
 - **Verticales a descubrir:** agentes conversacionales, SaaS contable, open banking/fintech, integradores de marketing. Se hallaron plataformas que **publican** agentes o APIs (Auronix, Clara, Yalo, Alegra, Belvo), pero no interés demostrado en DELIA.
 - **Fuentes:** INEGI (censos, DENUE, ENAFIN), Banxico encuesta y FIX, Cámara Diputados y Secretaría competente (referencias numeradas).
 
-### Colombia (fuentes primarias [F029]–[F039], y encuesta privada)
+### Colombia (fuentes oficiales y gremiales [F028]–[F038], y encuesta privada)
 
 - **Madurez:** Endeavor AI Pulse 2026: **493 organizaciones de la muestra**, **61 %** dijo IA prioridad estratégica y **0,2 %** nivel avanzado según su metodología. La muestra autoseleccionada **no** representa población empresarial nacional. Se necesita medir específicamente uso de APIs LLM entre SaaS locales [F037].
 - **Regulación:** Ley 1581/2012 y SIC Circular Externa **002/2024** sobre tratamiento de datos en IA, además de circular sectorial fintech **001/2025**; DNP CONPES 4144/2025 es **política pública**, no licencia ni ley especial vigente que exija comprar un gateway [F028] [F029] [F034].
 - **Verticales a descubrir:** proveedores de ERP/contabilidad (Siigo MCP, Alegra), integradores (Pragma), pagos y fintech. Verificar si usan LLM externo, permisos actuales y controles existentes; una API de pagos no basta para calificarlos.
 - **Fuentes:** SIC, DANE, DNP, SFC y cámaras gremiales, todas con alcance y fecha.
 
-### Bolivia (fuentes primarias [F040]–[F053])
+### Bolivia (fuentes primarias y eventos [F039]–[F052])
 
 - **Madurez:** **porcentaje representativo de empresas con IA API: no verificado**. AGETIC y UNESCO iniciaron evaluación de preparación IA en 2026; ello es una iniciativa estatal, no prueba de adopción empresarial. Estadísticas de INE sobre **hogares** o registro de empresas de SEPREC **no pueden sustituir** una encuesta de uso de LLM empresarial [F039] [F047] [F048].
 - **Regulación:** Constitución, Ley 164 y obligaciones sectoriales, más **anteproyectos** de protección de datos. **No se verificó una ley integral de protección de datos promulgada equivalente a la chilena**; nunca atribuir vigencia a un borrador. Validar requisitos bancarios y de telecomunicaciones con asesoría local [F040] [F042] [F043].
@@ -305,7 +305,7 @@ Tipos de cambio oficiales usados: **30/10/2026** Chile USD/CLP **993,22** (BCCh)
 
 - **Chile:** ProChile **ENEXPRO TECH 16–19 noviembre 2026**; el plazo publicado de postulación fue **20/10**, cerrado al corte salvo nueva convocatoria; no sugerir que aún está abierto. EtM Day **19–21 noviembre** para comunidad/networking. CORFO programas según elegibilidad y bases; Viraliza Biobío 2026 está **cerrado** [F015] [F104] [F016].
 - **México:** incMTY 13 noviembre (ver agenda), encuentros fintech y AI en CDMX/Monterrey. Programas de fondos de México, NAFIN/organismos estatales **elegibilidad y convocatorias concretas NV**; no presentarlos como subvenciones aprobadas [F027].
-- **Colombia:** comunidades Colombia Tech Week y Colombia 4.0, cámaras y asociaciones fintech; convenios o fondos de iNNpulsa **no verificados como abiertos hoy**. Usar redes para entrevistas con integradores antes de buscar subsidios.
+- **Colombia:** Colombia Tech Week **10–16 agosto de 2026 ya finalizó**; Colombia 4.0 y cámaras/fintech son redes para investigar futuras ediciones. Convenios o fondos de iNNpulsa **no verificados como abiertos hoy**. Usar contactos sectoriales para entrevistas antes de buscar subsidios.
 - **Bolivia:** **Santa Cruz Tech Week 3–7 noviembre** y **Fintech Summit Bolivia 5 noviembre** según organizadores, espacios de conversación B2B; CITC AGETIC septiembre/octubre y Expocruz septiembre ya pasaron. Programas de crédito/fondos específicos **no verificados** [F052] [F106] [F051].
 
 ### 6.9. Plan de 90 días
