@@ -19,6 +19,28 @@
 **Cronograma inicial:** 12 de octubre de 2026 – 17 de enero de 2027.  
 **Repositorio:** [github.com/andres-olguin/DELIA](https://github.com/andres-olguin/DELIA)
 
+### Ronda 2 — Investigación comercial y kit de ventas (31/10/2026)
+
+**Continuación de los estudios anteriores, sin sustituirlos.** Se amplió la prospección de 60 a **160 cuentas de investigación** (40 por país), con 25 posibles integradores de canal, puntuaciones exploratorias, doce meses de fuentes separadas por estado de comprobación, materiales de contacto y criterios para pilotos. **Ninguna empresa está clasificada como cliente interesado; todas las cuentas permanecen «no contactada».** La puntuación es una hipótesis operativa, no probabilidad estadística de compra.
+
+| Investigación y planificación | Ventas y trabajo con compradores |
+|---|---|
+| [Estudio Ronda 2: incidentes, normativas, 15 competidores y estrategia](docs/ESTUDIO_RONDA2_PROFUNDIZACION_COMERCIAL_2026-10-31.md) | [One-pager comercial en español](docs/ventas/ONE_PAGER_DELIA_ES.md) |
+| [160 cuentas B2B, 40 por país, puntuación y ola 1 (CSV)](docs/PROSPECTOS_RONDA2_160_CL_CO_MX_BO_2026-10-31.csv) | [Presentación comercial: guion de 12 láminas](docs/ventas/PRESENTACION_VENTAS_12_LAMINAS.md) |
+| [25 integradores y consultoras, canal B2B2B (CSV)](docs/ALIANZAS_CANAL_25_RONDA2_2026-10-31.csv) | [Secuencias de 4 mensajes: 144 variantes por rol, país y canal](docs/ventas/SECUENCIAS_CONTACTO_4_PASOS.md) |
+| [Financiación, aceleradoras, eventos y comunidades](docs/FONDOS_EVENTOS_COMUNIDADES_RONDA2_2026-10-31.md) | [Entrevista de descubrimiento: 30 minutos](docs/ventas/ENTREVISTA_DESCUBRIMIENTO_30_MIN.md) |
+| [Modelo de costos y márgenes editable (CSV)](docs/MODELO_FINANCIERO_EDITABLE_RONDA2.csv) | [Demo de 10 minutos: datos sintéticos, no producción](docs/ventas/DEMO_SINTETICA_10_MIN.md) |
+| [TAM/SAM/SOM: escenario editable sin denominadores inventados (CSV)](docs/ESCENARIOS_TAM_SAM_SOM_RONDA2.csv) | [Manual de 20 objeciones](docs/ventas/MANUAL_OBJECIONES_20.md) |
+| [Riesgos P0/P1, puertas de validación y plan de 13 semanas](docs/RIESGOS_VALIDACION_PLAN_90_DIAS_RONDA2.md) | [Calculadora de ROI parametrizable (CSV)](docs/ventas/ROI_CALCULADORA.csv) |
+| [Registro de investigación, vacíos y correcciones](docs/REGISTRO_INVESTIGACION_RONDA2_2026-10-31.md) | [Plantilla de piloto pagado de 30 días, sujeta a seguridad y revisión legal](docs/ventas/PLANTILLA_PILOTO_PAGADO_30_DIAS.md) |
+| [Catálogo de 235 referencias con estado de comprobación (CSV)](docs/REFERENCIAS_Y_ESTADO_VERIFICACION_RONDA2.csv) | [CRM de entrevistas vacío (CSV): para utilizar solamente en espacio privado](docs/ventas/CRM_ENTREVISTAS.csv) |
+
+**Cautela documental:** 202 enlaces del catálogo no figuraban en las 108 referencias del estudio anterior, pero **no son 202 fuentes íntegramente verificadas**: existen páginas solo identificadas, indexadas o pendientes de contrastación. Se revisó el contenido web corporativo de 116 de las 160 cuentas; para las otras 44 se indica expresamente la limitación. No se ejecutaron pruebas técnicas de DELIA ni entrevistas comerciales durante esta ronda.
+
+**Bloqueo crítico:** no habilitar DELIA para datos reales o pilotos productivos antes de corregir inconsistencias de importación/API, autenticación y aislamiento, almacenamiento de prompts/secretos y falta de sanitización en el flujo de salida. Todo el material comercial identifica esas limitaciones.
+
+---
+
 **Investigación de mercado y estrategia comercial ampliada (31/10/2026):** [Estudio integral Chile, México, Colombia y Bolivia — 108 fuentes y auditoría del código](docs/INTELIGENCIA_MERCADO_GO_TO_MARKET_CL_MX_CO_BO_2026-10-31.md) · [60 empresas para investigación — CSV (15 por país)](docs/PROSPECTOS_B2B_CL_MX_CO_BO_2026-10-31.csv). **Todas las cuentas están no contactadas y no hay interés de compra de DELIA confirmado.**
 
 **Investigación comercial (31/10/2026):** [Estudio de mercado B2B/B2C — Chile, México y Colombia](docs/ESTUDIO_MERCADO_B2B_B2C_CHILE_MEXICO_COLOMBIA_2026-10-31.md) · [Base de 12 cuentas observables para investigación (CSV)](docs/PROSPECTOS_OBSERVABLES_CL_MX_CO_2026-10-31.csv). Estos materiales presentan hipótesis de segmentación, fuentes y un protocolo de entrevistas; **no** acreditan compradores interesados ni demanda de DELIA validada.
@@ -39,7 +61,7 @@ Las empresas que integran APIs LLM deben decidir **qué datos envían al modelo,
 | API/proxy/auditoría | Archivos FastAPI, HTTPX y modelos presentes | **Bloqueos P0**: importaciones/esquemas inconsistentes, rutas auditoría sin auth explícita, texto sensible en modelos y redacción no conectada con reenvío |
 | México/Bolivia | Casos y documentos en investigación | CURP/RFC y CI/NIT bolivianos **no implementados** |
 | Controles empresariales | Arquitectura y roadmap documentados | Autenticación multitenant, rate limiting real, fallback, dashboard, tokenización reversible, cifrado/vault **no demostrados** |
-| Mercados y clientes | Investigación documental y 60 cuentas visibles | **0 compradores DELIA verificados**, no existen precios DELIA validados |
+| Mercados y clientes | Investigación documental; 160 cuentas en lista de investigación (40 por país) | **0 compradores DELIA verificados**, no existen precios DELIA validados |
 
 **Prioridad de entrega:** corregir P0, reproducir la suite de pruebas, medir sanitización en datos sintéticos, ejecutar un benchmark honesto y recién entonces discutir pilotos autorizados. Ver [informe integral y mapa de riesgos](docs/INTELIGENCIA_MERCADO_GO_TO_MARKET_CL_MX_CO_BO_2026-10-31.md).
 
