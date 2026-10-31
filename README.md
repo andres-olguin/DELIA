@@ -21,7 +21,7 @@
 
 ### Ronda 2 — Investigación comercial y kit de ventas (31/10/2026)
 
-**Continuación de los estudios anteriores, sin sustituirlos.** Se amplió la prospección de 60 a **160 cuentas de investigación** (40 por país), con 25 posibles integradores de canal, puntuaciones exploratorias, doce meses de fuentes separadas por estado de comprobación, materiales de contacto y criterios para pilotos. **Ninguna empresa está clasificada como cliente interesado; todas las cuentas permanecen «no contactada».** La puntuación es una hipótesis operativa, no probabilidad estadística de compra.
+**Continuación de los estudios anteriores, sin sustituirlos.** Se amplió la prospección de 60 a **160 cuentas de investigación** (40 por país), con 25 posibles integradores de canal, puntuaciones exploratorias, fuentes con fechas y estados de comprobación explícitos, materiales de contacto y criterios para pilotos. **Ninguna empresa está clasificada como cliente interesado; todas las cuentas permanecen «no contactada».** La puntuación es una hipótesis operativa, no probabilidad estadística de compra.
 
 | Investigación y planificación | Ventas y trabajo con compradores |
 |---|---|
