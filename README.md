@@ -19,6 +19,30 @@
 **Cronograma inicial:** 12 de octubre de 2026 – 17 de enero de 2027.  
 **Repositorio:** [github.com/andres-olguin/DELIA](https://github.com/andres-olguin/DELIA)
 
+### Ronda 3 — Evidencia, benchmark local y primeros activos para validación (31/10/2026)
+
+**Estado real:** benchmark sintético ejecutado localmente con el detector exacto de `main`: **71 TP, 3 FP y 79 FN** en 150 entidades etiquetadas (precision **95,95 %**, recall **47,33 %**, F1 **63,39 %**). **No cumple una garantía de sanitización productiva**. Presidio, Cloudflare DLP y Google Model Armor **NO FUERON EJECUTADOS**; no se ha demostrado ventaja ante esos proveedores.
+
+**Código:** 12 Issues P0/P1 creados; una propuesta de parche se preparó y probó localmente (6 tests lab pasaron, 2 warnings) pero **no existe rama ni PR**: el [ruleset `Proteccion-Main`](https://github.com/andres-olguin/DELIA/rules/25836222) prohíbe crear ramas por estar dirigido a `~ALL`, incluso ramas nuevas. [Issue #18 solicita corrección humana](https://github.com/andres-olguin/DELIA/issues/18). **No se subió código funcional a `main`**.
+
+| Auditoría, evidencia y seguridad | Material comercial y validación |
+|---|---|
+| [Registro de investigación completo — Ronda 3](docs/REGISTRO_INVESTIGACION_RONDA3_2026-10-31.md) | [Foco comercial: integradores B2B2B; Brasil LGPD como fase 2](docs/FOCO_NICHO_Y_BRASIL_RONDA3_2026-10-31.md) |
+| [Verificación de las 44 cuentas pendientes (CSV)](docs/VERIFICACION_44_CUENTAS_RONDA3.csv) | [One-pager para integradores](docs/ventas/ONE_PAGER_INTEGRADORES_RONDA3.md) |
+| [235 fuentes clasificadas según lectura (CSV)](docs/REFERENCIAS_235_LECTURA_RONDA3.csv) | [Pitch de 30 segundos y mensajes](docs/ventas/PITCH_INTEGRADORES_RONDA3.md) |
+| [Recalificación de 40 cuentas de ola 1 con evidencia LLM (CSV)](docs/OLA1_40_EVIDENCIA_LLM_RECALIFICACION_RONDA3.csv) | [Landing en español, lista de espera conceptual](docs/ventas/LANDING_ES_INTEGRADORES_WAITLIST_RONDA3.md) |
+| [Marco legal de protección de datos y prospección por país](docs/MARCO_LEGAL_Y_PROSPECCION_RONDA3_2026-10-31.md) | [Tres artículos técnicos](docs/articulos/01_FUGAS_PII_PROMPTS_Y_MITIGACIONES.md) · [Artículo 2](docs/articulos/02_BENCHMARK_RUT_NIT_CURP.md) · [Artículo 3](docs/articulos/03_COMPARACION_HONESTA_GATEWAYS_IA.md) |
+| [Corpus sintético etiquetado — 172 pruebas (JSONL)](benchmarks/synthetic_pii_r3.jsonl) | [Calendario editorial — 12 semanas (CSV)](docs/ventas/CALENDARIO_EDITORIAL_12_SEMANAS.csv) · [guía](docs/ventas/CALENDARIO_EDITORIAL_12_SEMANAS.md) |
+| [Método y resultados del benchmark](benchmarks/README.md) | [Plan de reclutamiento — 24 entrevistas](docs/ventas/PLAN_24_ENTREVISTAS_RONDA3.md) |
+| [Política de seguridad](SECURITY.md) · [plan TALIA→DELIA compatible](docs/PLAN_MIGRACION_TALIA_DELIA_2026-10-31.md) | [Carta de intención no vinculante](docs/ventas/CARTA_INTENCION_NO_VINCULANTE_RONDA3.md) · [encuesta Van Westendorp](docs/ventas/ENCUESTA_VAN_WESTENDORP_RONDA3.md) |
+| [Issues P0/P1 #6–#17](https://github.com/andres-olguin/DELIA/issues) · [bloqueo de ramas #18](https://github.com/andres-olguin/DELIA/issues/18) | [Seis borradores de postulación a fondos](docs/ventas/BORRADORES_6_FONDOS_ACELERADORAS_RONDA3.md) · [tablero 13 semanas (CSV)](docs/ventas/TABLERO_METRICAS_13_SEMANAS_RONDA3.csv) |
+
+**Calidad de evidencia:** 44 revisiones individuales → 8 páginas legibles, 10 extractos y 26 cuentas solo de directorio; 235 URLs → solo 7 páginas comprobadas íntegras en esta ronda, 224 con fragmentos o estado legado y 4 directorios. De la antigua ola 1 (40 cuentas), **8** se priorizan para investigación, **2** quedan en reserva, **30** se descartan de la primera ola por falta de señal pública suficientemente específica. Ninguna está confirmada como compradora DELIA.
+
+**NO han ocurrido**: entrevistas con compradores, ensayos con datos reales de clientes, pilotos, contratos, cobros DELIA, despliegue productivo, postulación a fondos o lanzamiento de lista de espera. Los documentos de ventas son borradores, no campañas publicadas.
+
+---
+
 ### Ronda 2 — Investigación comercial y kit de ventas (31/10/2026)
 
 **Continuación de los estudios anteriores, sin sustituirlos.** Se amplió la prospección de 60 a **160 cuentas de investigación** (40 por país), con 25 posibles integradores de canal, puntuaciones exploratorias, fuentes con fechas y estados de comprobación explícitos, materiales de contacto y criterios para pilotos. **Ninguna empresa está clasificada como cliente interesado; todas las cuentas permanecen «no contactada».** La puntuación es una hipótesis operativa, no probabilidad estadística de compra.
