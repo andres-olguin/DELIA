@@ -1,0 +1,4 @@
+"Escenario","cuentas_elegibles_verificadas","fraccion_adopcion_llm_hp","fraccion_necesidad_no_resuelta_hp","fraccion_comprador_accesible_hp","tasa_cierre_hp","precio_anual_usd_hp","TAM_proxy_unidades","SAM_proxy_unidades","SOM_unidades","ARR_SOM_USD","nota"
+"Conservador","","0.2","0.25","0.2","0.1","1188","=IF(B2="""",""NV"",B2*C2)","=IF(B2="""",""NV"",B2*C2*D2)","=IF(B2="""",""NV"",B2*C2*D2*E2*F2)","=IF(B2="""",""NV"",J2*G2)","No rellenar denominador con 160 cuentas: las 160 son lista de investigación, no número de clientes elegibles"
+"Base","","0.4","0.4","0.3","0.15","4188","=IF(B3="""",""NV"",B3*C3)","=IF(B3="""",""NV"",B3*C3*D3)","=IF(B3="""",""NV"",B3*C3*D3*E3*F3)","=IF(B3="""",""NV"",J3*G3)","Hipótesis para sensibilidad; no forecast"
+"Expansivo","","0.6","0.6","0.45","0.25","14388","=IF(B4="""",""NV"",B4*C4)","=IF(B4="""",""NV"",B4*C4*D4)","=IF(B4="""",""NV"",B4*C4*D4*E4*F4)","=IF(B4="""",""NV"",J4*G4)","Requiere datos reales de buyer interviews y contratos"
