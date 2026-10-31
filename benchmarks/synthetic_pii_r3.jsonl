@@ -1,0 +1,172 @@
+{"id":"T0001","country":"CL","target":"RUT","text":"RUT ficticio: 70.000.000-1.","entities":[{"type":"RUT","start":14,"end":26}],"difficulty":"positivo","note":""}
+{"id":"T0002","country":"CL","target":"RUT","text":"Cliente ID: 70002719-8.","entities":[{"type":"RUT","start":12,"end":22}],"difficulty":"positivo","note":""}
+{"id":"T0003","country":"CL","target":"RUT","text":"rut: 70.005.438-1.","entities":[{"type":"RUT","start":5,"end":17}],"difficulty":"positivo","note":""}
+{"id":"T0004","country":"CL","target":"RUT","text":"La ficha incorpora RUT 70008157-5.","entities":[{"type":"RUT","start":23,"end":33}],"difficulty":"positivo","note":""}
+{"id":"T0005","country":"CL","target":"RUT","text":"RUT ficticio: 70.010.876-7.","entities":[{"type":"RUT","start":14,"end":26}],"difficulty":"positivo","note":""}
+{"id":"T0006","country":"CL","target":"RUT","text":"Cliente ID: 70013595-0.","entities":[{"type":"RUT","start":12,"end":22}],"difficulty":"positivo","note":""}
+{"id":"T0007","country":"CL","target":"RUT","text":"rut: 70.016.314-8.","entities":[{"type":"RUT","start":5,"end":17}],"difficulty":"positivo","note":""}
+{"id":"T0008","country":"CL","target":"RUT","text":"La ficha incorpora RUT 70019033-1.","entities":[{"type":"RUT","start":23,"end":33}],"difficulty":"positivo","note":""}
+{"id":"T0009","country":"CL","target":"RUT","text":"RUT ficticio: 70.021.752-3.","entities":[{"type":"RUT","start":14,"end":26}],"difficulty":"positivo","note":""}
+{"id":"T0010","country":"CL","target":"RUT","text":"Cliente ID: 70024471-7.","entities":[{"type":"RUT","start":12,"end":22}],"difficulty":"positivo","note":""}
+{"id":"T0011","country":"CL","target":"RUT","text":"rut: 70.027.190-0.","entities":[{"type":"RUT","start":5,"end":17}],"difficulty":"positivo","note":""}
+{"id":"T0012","country":"CL","target":"RUT","text":"La ficha incorpora RUT 70029909-0.","entities":[{"type":"RUT","start":23,"end":33}],"difficulty":"positivo","note":""}
+{"id":"T0013","country":"CL","target":"RUT","text":"Campo RUT de ensayo: 71.000.000 - K fin.","entities":[{"type":"RUT","start":21,"end":35}],"difficulty":"formato_sucio","note":""}
+{"id":"T0014","country":"CL","target":"RUT","text":"Campo RUT de ensayo: 72000611 1 fin.","entities":[{"type":"RUT","start":21,"end":31}],"difficulty":"formato_sucio","note":""}
+{"id":"T0015","country":"CL","target":"RUT","text":"Campo RUT de ensayo: 71.001.622 - 4 fin.","entities":[{"type":"RUT","start":21,"end":35}],"difficulty":"formato_sucio","note":""}
+{"id":"T0016","country":"CL","target":"RUT","text":"Campo RUT de ensayo: 72001833 0 fin.","entities":[{"type":"RUT","start":21,"end":31}],"difficulty":"formato_sucio","note":""}
+{"id":"T0017","country":"CL","target":"RUT","text":"Campo RUT de ensayo: 71.003.244 - 0 fin.","entities":[{"type":"RUT","start":21,"end":35}],"difficulty":"formato_sucio","note":""}
+{"id":"T0018","country":"CL","target":"RUT","text":"Campo RUT de ensayo: 72003055 1 fin.","entities":[{"type":"RUT","start":21,"end":31}],"difficulty":"formato_sucio","note":""}
+{"id":"T0019","country":"CL","target":"RUT","text":"Campo RUT de ensayo: 71.004.866 - 5 fin.","entities":[{"type":"RUT","start":21,"end":35}],"difficulty":"formato_sucio","note":""}
+{"id":"T0020","country":"CL","target":"RUT","text":"Campo RUT de ensayo: 72004277 0 fin.","entities":[{"type":"RUT","start":21,"end":31}],"difficulty":"formato_sucio","note":""}
+{"id":"T0021","country":"CO","target":"NIT","text":"NIT: 900.000.000-5.","entities":[{"type":"NIT","start":5,"end":18}],"difficulty":"positivo","note":""}
+{"id":"T0022","country":"CO","target":"NIT","text":"Facturación NIT 900001739-3.","entities":[{"type":"NIT","start":16,"end":27}],"difficulty":"positivo","note":""}
+{"id":"T0023","country":"CO","target":"NIT","text":"Documento: 900.003.478-5.","entities":[{"type":"NIT","start":11,"end":24}],"difficulty":"positivo","note":""}
+{"id":"T0024","country":"CO","target":"NIT","text":"NIT: 900005217-9.","entities":[{"type":"NIT","start":5,"end":16}],"difficulty":"positivo","note":""}
+{"id":"T0025","country":"CO","target":"NIT","text":"Facturación NIT 900.006.956-8.","entities":[{"type":"NIT","start":16,"end":29}],"difficulty":"positivo","note":""}
+{"id":"T0026","country":"CO","target":"NIT","text":"Documento: 900008695-1.","entities":[{"type":"NIT","start":11,"end":22}],"difficulty":"positivo","note":""}
+{"id":"T0027","country":"CO","target":"NIT","text":"NIT: 900.010.434-0.","entities":[{"type":"NIT","start":5,"end":18}],"difficulty":"positivo","note":""}
+{"id":"T0028","country":"CO","target":"NIT","text":"Facturación NIT 900012173-2.","entities":[{"type":"NIT","start":16,"end":27}],"difficulty":"positivo","note":""}
+{"id":"T0029","country":"CO","target":"NIT","text":"Documento: 900.013.912-3.","entities":[{"type":"NIT","start":11,"end":24}],"difficulty":"positivo","note":""}
+{"id":"T0030","country":"CO","target":"NIT","text":"NIT: 900015651-5.","entities":[{"type":"NIT","start":5,"end":16}],"difficulty":"positivo","note":""}
+{"id":"T0031","country":"CO","target":"NIT","text":"Facturación NIT 900.017.390-7.","entities":[{"type":"NIT","start":16,"end":29}],"difficulty":"positivo","note":""}
+{"id":"T0032","country":"CO","target":"NIT","text":"Documento: 900019129-1.","entities":[{"type":"NIT","start":11,"end":22}],"difficulty":"positivo","note":""}
+{"id":"T0033","country":"CO","target":"NIT","text":"NIT de prueba 901.000.000 - 9 adjunto.","entities":[{"type":"NIT","start":14,"end":29}],"difficulty":"formato_sucio","note":""}
+{"id":"T0034","country":"CO","target":"NIT","text":"NIT de prueba 901 000 187-7 adjunto.","entities":[{"type":"NIT","start":14,"end":27}],"difficulty":"formato_sucio","note":""}
+{"id":"T0035","country":"CO","target":"NIT","text":"NIT de prueba 901.000.374 - 8 adjunto.","entities":[{"type":"NIT","start":14,"end":29}],"difficulty":"formato_sucio","note":""}
+{"id":"T0036","country":"CO","target":"NIT","text":"NIT de prueba 901 000 561-9 adjunto.","entities":[{"type":"NIT","start":14,"end":27}],"difficulty":"formato_sucio","note":""}
+{"id":"T0037","country":"CO","target":"NIT","text":"NIT de prueba 901.000.748 - 9 adjunto.","entities":[{"type":"NIT","start":14,"end":29}],"difficulty":"formato_sucio","note":""}
+{"id":"T0038","country":"CO","target":"NIT","text":"NIT de prueba 901 000 935-1 adjunto.","entities":[{"type":"NIT","start":14,"end":27}],"difficulty":"formato_sucio","note":""}
+{"id":"T0039","country":"CO","target":"NIT","text":"NIT de prueba 901.001.122 - 3 adjunto.","entities":[{"type":"NIT","start":14,"end":29}],"difficulty":"formato_sucio","note":""}
+{"id":"T0040","country":"CO","target":"NIT","text":"NIT de prueba 901 001 309-3 adjunto.","entities":[{"type":"NIT","start":14,"end":27}],"difficulty":"formato_sucio","note":""}
+{"id":"T0041","country":"CO","target":"CEDULA","text":"cédula: 1.234.567.890.","entities":[{"type":"CEDULA","start":8,"end":21}],"difficulty":"positivo","note":""}
+{"id":"T0042","country":"CO","target":"CEDULA","text":"C.C. 52.123.456.","entities":[{"type":"CEDULA","start":5,"end":15}],"difficulty":"positivo","note":""}
+{"id":"T0043","country":"CO","target":"CEDULA","text":"CC 987654321.","entities":[{"type":"CEDULA","start":3,"end":12}],"difficulty":"positivo","note":""}
+{"id":"T0044","country":"CO","target":"CEDULA","text":"cédula de ciudadanía No. 12345678.","entities":[{"type":"CEDULA","start":25,"end":33}],"difficulty":"positivo","note":""}
+{"id":"T0045","country":"CO","target":"CEDULA","text":"cédula: 1.234.567.890.","entities":[{"type":"CEDULA","start":8,"end":21}],"difficulty":"positivo","note":""}
+{"id":"T0046","country":"CO","target":"CEDULA","text":"C.C. 52.123.456.","entities":[{"type":"CEDULA","start":5,"end":15}],"difficulty":"positivo","note":""}
+{"id":"T0047","country":"CO","target":"CEDULA","text":"CC 987654321.","entities":[{"type":"CEDULA","start":3,"end":12}],"difficulty":"positivo","note":""}
+{"id":"T0048","country":"CO","target":"CEDULA","text":"cédula de ciudadanía No. 12345678.","entities":[{"type":"CEDULA","start":25,"end":33}],"difficulty":"positivo","note":""}
+{"id":"T0049","country":"CO","target":"CEDULA","text":"cédula: 1.234.567.890.","entities":[{"type":"CEDULA","start":8,"end":21}],"difficulty":"positivo","note":""}
+{"id":"T0050","country":"CO","target":"CEDULA","text":"C.C. 52.123.456.","entities":[{"type":"CEDULA","start":5,"end":15}],"difficulty":"positivo","note":""}
+{"id":"T0051","country":"CO","target":"CEDULA","text":"CC 987654321.","entities":[{"type":"CEDULA","start":3,"end":12}],"difficulty":"positivo","note":""}
+{"id":"T0052","country":"CO","target":"CEDULA","text":"cédula de ciudadanía No. 12345678.","entities":[{"type":"CEDULA","start":25,"end":33}],"difficulty":"positivo","note":""}
+{"id":"T0053","country":"CO","target":"CEDULA","text":"Persona ID 55123000.","entities":[],"difficulty":"negativo_dificil","note":""}
+{"id":"T0054","country":"CO","target":"CEDULA","text":"pedido 55123317.","entities":[],"difficulty":"negativo_dificil","note":""}
+{"id":"T0055","country":"CO","target":"CEDULA","text":"referencia 55123634.","entities":[],"difficulty":"negativo_dificil","note":""}
+{"id":"T0056","country":"CO","target":"CEDULA","text":"cc # 55123951.","entities":[{"type":"CEDULA","start":5,"end":13}],"difficulty":"negativo_dificil","note":""}
+{"id":"T0057","country":"CO","target":"CEDULA","text":"Persona ID 55124268.","entities":[],"difficulty":"negativo_dificil","note":""}
+{"id":"T0058","country":"CO","target":"CEDULA","text":"pedido 55124585.","entities":[],"difficulty":"negativo_dificil","note":""}
+{"id":"T0059","country":"CO","target":"CEDULA","text":"referencia 55124902.","entities":[],"difficulty":"negativo_dificil","note":""}
+{"id":"T0060","country":"CO","target":"CEDULA","text":"cc # 55125219.","entities":[{"type":"CEDULA","start":5,"end":13}],"difficulty":"negativo_dificil","note":""}
+{"id":"T0061","country":"MX","target":"CURP","text":"CURP de prueba: BAXX900101HDFRRL01.","entities":[{"type":"CURP","start":16,"end":34}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0062","country":"MX","target":"CURP","text":"Identificador CURP MEXX880821MDFABC02.","entities":[{"type":"CURP","start":19,"end":37}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0063","country":"MX","target":"CURP","text":"CURP=XXXX010101HDFXXX01.","entities":[{"type":"CURP","start":5,"end":23}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0064","country":"MX","target":"CURP","text":"CURP de prueba: BAXX900101HDFRRL01.","entities":[{"type":"CURP","start":16,"end":34}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0065","country":"MX","target":"CURP","text":"Identificador CURP MEXX880821MDFABC02.","entities":[{"type":"CURP","start":19,"end":37}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0066","country":"MX","target":"CURP","text":"CURP=XXXX010101HDFXXX01.","entities":[{"type":"CURP","start":5,"end":23}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0067","country":"MX","target":"CURP","text":"CURP de prueba: BAXX900101HDFRRL01.","entities":[{"type":"CURP","start":16,"end":34}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0068","country":"MX","target":"CURP","text":"Identificador CURP MEXX880821MDFABC02.","entities":[{"type":"CURP","start":19,"end":37}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0069","country":"MX","target":"CURP","text":"CURP=XXXX010101HDFXXX01.","entities":[{"type":"CURP","start":5,"end":23}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0070","country":"MX","target":"CURP","text":"CURP de prueba: BAXX900101HDFRRL01.","entities":[{"type":"CURP","start":16,"end":34}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0071","country":"MX","target":"CURP","text":"Identificador CURP MEXX880821MDFABC02.","entities":[{"type":"CURP","start":19,"end":37}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0072","country":"MX","target":"CURP","text":"CURP=XXXX010101HDFXXX01.","entities":[{"type":"CURP","start":5,"end":23}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0073","country":"MX","target":"RFC","text":"RFC de muestra: XAXX010101000.","entities":[{"type":"RFC","start":16,"end":29}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0074","country":"MX","target":"RFC","text":"RFC=BEXX891201HH1.","entities":[{"type":"RFC","start":4,"end":17}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0075","country":"MX","target":"RFC","text":"Documento fiscal COSC8001137NA.","entities":[{"type":"RFC","start":17,"end":30}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0076","country":"MX","target":"RFC","text":"RFC de muestra: XAXX010101000.","entities":[{"type":"RFC","start":16,"end":29}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0077","country":"MX","target":"RFC","text":"RFC=BEXX891201HH1.","entities":[{"type":"RFC","start":4,"end":17}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0078","country":"MX","target":"RFC","text":"Documento fiscal COSC8001137NA.","entities":[{"type":"RFC","start":17,"end":30}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0079","country":"MX","target":"RFC","text":"RFC de muestra: XAXX010101000.","entities":[{"type":"RFC","start":16,"end":29}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0080","country":"MX","target":"RFC","text":"RFC=BEXX891201HH1.","entities":[{"type":"RFC","start":4,"end":17}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0081","country":"MX","target":"RFC","text":"Documento fiscal COSC8001137NA.","entities":[{"type":"RFC","start":17,"end":30}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0082","country":"MX","target":"RFC","text":"RFC de muestra: XAXX010101000.","entities":[{"type":"RFC","start":16,"end":29}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0083","country":"MX","target":"RFC","text":"RFC=BEXX891201HH1.","entities":[{"type":"RFC","start":4,"end":17}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0084","country":"MX","target":"RFC","text":"Documento fiscal COSC8001137NA.","entities":[{"type":"RFC","start":17,"end":30}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0085","country":"BO","target":"CI_BO","text":"CI de muestra 7800000.","entities":[{"type":"CI_BO","start":14,"end":21}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0086","country":"BO","target":"CI_BO","text":"C.I.: 6500311-SC.","entities":[{"type":"CI_BO","start":6,"end":16}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0087","country":"BO","target":"CI_BO","text":"Documento CI: 7800422.","entities":[{"type":"CI_BO","start":14,"end":21}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0088","country":"BO","target":"CI_BO","text":"CI de muestra 6500933-SC.","entities":[{"type":"CI_BO","start":14,"end":24}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0089","country":"BO","target":"CI_BO","text":"C.I.: 7800844.","entities":[{"type":"CI_BO","start":6,"end":13}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0090","country":"BO","target":"CI_BO","text":"Documento CI: 6501555-SC.","entities":[{"type":"CI_BO","start":14,"end":24}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0091","country":"BO","target":"CI_BO","text":"CI de muestra 7801266.","entities":[{"type":"CI_BO","start":14,"end":21}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0092","country":"BO","target":"CI_BO","text":"C.I.: 6502177-SC.","entities":[{"type":"CI_BO","start":6,"end":16}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0093","country":"BO","target":"CI_BO","text":"Documento CI: 7801688.","entities":[{"type":"CI_BO","start":14,"end":21}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0094","country":"BO","target":"CI_BO","text":"CI de muestra 6502799-SC.","entities":[{"type":"CI_BO","start":14,"end":24}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0095","country":"BO","target":"CI_BO","text":"C.I.: 7802110.","entities":[{"type":"CI_BO","start":6,"end":13}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0096","country":"BO","target":"CI_BO","text":"Documento CI: 6503421-SC.","entities":[{"type":"CI_BO","start":14,"end":24}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0097","country":"BO","target":"NIT_BO","text":"NIT Bolivia ficticio: 2000000000.","entities":[{"type":"NIT_BO","start":22,"end":32}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0098","country":"BO","target":"NIT_BO","text":"NIT: 2000003709.","entities":[{"type":"NIT_BO","start":5,"end":15}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0099","country":"BO","target":"NIT_BO","text":"NIT de laboratorio: 2000007418.","entities":[{"type":"NIT_BO","start":20,"end":30}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0100","country":"BO","target":"NIT_BO","text":"NIT Bolivia ficticio: 2000011127.","entities":[{"type":"NIT_BO","start":22,"end":32}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0101","country":"BO","target":"NIT_BO","text":"NIT: 2000014836.","entities":[{"type":"NIT_BO","start":5,"end":15}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0102","country":"BO","target":"NIT_BO","text":"NIT de laboratorio: 2000018545.","entities":[{"type":"NIT_BO","start":20,"end":30}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0103","country":"BO","target":"NIT_BO","text":"NIT Bolivia ficticio: 2000022254.","entities":[{"type":"NIT_BO","start":22,"end":32}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0104","country":"BO","target":"NIT_BO","text":"NIT: 2000025963.","entities":[{"type":"NIT_BO","start":5,"end":15}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0105","country":"BO","target":"NIT_BO","text":"NIT de laboratorio: 2000029672.","entities":[{"type":"NIT_BO","start":20,"end":30}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0106","country":"BO","target":"NIT_BO","text":"NIT Bolivia ficticio: 2000033381.","entities":[{"type":"NIT_BO","start":22,"end":32}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0107","country":"BO","target":"NIT_BO","text":"NIT: 2000037090.","entities":[{"type":"NIT_BO","start":5,"end":15}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0108","country":"BO","target":"NIT_BO","text":"NIT de laboratorio: 2000040799.","entities":[{"type":"NIT_BO","start":20,"end":30}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0109","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111 1111 1111 1111.","entities":[{"type":"TARJETA","start":52,"end":71}],"difficulty":"positivo","note":""}
+{"id":"T0110","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111-1111-1111-1111.","entities":[{"type":"TARJETA","start":52,"end":71}],"difficulty":"positivo","note":""}
+{"id":"T0111","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111111111111111.","entities":[{"type":"TARJETA","start":52,"end":68}],"difficulty":"positivo","note":""}
+{"id":"T0112","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111 1111 1111 1111.","entities":[{"type":"TARJETA","start":52,"end":71}],"difficulty":"positivo","note":""}
+{"id":"T0113","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111-1111-1111-1111.","entities":[{"type":"TARJETA","start":52,"end":71}],"difficulty":"positivo","note":""}
+{"id":"T0114","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111111111111111.","entities":[{"type":"TARJETA","start":52,"end":68}],"difficulty":"positivo","note":""}
+{"id":"T0115","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111 1111 1111 1111.","entities":[{"type":"TARJETA","start":52,"end":71}],"difficulty":"positivo","note":""}
+{"id":"T0116","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111-1111-1111-1111.","entities":[{"type":"TARJETA","start":52,"end":71}],"difficulty":"positivo","note":""}
+{"id":"T0117","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111111111111111.","entities":[{"type":"TARJETA","start":52,"end":68}],"difficulty":"positivo","note":""}
+{"id":"T0118","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111 1111 1111 1111.","entities":[{"type":"TARJETA","start":52,"end":71}],"difficulty":"positivo","note":""}
+{"id":"T0119","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111-1111-1111-1111.","entities":[{"type":"TARJETA","start":52,"end":71}],"difficulty":"positivo","note":""}
+{"id":"T0120","country":"GLOBAL","target":"TARJETA","text":"Tarjeta de prueba (número de test de la industria): 4111111111111111.","entities":[{"type":"TARJETA","start":52,"end":68}],"difficulty":"positivo","note":""}
+{"id":"T0121","country":"CL","target":"TELEFONO","text":"Teléfono ficticio: +56 9 8765 4321.","entities":[{"type":"TELEFONO","start":19,"end":34}],"difficulty":"positivo","note":""}
+{"id":"T0122","country":"CO","target":"TELEFONO","text":"Teléfono ficticio: +57 300 123 4567.","entities":[{"type":"TELEFONO","start":19,"end":35}],"difficulty":"positivo","note":""}
+{"id":"T0123","country":"CL","target":"TELEFONO","text":"Teléfono ficticio: +56-987654321.","entities":[{"type":"TELEFONO","start":19,"end":32}],"difficulty":"positivo","note":""}
+{"id":"T0124","country":"CO","target":"TELEFONO","text":"Teléfono ficticio: +57 312-456-7890.","entities":[{"type":"TELEFONO","start":19,"end":35}],"difficulty":"positivo","note":""}
+{"id":"T0125","country":"CL","target":"TELEFONO","text":"Teléfono ficticio: +56 9 8765 4321.","entities":[{"type":"TELEFONO","start":19,"end":34}],"difficulty":"positivo","note":""}
+{"id":"T0126","country":"CO","target":"TELEFONO","text":"Teléfono ficticio: +57 300 123 4567.","entities":[{"type":"TELEFONO","start":19,"end":35}],"difficulty":"positivo","note":""}
+{"id":"T0127","country":"CL","target":"TELEFONO","text":"Teléfono ficticio: +56-987654321.","entities":[{"type":"TELEFONO","start":19,"end":32}],"difficulty":"positivo","note":""}
+{"id":"T0128","country":"CO","target":"TELEFONO","text":"Teléfono ficticio: +57 312-456-7890.","entities":[{"type":"TELEFONO","start":19,"end":35}],"difficulty":"positivo","note":""}
+{"id":"T0129","country":"CL","target":"TELEFONO","text":"Teléfono ficticio: +56 9 8765 4321.","entities":[{"type":"TELEFONO","start":19,"end":34}],"difficulty":"positivo","note":""}
+{"id":"T0130","country":"CO","target":"TELEFONO","text":"Teléfono ficticio: +57 300 123 4567.","entities":[{"type":"TELEFONO","start":19,"end":35}],"difficulty":"positivo","note":""}
+{"id":"T0131","country":"CL","target":"TELEFONO","text":"Teléfono ficticio: +56-987654321.","entities":[{"type":"TELEFONO","start":19,"end":32}],"difficulty":"positivo","note":""}
+{"id":"T0132","country":"CO","target":"TELEFONO","text":"Teléfono ficticio: +57 312-456-7890.","entities":[{"type":"TELEFONO","start":19,"end":35}],"difficulty":"positivo","note":""}
+{"id":"T0133","country":"CL","target":"EMAIL","text":"Correo sintético: test0@demo.invalid.","entities":[{"type":"EMAIL","start":18,"end":36}],"difficulty":"positivo","note":""}
+{"id":"T0134","country":"MX","target":"EMAIL","text":"Correo sintético: persona1+prueba@empresa.invalid.","entities":[{"type":"EMAIL","start":18,"end":49}],"difficulty":"positivo","note":""}
+{"id":"T0135","country":"CO","target":"EMAIL","text":"Correo sintético: test2@demo.invalid.","entities":[{"type":"EMAIL","start":18,"end":36}],"difficulty":"positivo","note":""}
+{"id":"T0136","country":"BO","target":"EMAIL","text":"Correo sintético: persona3+prueba@empresa.invalid.","entities":[{"type":"EMAIL","start":18,"end":49}],"difficulty":"positivo","note":""}
+{"id":"T0137","country":"CL","target":"EMAIL","text":"Correo sintético: test4@demo.invalid.","entities":[{"type":"EMAIL","start":18,"end":36}],"difficulty":"positivo","note":""}
+{"id":"T0138","country":"MX","target":"EMAIL","text":"Correo sintético: persona5+prueba@empresa.invalid.","entities":[{"type":"EMAIL","start":18,"end":49}],"difficulty":"positivo","note":""}
+{"id":"T0139","country":"CO","target":"EMAIL","text":"Correo sintético: test6@demo.invalid.","entities":[{"type":"EMAIL","start":18,"end":36}],"difficulty":"positivo","note":""}
+{"id":"T0140","country":"BO","target":"EMAIL","text":"Correo sintético: persona7+prueba@empresa.invalid.","entities":[{"type":"EMAIL","start":18,"end":49}],"difficulty":"positivo","note":""}
+{"id":"T0141","country":"CL","target":"EMAIL","text":"Correo sintético: test8@demo.invalid.","entities":[{"type":"EMAIL","start":18,"end":36}],"difficulty":"positivo","note":""}
+{"id":"T0142","country":"MX","target":"EMAIL","text":"Correo sintético: persona9+prueba@empresa.invalid.","entities":[{"type":"EMAIL","start":18,"end":49}],"difficulty":"positivo","note":""}
+{"id":"T0143","country":"CO","target":"EMAIL","text":"Correo sintético: test10@demo.invalid.","entities":[{"type":"EMAIL","start":18,"end":37}],"difficulty":"positivo","note":""}
+{"id":"T0144","country":"BO","target":"EMAIL","text":"Correo sintético: persona11+prueba@empresa.invalid.","entities":[{"type":"EMAIL","start":18,"end":50}],"difficulty":"positivo","note":""}
+{"id":"T0145","country":"CL","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Av. Ficción 1234, Ciudad Ejemplo.","entities":[{"type":"DIRECCION","start":35,"end":67}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0146","country":"CO","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Calle Inventada 555, Barrio Prueba.","entities":[{"type":"DIRECCION","start":35,"end":69}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0147","country":"MX","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Pasaje Sintético 18, Región Demo.","entities":[{"type":"DIRECCION","start":35,"end":67}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0148","country":"BO","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Av. Ficción 1234, Ciudad Ejemplo.","entities":[{"type":"DIRECCION","start":35,"end":67}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0149","country":"CL","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Calle Inventada 555, Barrio Prueba.","entities":[{"type":"DIRECCION","start":35,"end":69}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0150","country":"CO","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Pasaje Sintético 18, Región Demo.","entities":[{"type":"DIRECCION","start":35,"end":67}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0151","country":"MX","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Av. Ficción 1234, Ciudad Ejemplo.","entities":[{"type":"DIRECCION","start":35,"end":67}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0152","country":"BO","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Calle Inventada 555, Barrio Prueba.","entities":[{"type":"DIRECCION","start":35,"end":69}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0153","country":"CL","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Pasaje Sintético 18, Región Demo.","entities":[{"type":"DIRECCION","start":35,"end":67}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0154","country":"CO","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Av. Ficción 1234, Ciudad Ejemplo.","entities":[{"type":"DIRECCION","start":35,"end":67}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0155","country":"MX","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Calle Inventada 555, Barrio Prueba.","entities":[{"type":"DIRECCION","start":35,"end":69}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0156","country":"BO","target":"DIRECCION","text":"Dirección ficticia de laboratorio: Pasaje Sintético 18, Región Demo.","entities":[{"type":"DIRECCION","start":35,"end":67}],"difficulty":"positivo_sin_implementacion","note":""}
+{"id":"T0157","country":"CL","target":"RUT","text":"RUT 12.345.678-9 (dígito inválido)","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0158","country":"CL","target":"RUT","text":"RUT: 12 345 678 5 (formato no aceptado)","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0159","country":"CO","target":"NIT","text":"NIT 800.197.268-5 (DV inválido, no asignado a persona)","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0160","country":"CO","target":"CEDULA","text":"pedido 52123456","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0161","country":"CL","target":"RUT","text":"Orden: 70000000-9 por lote","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0162","country":"MX","target":"RFC","text":"RFC XXXX010101XX0 (parecido, no validado)","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0163","country":"MX","target":"CURP","text":"Código de inventario BAXX900101HDFRRL01 (sin contexto)","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0164","country":"BO","target":"CI_BO","text":"SKU 7800000-SC","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0165","country":"BO","target":"NIT_BO","text":"Número serie 2000000000","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0166","country":"GLOBAL","target":"TARJETA","text":"Lote 4111111111111112 (Luhn inválido)","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0167","country":"GLOBAL","target":"TARJETA","text":"Producto 4111-1111-1111-1112 (Luhn inválido)","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0168","country":"GLOBAL","target":"EMAIL","text":"texto a@b sin TLD","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0169","country":"CO","target":"NIT","text":"Referencia 900000000-1","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0170","country":"CL","target":"TELEFONO","text":"El registro contiene +56 pero no teléfono","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0171","country":"MX","target":"RFC","text":"Texto sin identificador","entities":[],"difficulty":"hard_negative","note":""}
+{"id":"T0172","country":"GLOBAL","target":"DIRECCION","text":"Código postal 12345, no dirección","entities":[],"difficulty":"hard_negative","note":""}
