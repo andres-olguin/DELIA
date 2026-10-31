@@ -40,3 +40,21 @@ La herramienta Python `benchmarks/evaluate.py` quedó **preparada y ejecutada lo
 **Comando cuando se publique en rama:** `python benchmarks/evaluate.py --dataset benchmarks/synthetic_pii_r3.jsonl --out benchmarks/resultados_locales.json`. Su implementación usa Python estándar y el módulo `backend.dlp.pii`.
 
 **Pruebas pendientes:** verificar versiones del motor, configuración exacta de competidores, métricas TP/FP/FN por span en ambientes homogéneos, generación de dataset estratificado con más variantes y revisión de las etiquetas por personas distintas de quien lo generó.
+
+
+---
+
+## Ronda 4 — verificación del baseline técnico y comparadores (31/10/2026)
+**No reescribe los resultados de la Ronda 3.** La revisión original del detector (71 TP, 3 FP, 79 FN, F1 63,39 %) permanece como evidencia histórica sin validación independiente. **No se ejecutó Presidio, Cloudflare DLP ni Google Model Armor durante Ronda 4**; por tanto no hay nuevos valores TP/FP/FN/F1 por entidad/país ni ganador externo.
+
+**Observación adicional ejecutada:** se reconstruyó un parche de API/auth/egress como diff local (no aplicado en `main`) y se ejecutó sólo `python -m pytest -q tests/test_api.py` con Python 3.13.5: **6 passed, 2 warnings** por `datetime.utcnow()`. Se hizo `git apply --check` del patch en snapshot de archivos base: **aplica correctamente**. NO se probó la suite completa `tests/` ni un servidor real, migraciones, aislamiento multitenant, Python 3.11/CI, respuesta LLM o cobertura PII ampliada. Las 6 pruebas NO son nuevas mediciones del detector.
+
+**Microsoft Presidio:** `presidio_analyzer` no está instalado en el entorno de la ronda (`importlib.util.find_spec('presidio_analyzer')` → False). Sin paquetes/modelos/idiomas certificados ni resultado del runner, su benchmark sigue **NO EJECUTADO**. No se sustituyen sus resultados por predicciones sobre cobertura regional.
+
+**Cloudflare DLP:** según [pricing oficial](https://developers.cloudflare.com/ai-gateway/reference/pricing/) (actualización 15/10/2026), AI Gateway ofrece escaneo DLP gratis con perfiles restringidos sin plan Zero Trust. **No ejecutado:** sin tenant autorizado ni instrumentación de spans; una respuesta `block/flag` a nivel solicitud sería **métrica por caso**, no estrictamente tipo+span.
+
+**Google Model Armor:** [servicio oficial](https://cloud.google.com/security/products/model-armor) publica nivel gratuito de 2 millones de tokens/mes sujeto a condiciones de proyecto; **no ejecutado** por falta de cuenta/proyecto autorizado. No estimar cobertura de CURP/NIT sin API.
+
+**Conclusión desfavorable:** el primer problema DELIA no es demostrar superioridad comercial sino la sanitización insuficiente de 79/150 entidades del set sintético; 10 % de recall de México y Bolivia es especialmente insuficiente. La comparación con regex didáctica sí favorecía DELIA en corpus anterior, pero no representa ventaja comercial. Priorizar tipos MX/BO, direcciones, negativos difíciles y asegurar que un falso negativo no llegue a terceros. Para credibilidad, evaluar mismos casos con anotador independiente y spans medibles en todos los sistemas.
+
+[Guía de ejecución libre/gestionada y plantilla de resultados](../docs/benchmarks/GUIA_COMPARADORES_DLP_RONDA4_2026-10-31.md) · [Revisión de seguridad del patch](../docs/REVISION_SEGURIDAD_PARCHE_P0_RONDA4_2026-10-31.md). Estado de GitHub: [ruleset #18](https://github.com/andres-olguin/DELIA/issues/18) impide rama y PR; **CI de PR NO EJECUTADO**.
