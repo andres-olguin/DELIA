@@ -1,5 +1,7 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+**Proyecto en investigación y desarrollo: capa intermediaria de control para aplicaciones que integran APIs de modelos de IA.** El nombre histórico no significa que exista cifrado reversible implementado o verificado.
+
 > **Security and governance layer for AI applications.**
 >
 > DELIA es un proyecto de software en desarrollo activo que busca proporcionar una capa intermediaria de seguridad entre aplicaciones corporativas y proveedores de modelos de lenguaje (LLMs). Su objetivo es reducir la exposición de datos sensibles, centralizar controles de tráfico y facilitar la trazabilidad de interacciones con sistemas de inteligencia artificial.
@@ -17,9 +19,49 @@
 **Cronograma inicial:** 12 de octubre de 2026 – 17 de enero de 2027.  
 **Repositorio:** [github.com/andres-olguin/DELIA](https://github.com/andres-olguin/DELIA)
 
+**Investigación de mercado y estrategia comercial ampliada (31/10/2026):** [Estudio integral Chile, México, Colombia y Bolivia — 108 fuentes y auditoría del código](docs/INTELIGENCIA_MERCADO_GO_TO_MARKET_CL_MX_CO_BO_2026-10-31.md) · [60 empresas para investigación — CSV (15 por país)](docs/PROSPECTOS_B2B_CL_MX_CO_BO_2026-10-31.csv). **Todas las cuentas están no contactadas y no hay interés de compra de DELIA confirmado.**
+
 **Investigación comercial (31/10/2026):** [Estudio de mercado B2B/B2C — Chile, México y Colombia](docs/ESTUDIO_MERCADO_B2B_B2C_CHILE_MEXICO_COLOMBIA_2026-10-31.md) · [Base de 12 cuentas observables para investigación (CSV)](docs/PROSPECTOS_OBSERVABLES_CL_MX_CO_2026-10-31.csv). Estos materiales presentan hipótesis de segmentación, fuentes y un protocolo de entrevistas; **no** acreditan compradores interesados ni demanda de DELIA validada.
 
 > **Aviso de estado:** DELIA está en desarrollo. Los objetivos descritos en este documento no implican que todas las funciones estén implementadas, que el sistema esté listo para producción ni que garantice cumplimiento normativo. Los estados deben actualizarse a partir del código, las pruebas y las revisiones del equipo.
+
+---
+
+## ¿Por qué investigar DELIA?
+
+Las empresas que integran APIs LLM deben decidir **qué datos envían al modelo, qué autorizaciones aplican, a qué proveedor llegan y qué evidencia conservan**. DELIA investiga una capa intermedia para centralizar esos controles en integraciones autorizadas. Su propuesta específica para Latinoamérica es medir la detección de identificadores locales y documentación de riesgos. **No intercepta conversaciones privadas de ChatGPT ni garantiza cumplimiento regulatorio.**
+
+### Estado técnico y comercial al 31/10/2026
+
+| Componente | Lo observado en el código `main` | Limitaciones |
+|---|---|---|
+| Detección de datos personales | Utilidades de patrones en `backend/dlp/pii.py` (RUT, NIT/cédula colombianos, email, teléfonos CL/CO, tarjetas) | Cobertura parcial; métricas de precisión y pruebas ejecutadas **no verificadas** |
+| API/proxy/auditoría | Archivos FastAPI, HTTPX y modelos presentes | **Bloqueos P0**: importaciones/esquemas inconsistentes, rutas auditoría sin auth explícita, texto sensible en modelos y redacción no conectada con reenvío |
+| México/Bolivia | Casos y documentos en investigación | CURP/RFC y CI/NIT bolivianos **no implementados** |
+| Controles empresariales | Arquitectura y roadmap documentados | Autenticación multitenant, rate limiting real, fallback, dashboard, tokenización reversible, cifrado/vault **no demostrados** |
+| Mercados y clientes | Investigación documental y 60 cuentas visibles | **0 compradores DELIA verificados**, no existen precios DELIA validados |
+
+**Prioridad de entrega:** corregir P0, reproducir la suite de pruebas, medir sanitización en datos sintéticos, ejecutar un benchmark honesto y recién entonces discutir pilotos autorizados. Ver [informe integral y mapa de riesgos](docs/INTELIGENCIA_MERCADO_GO_TO_MARKET_CL_MX_CO_BO_2026-10-31.md).
+
+### Casos de uso a validar, no funciones disponibles
+
+- Un SaaS de RR.HH. que quiera impedir el envío accidental de identificaciones a un proveedor LLM.
+- Una integración contable con NIT/RUT/CURP que necesite reglas documentadas para asistentes.
+- Un integrador que deba configurar políticas independientes por cliente y monitorear uso.
+- Un equipo de seguridad que requiera evidencia de decisiones de bloqueos sin guardar prompts sensibles.
+
+### Comparación comercial honesta de alternativas
+
+| Referente | Capacidades declaradas públicamente | Barrera para DELIA |
+|---|---|---|
+| [Cloudflare AI Gateway](https://developers.cloudflare.com/ai-gateway/reference/pricing/) | Gateway central con funciones gratis, DLP con condiciones | Proxy y DLP genérico ya existen |
+| [LiteLLM](https://www.litellm.ai/pricing) | Proxy multiproveedor OSS y herramientas de administración | OSS sin licencia pagada, pero requiere infraestructura |
+| [Portkey](https://portkey.ai/pricing) | Gateway/guardrails; Production anunciado US$49/mes | Competidor comercial consolidado |
+| [Google Model Armor](https://cloud.google.com/security-command-center/pricing) | Inspección de entradas/salidas; 2 millones de tokens/mes gratis, luego US$0,10/millón en modalidad publicada | Sanitización aislada enfrenta coste alternativo bajo |
+| [Microsoft Presidio](https://microsoft.github.io/presidio/supported_entities/) | Detectores PII extensibles, software abierto | Reglas locales deben demostrar mejora real |
+| [Azure AI Gateway (preview)](https://learn.microsoft.com/en-us/azure/api-management/ai-gateway-overview) | Auth, políticas, routing y telemetría, versión preliminar | Precio de preview por anunciar; capacidades del ecosistema |
+
+**No se declara que DELIA iguale o supere estas soluciones.** Comparativa de doce alternativas, fechas, precios y límites: [informe ampliado](docs/INTELIGENCIA_MERCADO_GO_TO_MARKET_CL_MX_CO_BO_2026-10-31.md).
 
 ---
 
