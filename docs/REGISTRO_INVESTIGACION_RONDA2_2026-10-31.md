@@ -19,14 +19,14 @@ Rondas: (A) lectura de main/estudios, (B) investigación de nuevas cuentas y fue
 | Medida | Conteo de inventario | Interpretación |
 |---|---:|---|
 | Bibliografía del estudio previo de cuatro países | **108** URLs numeradas | Punto de partida para comparación por URL normalizada (dominio sin `www`, ruta sin / final) |
-| Catálogo adicional Ronda 2, URLs distintas | **232** | Compuesto por sitios de cuentas, documentos de proveedores, resoluciones, fondos, eventos y directorios |
-| URLs no presentes entre las 108 anteriores | **199** | **Fuentes/enlaces adicionales identificados y examinados con intensidad variable; NO significa 199 sitios auditados íntegramente** |
+| Catálogo adicional Ronda 2, URLs distintas | **235** | Compuesto por sitios de cuentas, documentos de proveedores, resoluciones, fondos, eventos y directorios |
+| URLs no presentes entre las 108 anteriores | **202** | **Fuentes/enlaces adicionales identificados y examinados con intensidad variable; NO significa 199 sitios auditados íntegramente** |
 | Referencias de páginas con contenido consultado/registrado | **138** | Incluye algunas URLs también presentes en bibliografía anterior |
 | Sitios empresariales individuales con contenido web contrastado | **116 de 160** | Autodescripción en web pública, no comprobación de stack privado ni de compra |
 | Sitios empresariales pendientes de corroboración individual | **44 de 160** | Figura empresa/sitio vía directorio o fuente inicial, pero no se verificó el contenido corporativo directamente |
-| Otras fuentes solo consultadas mediante búsqueda, referencia parcial o lectura limitada | **50** | No equivalen a fuentes primarias verificadas integralmente |
+| Otras fuentes solo consultadas mediante búsqueda, referencia parcial o lectura limitada | **53** | No equivalen a fuentes primarias verificadas integralmente |
 
-**Resultado frente al requisito «150 fuentes adicionales»:** el inventario contiene **199 URLs distintas que no estaban en las 108 referencias anteriores**, por encima del umbral de **enlaces de investigación**. Sin embargo, **no se alcanzó la verificación integral, individual y de contenido de 150 de esas 199 páginas**; la cifra no debe presentarse como «150 fuentes primarias completamente auditadas». Se necesita revisión adicional de los sitios que fallaron, metadatos, fechas, LinkedIn y prensa antes de afirmar cumplimiento más estricto. La diferencia importa: contar enlaces no es equivalente a validar evidencia.
+**Resultado frente al requisito «150 fuentes adicionales»:** el inventario contiene **202 URLs distintas que no estaban en las 108 referencias anteriores**, por encima del umbral de **enlaces de investigación**. Sin embargo, **no se alcanzó la verificación integral, individual y de contenido de 150 de esas 202 páginas**; la cifra no debe presentarse como «150 fuentes primarias completamente auditadas». Se necesita revisión adicional de los sitios que fallaron, metadatos, fechas, LinkedIn y prensa antes de afirmar cumplimiento más estricto. La diferencia importa: contar enlaces no es equivalente a validar evidencia.
 
 La normalización de URLs usada solo elimina prefijo `www.` y slash final; redirecciones, duplicados semánticos y enlaces a documentos idénticos podrían requerir reconciliación manual. Las categorías de fuente son heterogéneas: resolución oficial ≠ autodescripción comercial ≠ directorio de empresas.
 
@@ -48,7 +48,9 @@ Se consultaron páginas oficiales de precios y características de Cloudflare, L
 
 ### Riesgos/sanciones
 
-Diez expedientes de autoridades de protección de datos y consumidor. **No todos son IA ni LLM**: varios son tratamiento de geolocalización, contraseñas, retención o reconocimiento facial. Son indicios de costos de prácticas incorrectas, no «multas que DELIA habría evitado».
+Diez expedientes de autoridades de protección de datos y consumidor: **tres decisiones de la SIC de Colombia** y siete antecedentes estadounidenses/europeos. **No todos son IA ni LLM**: varios son tratamiento de geolocalización, contraseñas, retención o reconocimiento facial. Son indicios de costos de prácticas incorrectas, no «multas que DELIA habría evitado».
+
+**Profundización regional:** se incorporaron fuentes oficiales colombianas sobre World Foundation/Tools for Humanity, Risks International y Construir Comundo. No se trata de fugas por LLM ni prueba de que DELIA las hubiera prevenido. Los expedientes y medidas se citan con estado comunicado por la autoridad; posibles recursos posteriores no están verificados.
 
 **Corrección jurídica importante:** el Garante italiano publicó sanción anunciada a OpenAI en 2024, pero su nota oficial informa que la oposición fue acogida por sentencia del Tribunal de Roma publicada el **18/03/2026**. Se corrigió el [informe](ESTUDIO_RONDA2_PROFUNDIZACION_COMERCIAL_2026-10-31.md) para no presentar la sanción como definitiva. Fuente oficial: https://gpdp.it/web/guest/home/docweb/-/docweb-display/docweb/10085432.
 
