@@ -2,7 +2,7 @@
 **Fecha diseño:** 2026-10-31. **Inicio propuesto:** 2026-11-02. **0 conversaciones realizadas verificadas.** Meta 15 invitaciones personalizadas a cargos corporativos (no pronóstico de 15 entrevistas aceptadas). No enviar en nombre de MasterTech sin revisión de base legal aplicable y autorización del canal.
 
 ## Muestra seleccionada, sin contactos personales
-Ver las [15 fichas de evidencia](fichas_ronda4/). Países: Chile 4, Colombia 4, México 4, Bolivia 3. Se busca variación de integradores, SaaS y servicios financieros. **Ancient Technology y Jugo de Limón aún carecen de evidencia independiente de despliegue LLM productivo; son casos exploratorios**. No asignar a ninguna cuenta interés, presupuesto o cargo confirmado.
+Ver las [15 fichas de evidencia](fichas_ronda4/). Países: Chile 5, Colombia 4, México 3, Bolivia 3. Se busca variación de integradores, SaaS y servicios financieros. **Los candidatos Vambe y Auronix se incorporaron por publicaciones corporativas más concretas; ninguna declaración demuestra por sí sola despliegue LLM auditado, necesidad o compra.**. No asignar a ninguna cuenta interés, presupuesto o cargo confirmado.
 
 ### Semana 1 — 02 al 08/11/2026: contraste y primer mensaje
 1. Comprobar en la web oficial la fuente por empresa y si el canal permite propuestas B2B; seleccionar cargo, no nombre. Bloquear envío si falta autorización o evidencia.
