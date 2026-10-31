@@ -17,6 +17,8 @@
 **Cronograma inicial:** 12 de octubre de 2026 – 17 de enero de 2027.  
 **Repositorio:** [github.com/andres-olguin/DELIA](https://github.com/andres-olguin/DELIA)
 
+**Investigación comercial (31/10/2026):** [Estudio de mercado B2B/B2C — Chile, México y Colombia](docs/ESTUDIO_MERCADO_B2B_B2C_CHILE_MEXICO_COLOMBIA_2026-10-31.md) · [Base de 12 cuentas observables para investigación (CSV)](docs/PROSPECTOS_OBSERVABLES_CL_MX_CO_2026-10-31.csv). Estos materiales presentan hipótesis de segmentación, fuentes y un protocolo de entrevistas; **no** acreditan compradores interesados ni demanda de DELIA validada.
+
 > **Aviso de estado:** DELIA está en desarrollo. Los objetivos descritos en este documento no implican que todas las funciones estén implementadas, que el sistema esté listo para producción ni que garantice cumplimiento normativo. Los estados deben actualizarse a partir del código, las pruebas y las revisiones del equipo.
 
 ---
