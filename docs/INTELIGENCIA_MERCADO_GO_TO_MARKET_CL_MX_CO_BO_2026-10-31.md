@@ -14,6 +14,8 @@
 
 **Competencia fuerte:** Cloudflare AI Gateway y LiteLLM tienen funciones base gratuitas; Portkey publica US$49/mes; Google Model Armor tiene **2 millones tokens mensuales gratis y US$0,10/millón adicional** en condiciones publicadas; Presidio es OSS. Por ello, no hay justificación para vender únicamente regex o enrutamiento genérico [F053] [F055] [F056] [F066].
 
+**Cobertura geográfica y equipo:** el equipo vinculado actualmente a MasterTech incluye Chile, Colombia, México y Bolivia. **Brasil es expansión futura**, no se presupone un equipo activo allí.
+
 **Mercados:** Chile primero por proximidad de MasterTech; México por integradores y SaaS con uso explícito de agentes; Colombia por software contable y fintech; Bolivia como piloto de investigación y alianzas técnicas, evitando sobrestimar adopción o madurez. Son preferencias de ejecución y **no** rankings estadísticos de conversión.
 
 **Prospección:** [60 cuentas observables documentadas](PROSPECTOS_B2B_CL_MX_CO_BO_2026-10-31.csv) (**15/país**), todas **«no contactada»**, ninguna con compra DELIA confirmada. Algunas solo exhiben APIs/datos digitales, no uso LLM: conservan la etiqueta de baja certeza para evitar falsas oportunidades.
@@ -27,7 +29,7 @@
 ---
 
 ## Índice
-1. Metodología y lectura de código · 2. Brechas para vender · 3. Mercado regional y regulaciones · 4. Competencia (12+ jugadores) · 5. Propuesta de valor y buyer personas · 6. Países y puntuación de segmentos · 7. Las 60 cuentas · 8. Precios y TAM/SAM/SOM · 9. Canales y discursos de venta · 10. Promoción, eventos y financiación · 11. Plan de 90 días · 12. Refutadores y criterios de decisión · 13. Auditoría y registro de investigación · 14. Bibliografía numerada.
+1. Ronda 1: auditoría técnica de main · 2. Ronda 2: competencia y sustitutos · 3. Diferenciadores y propuestas de valor · 4. Ronda 3: mercados y regulación por país · 5. Ronda 4: 60 cuentas observables · 6. Ronda 5: ICP, canales, precios, TAM/SAM/SOM, contacto y 90 días · 7. Ronda 6: auditoría y registro de investigación · 8. Bibliografía numerada (108 URLs).
 
 ## 1. Ronda 1 — auditoría de repositorio: lo que DELIA **hace** y **no hace**
 
