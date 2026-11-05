@@ -58,3 +58,13 @@ La herramienta Python `benchmarks/evaluate.py` quedó **preparada y ejecutada lo
 **Conclusión desfavorable:** el primer problema DELIA no es demostrar superioridad comercial sino la sanitización insuficiente de 79/150 entidades del set sintético; 10 % de recall de México y Bolivia es especialmente insuficiente. La comparación con regex didáctica sí favorecía DELIA en corpus anterior, pero no representa ventaja comercial. Priorizar tipos MX/BO, direcciones, negativos difíciles y asegurar que un falso negativo no llegue a terceros. Para credibilidad, evaluar mismos casos con anotador independiente y spans medibles en todos los sistemas.
 
 [Guía de ejecución libre/gestionada y plantilla de resultados](../docs/benchmarks/GUIA_COMPARADORES_DLP_RONDA4_2026-10-31.md) · [Revisión de seguridad del patch](../docs/REVISION_SEGURIDAD_PARCHE_P0_RONDA4_2026-10-31.md). Estado de GitHub: [ruleset #18](https://github.com/andres-olguin/DELIA/issues/18) impide rama y PR; **CI de PR NO EJECUTADO**.
+
+## Reproducción del análisis inicial del Issue #12
+
+Desde la raíz del repositorio, con Python estándar:
+
+```bash
+python3 -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_r3.jsonl > benchmarks/resultados_issue_12.json
+```
+
+El [reporte del Issue #12](resultados_issue_12.json) incluye los hashes SHA-256 del corpus y del detector evaluado. Las métricas son proporciones entre 0 y 1. Un valor `null` indica que el denominador es cero. Se evalúa el detector local por coincidencia exacta de tipo y posición. Los comparadores externos figuran como NO EJECUTADO.
