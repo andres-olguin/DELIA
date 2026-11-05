@@ -1,5 +1,17 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## Lectura rápida — situación comprobada al 4 de noviembre de 2026
+
+**DELIA es una investigación y un desarrollo de seguridad de IA, no un gateway de protección PII certificado ni listo para producción.** El benchmark sintético publicado identificó 71 verdaderos positivos, 3 falsos positivos y 79 falsos negativos: **recall 47,33 %**. El siguiente trabajo importante es corregir riesgos P0 y demostrar cobertura antes de tratar datos sensibles.
+
+- [Arquitectura escalable, seguridad y gates de producto](docs/ARQUITECTURA_ESCALABILIDAD_Y_GATES_2026-11-04.md).
+- [Revisión de riesgos del parche P0](docs/REVISION_SEGURIDAD_PARCHE_P0_RONDA4_2026-10-31.md): el parche local histórico **no estaba fusionado** a `main` en este corte.
+- [Investigación y benchmark reproducible](benchmarks/README.md).
+- [Incidencia de protección de ramas #18](https://github.com/andres-olguin/DELIA/issues/18): el ruleset `Proteccion-Main` aplica `~ALL` e impide crear ramas nuevas; la publicación de documentación en `main` no resuelve esa configuración.
+
+**Navegación:** este README conserva el informe detallado y la investigación original debajo. Leer primero el estado técnico, después los estudios y por último los documentos comerciales; no confundir hipótesis de mercado, CSV de prospectos y pruebas de ejecución.
+
+
 **Proyecto en investigación y desarrollo: capa intermediaria de control para aplicaciones que integran APIs de modelos de IA.** El nombre histórico no significa que exista cifrado reversible implementado o verificado.
 
 > **Security and governance layer for AI applications.**
