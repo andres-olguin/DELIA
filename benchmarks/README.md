@@ -1,3 +1,36 @@
+# Corpus sintético de México y Bolivia
+
+[synthetic_pii_mx_bo.jsonl](synthetic_pii_mx_bo.jsonl) reúne 96 escenarios
+seleccionados según la [especificación de detección](../docs/benchmarks/ISSUE_16_COMPORTAMIENTO_DETECCION.md).
+Hay 48 casos por país, distribuidos en 40 positivos, 45 negativos, 7 ambiguos y
+4 regresiones. Las 55 entidades anotadas incluyen 49 de los tipos nuevos y 6 de
+categorías existentes. Los casos cubren fechas imposibles, límites, contexto,
+claves genéricas, complementos y solapes.
+
+Los textos se redactaron para el laboratorio. Las cadenas pueden coincidir
+fortuitamente con identificadores emitidos y se usan sin consultar padrones ni
+asociarlas con titulares. El corpus histórico de Ronda 3 se conserva para
+reproducir sus resultados.
+
+Desde la raíz, generar el archivo con Python estándar.
+
+```bash
+python3 benchmarks/generate_synthetic_pii_mx_bo.py > benchmarks/synthetic_pii_mx_bo.jsonl
+```
+
+El generador calcula los índices a partir de anotaciones en las plantillas.
+Cada entidad señala el intervalo original con inicio inclusivo y fin exclusivo.
+La regeneración produce el mismo archivo byte por byte. Para agregar un
+escenario, se puede añadir al final del bloque de su tipo para preservar los
+identificadores de los casos existentes.
+
+El evaluador probado en el [diagnóstico inicial](../docs/benchmarks/ISSUE_16_DIAGNOSTICO_INICIAL.md)
+leyó los 96 casos y comparó tipo e intervalo exactos. Con el detector anterior
+a la implementación obtuvo 6 aciertos, 1 falso positivo y 49 falsos negativos.
+El falso positivo es la secuencia de 13 dígitos que pasa Luhn y está etiquetada
+como NIT boliviano. Este corpus sirve para comparar el comportamiento antes y
+después sobre las mismas entradas sintéticas.
+
 # Ronda 3 — Corpus PII sintético y benchmarking reproducible
 
 **Fecha:** 31/10/2026. [Dataset etiquetado JSONL](synthetic_pii_r3.jsonl): 172 casos de laboratorio, 150 entidades positivas, 22 registros sin entidades. Países CL/CO/MX/BO y categoría GLOBAL. Incluye RUT, NIT, cédula, CURP, RFC, CI/NIT boliviano, tarjetas de prueba, teléfonos, correos `.invalid`, direcciones inventadas y negativos difíciles.
