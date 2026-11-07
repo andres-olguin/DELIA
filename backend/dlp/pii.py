@@ -1,4 +1,5 @@
 import re
+from datetime import date
 from typing import NamedTuple
 
 class Finding(NamedTuple):
@@ -28,9 +29,58 @@ def _check_id(dv_fn):
         return dv_fn(body) == dv
     return check
 
+
+def _valid_date(value: str, century: int) -> bool:
+    try:
+        date(century + int(value[:2]), int(value[2:4]), int(value[4:6]))
+    except ValueError:
+        return False
+    return True
+
+
+def _valid_curp(raw: str) -> bool:
+    # La regex comprueba estructura. El diferenciador determina la ventana del año.
+    century = 1900 if raw[16].isdigit() else 2000
+    return _valid_date(raw[4:10], century)
+
+
+def _valid_rfc(raw: str) -> bool:
+    if raw.upper() in {"XAXX010101000", "XEXX010101000"}:
+        return False
+    value = raw[-9:-3]
+    return _valid_date(value, 1900) or _valid_date(value, 2000)
+
+
+# Los límites conservan semántica Unicode, mientras los bloques de identificador
+# usan letras y dígitos explícitos. Así se evita aceptar letras Unicode similares.
+_CURP_PATTERN = (
+    r"(?<![\w&-])(?ai:[A-Z][AEIOUX][A-Z]{2}[0-9]{6}[HMX]"
+    r"(?:AS|BC|BS|CC|CH|CL|CM|CS|DF|DG|GR|GT|HG|JC|MC|MN|MS|NE|NL|NT|"
+    r"OC|PL|QO|QR|QT|SL|SP|SR|TC|TL|TS|VZ|YN|ZS)"
+    r"[B-DF-HJ-NP-TV-Z]{3}[A-Z0-9][0-9])(?![\w&-])"
+)
+_RFC_PATTERN = r"(?<![\w&-])(?ai:[A-ZÑñ&]{3,4}[0-9]{6}[A-Z0-9]{3})(?![\w&-])"
+
+# Etiqueta y valor en la misma línea, incluyendo claves y valores JSON citados.
+_ID_SEPARATOR = r'"?(?:[ \t]*[:=#][ \t]*|[ \t]+)"?'
+_CI_BO_PATTERN = (
+    r"(?i:(?<!\w)(?:ci(?:[ \t]+(?:bolivia|bo))?|c\.i\.|c[eé]dula[ \t]+boliviana))"
+    + _ID_SEPARATOR
+    + r"((?ai:[0-9]{5,10}(?:-[A-Z0-9]{2})?"
+    r"(?:(?:[ \t]+|-)(?:BE|CB|CH|LP|OR|OU|PD|PT|SC|TJ))?))(?![\w-])"
+)
+_NIT_BO_PATTERN = (
+    r"(?i:(?<!\w)nit(?:[ \t]+(?:bolivia|boliviano|bo))?)"
+    + _ID_SEPARATOR
+    + r"([0-9]{8,13})(?![\w-])"
+)
+
 # (tipo, regex, validador opcional sobre el texto encontrado, grupo a enmascarar)
-# shortcut: NIT solo de 9 dígitos y RUT de 7-8 (los comunes), ampliar si aparecen falsos negativos.
+# shortcut: NIT colombiano de 9 dígitos y RUT de 7-8, ampliar si aparecen falsos negativos.
 _RULES = (
+    # El orden resuelve empates de intervalo a favor del contexto boliviano.
+    ("CI_BO", _CI_BO_PATTERN, None, 1),
+    ("NIT_BO", _NIT_BO_PATTERN, None, 1),
     ("EMAIL", r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+", None, 0),
     ("RUT", r"\b\d{1,2}\.?\d{3}\.?\d{3}-[\dkK]\b", _check_id(rut_dv), 0),
     ("NIT", r"\b\d{3}\.?\d{3}\.?\d{3}-\d\b", _check_id(nit_dv), 0),
@@ -40,6 +90,9 @@ _RULES = (
     ("CEDULA",
      r"(?i)\b(?:c\.\s?c\.?|cc|c[eé]dula(?:\s+de\s+ciudadan[ií]a)?)\s*(?:no\.?|n[oº°]\.?|n[uú]mero|#)?\s*:?\s*"
      r"(\d{1,3}(?:\.\d{3}){1,2}|\d{6,10})\b", None, 1),
+    # Validación estructural y de calendario, sin consulta de identidad ni checksum.
+    ("CURP", _CURP_PATTERN, _valid_curp, 0),
+    ("RFC", _RFC_PATTERN, _valid_rfc, 0),
 )
 
 def detect(text: str) -> list[Finding]:
@@ -49,6 +102,7 @@ def detect(text: str) -> list[Finding]:
             if validate is None or validate(m.group(0)):
                 found.append(Finding(kind, m.start(group), m.end(group)))
     # Ante solapes gana el hallazgo que empieza antes y, a igual inicio, el más largo.
+    # A igualdad de intervalo prevalece el orden de _RULES.
     found.sort(key=lambda f: (f.start, -(f.end - f.start)))
     result, last_end = [], 0
     for f in found:
