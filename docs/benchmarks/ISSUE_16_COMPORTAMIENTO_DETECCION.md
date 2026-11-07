@@ -64,6 +64,17 @@ revisado los tratará como negativos deliberados.
 - La fecha del candidato se comprueba con calendario. Las ventanas de año son
   convenciones para detección y admiten, por ejemplo, el 29 de febrero de 2000
   cuando la variante permite ese siglo. No se contrasta la fecha con un padrón.
+- Los espacios y tabuladores alrededor de los guiones de CI forman parte del
+  intervalo enmascarado. Un sufijo unido mediante guion debe cumplir la forma
+  admitida antes de que se pueda aceptar el candidato completo. Las etiquetas
+  usan las letras latinas indicadas y se rechazan coincidencias pegadas a marcas
+  combinantes Unicode. Se evitan recortes de números unidos a otros dígitos
+  mediante punto, coma o barra.
+- La Ñ y la ñ del bloque inicial de RFC también se reconocen cuando aparecen
+  como escapes JSON `\u00d1` y `\u00f1`. El intervalo incluye la secuencia escapada
+  del cuerpo original. Los correos con esos escapes o con `&` en la parte local
+  se enmascaran completos. Otros mecanismos de escape requieren cobertura
+  adicional antes de considerarse admitidos.
 
 ## Precedencia
 
@@ -106,3 +117,23 @@ La comprobación inicial se ejecutó con
 También se comprobó que el detector actual clasifica la cadena sintética de
 13 dígitos de la tabla como `TARJETA`. Los ejemplos de salida nueva quedan como
 criterios de aceptación para la implementación.
+
+## Verificación ampliada
+
+Se ejecutó el siguiente grupo con Python 3.14.4, pytest 9.2.0, SQLAlchemy 2.1.8
+y requests 2.34.2 instalado dentro de `.venv` para el consumidor HTTP.
+
+```bash
+.venv/bin/python -m pytest -q --tb=short tests/test_pii.py tests/test_pii_mx_bo.py tests/test_replay_session.py tests/test_logger.py tests/test_models.py
+```
+
+Resultado de la revisión ampliada, **157 pruebas aprobadas y 12 advertencias**.
+Las advertencias proceden de `declarative_base()` y `datetime.utcnow()` en los
+modelos existentes. Se verificaron detección, intervalos con prefijos Unicode,
+valores repetidos, idempotencia, texto, bytes UTF-8 y JSON preparado por
+`LoggedSession`. El adaptador de prueba captura las solicitudes en memoria.
+
+La ejecución `.venv/bin/python -m pytest -q --tb=short tests/` se interrumpió
+durante la recolección de `tests/test_api.py` porque falta `fastapi` en el entorno.
+Las pruebas API siguen pendientes. Los 157 resultados corresponden únicamente
+al comando de selección anterior.

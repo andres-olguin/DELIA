@@ -1,6 +1,7 @@
 import re
 from datetime import date
 from typing import NamedTuple
+from unicodedata import category
 
 class Finding(NamedTuple):
     type: str
@@ -59,21 +60,38 @@ _CURP_PATTERN = (
     r"OC|PL|QO|QR|QT|SL|SP|SR|TC|TL|TS|VZ|YN|ZS)"
     r"[B-DF-HJ-NP-TV-Z]{3}[A-Z0-9][0-9])(?![\w&-])"
 )
-_RFC_PATTERN = r"(?<![\w&-])(?ai:[A-ZÑñ&]{3,4}[0-9]{6}[A-Z0-9]{3})(?![\w&-])"
+# requests serializa Ñ/ñ como \u00d1/\u00f1 en JSON. Capturar el escape
+# completo mantiene los índices sobre el cuerpo original y permite reemplazarlo.
+_RFC_PATTERN = (
+    r"(?<![\w&-])(?ai:(?:[A-ZÑñ&]|\\u00[DF]1){3,4}"
+    r"[0-9]{6}[A-Z0-9]{3})(?![\w&-])"
+)
 
 # Etiqueta y valor en la misma línea, incluyendo claves y valores JSON citados.
 _ID_SEPARATOR = r'"?(?:[ \t]*[:=#][ \t]*|[ \t]+)"?'
+_NUMERIC_END = r"(?![\w-]|[.,/][0-9])(?![ \t]*-)"
 _CI_BO_PATTERN = (
-    r"(?i:(?<!\w)(?:ci(?:[ \t]+(?:bolivia|bo))?|c\.i\.|c[eé]dula[ \t]+boliviana))"
+    r"(?<!\w)(?ai:ci(?:[ \t]+(?:bolivia|bo))?|c\.i\.|c[eéÉ]dula[ \t]+boliviana)"
     + _ID_SEPARATOR
-    + r"((?ai:[0-9]{5,10}(?:-[A-Z0-9]{2})?"
-    r"(?:(?:[ \t]+|-)(?:BE|CB|CH|LP|OR|OU|PD|PT|SC|TJ))?))(?![\w-])"
+    + r"((?ai:[0-9]{5,10}(?:[ \t]*-[ \t]*[A-Z0-9]{2})?"
+    r"(?:(?:[ \t]*-[ \t]*|[ \t]+)(?:BE|CB|CH|LP|OR|OU|PD|PT|SC|TJ))?))"
+    + _NUMERIC_END
 )
 _NIT_BO_PATTERN = (
-    r"(?i:(?<!\w)nit(?:[ \t]+(?:bolivia|boliviano|bo))?)"
+    r"(?<!\w)(?ai:nit(?:[ \t]+(?:bolivia|boliviano|bo))?)"
     + _ID_SEPARATOR
-    + r"([0-9]{8,13})(?![\w-])"
+    + r"([0-9]{8,13})"
+    + _NUMERIC_END
 )
+_REGIONAL_TYPES = {"CURP", "RFC", "CI_BO", "NIT_BO"}
+
+
+def _has_combining_boundary(text: str, start: int, end: int) -> bool:
+    # Una marca combinante pertenece al token vecino aunque no coincida con \w.
+    for position in (start - 1, end):
+        if 0 <= position < len(text) and category(text[position]).startswith("M"):
+            return True
+    return False
 
 # (tipo, regex, validador opcional sobre el texto encontrado, grupo a enmascarar)
 # shortcut: NIT colombiano de 9 dígitos y RUT de 7-8, ampliar si aparecen falsos negativos.
@@ -81,7 +99,7 @@ _RULES = (
     # El orden resuelve empates de intervalo a favor del contexto boliviano.
     ("CI_BO", _CI_BO_PATTERN, None, 1),
     ("NIT_BO", _NIT_BO_PATTERN, None, 1),
-    ("EMAIL", r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+", None, 0),
+    ("EMAIL", r"(?:[\w.+&-]|\\u00[dDfF]1)+@[\w-]+(?:\.[\w-]+)+", None, 0),
     ("RUT", r"\b\d{1,2}\.?\d{3}\.?\d{3}-[\dkK]\b", _check_id(rut_dv), 0),
     ("NIT", r"\b\d{3}\.?\d{3}\.?\d{3}-\d\b", _check_id(nit_dv), 0),
     ("TARJETA", r"\b\d(?:[ -]?\d){12,18}\b", lambda s: luhn(re.sub(r"\D", "", s)), 0),
@@ -99,6 +117,8 @@ def detect(text: str) -> list[Finding]:
     found = []
     for kind, pattern, validate, group in _RULES:
         for m in re.finditer(pattern, text):
+            if kind in _REGIONAL_TYPES and _has_combining_boundary(text, m.start(group), m.end(group)):
+                continue
             if validate is None or validate(m.group(0)):
                 found.append(Finding(kind, m.start(group), m.end(group)))
     # Ante solapes gana el hallazgo que empieza antes y, a igual inicio, el más largo.
