@@ -1,6 +1,6 @@
 from uuid import uuid4
 from dataclasses import dataclass
-from app.models.chat import ChatRequest
+from models.chat import ChatRequest
 
 @dataclass
 class AuditResult:

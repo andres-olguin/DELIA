@@ -1,6 +1,6 @@
 import httpx
 from fastapi import HTTPException
-from app.models.chat import ChatRequest
+from models.chat import ChatRequest
 
 # URL temporal o de prueba del proveedor de IA upstream (puedes ajustarla según el proveedor que utilices)
 UPSTREAM_URL = "https://api.openai.com/v1/chat/completions"

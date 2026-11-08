@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Header, Depends
 from sqlalchemy.orm import Session
-from app.models.chat import ChatRequest
-from app.services.audit import audit_prompt
-from app.services.proxy import forward_request
+from models.chat import ChatRequest
+from services.audit import audit_prompt
+from services.proxy import forward_request
 from app.database import get_db
 from app.models import AuditLog
 
