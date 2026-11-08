@@ -83,3 +83,22 @@ verificadores de CURP/RFC sigue pendiente. Los porcentajes tampoco miden tipos
 ajenos al alcance, como direcciones, ni reemplazan los resultados del corpus
 histórico de 172 casos. Presidio, Cloudflare DLP y Google Model Armor figuran como
 NO EJECUTADOS en los reportes.
+
+La [guía de pruebas](../../CONTRIBUTING.md#pruebas) explica cómo reproducir el
+entorno con dependencias fijadas. El
+[workflow de GitHub Actions](../../.github/workflows/python-tests.yml) ejecuta
+la suite completa y el benchmark actual con ese entorno. Su salida permite
+revisar el resultado del detector para cada cambio.
+
+El alcance operativo de la medición es `detect()` y el corpus sintético. Las
+pruebas de enmascaramiento cubren `redact()` y el cuerpo enviado mediante
+`LoggedSession`. La ruta `/proxy/v1/chat` reenvía por un servicio distinto
+con HTTPX y queda fuera de esa verificación de enmascaramiento. Para el
+seguimiento de su integración, consulta
+[sanitización antes del proveedor](https://github.com/andres-olguin/DELIA/issues/9).
+
+El contrato de `detect()` y `redact()` conserva las etiquetas existentes y
+los índices sobre el texto original. Los nuevos tipos son `CURP`, `RFC`,
+`CI_BO` y `NIT_BO`. La migración de nombres de API, campos heredados y base de
+datos se documenta en el
+[plan TALIA → DELIA](../PLAN_MIGRACION_TALIA_DELIA_2026-10-31.md).

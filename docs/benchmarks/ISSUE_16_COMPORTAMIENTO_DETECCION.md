@@ -135,5 +135,8 @@ valores repetidos, idempotencia, texto, bytes UTF-8 y JSON preparado por
 
 La ejecución `.venv/bin/python -m pytest -q --tb=short tests/` se interrumpió
 durante la recolección de `tests/test_api.py` porque falta `fastapi` en el entorno.
-Las pruebas API siguen pendientes. Los 157 resultados corresponden únicamente
-al comando de selección anterior.
+Los 157 resultados corresponden al comando de selección anterior. En una
+ejecución posterior, con FastAPI y HTTPX instalados y las rutas de importación
+corregidas, pasaron los cuatro casos API. La suite completa más reciente y
+su entorno se documentan en [los resultados](RESULTADOS_MX_BO.md) y en la
+[guía de pruebas](../../CONTRIBUTING.md#pruebas).

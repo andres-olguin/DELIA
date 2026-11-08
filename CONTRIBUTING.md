@@ -32,7 +32,24 @@ Si descubres una posible vulnerabilidad que pudiera exponer datos, **no publique
 
 ## Pruebas
 
-Existen pruebas en `tests/` y módulos de backend y API en distintas etapas. Antes de ejecutar, verifica las dependencias y la configuración real; el README incluye una guía inicial con advertencias. Si tu PR modifica código, añade las pruebas correspondientes y especifica los comandos usados y sus resultados. No asumas que un archivo de prueba implica que toda la aplicación funciona.
+Para reproducir la suite en Linux, ejecuta estos comandos desde la raíz con
+Python 3.14.4. Las dependencias directas e indirectas de prueba tienen versiones
+fijas en [requirements-test.txt](requirements-test.txt).
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-test.txt
+.venv/bin/python -m pip check
+.venv/bin/python -m pytest -q --tb=short tests/
+```
+
+Las pruebas API usan SQLite en memoria y las pruebas del cliente HTTP usan
+un adaptador en memoria. GitHub Actions ejecuta la misma suite y el benchmark
+sintético en los PR hacia `main` y en los pushes a las ramas configuradas.
+Si tu PR modifica código, añade las pruebas correspondientes y registra los
+comandos usados y sus resultados. Consulta el
+[informe del benchmark](docs/benchmarks/RESULTADOS_MX_BO.md) para reproducir
+la comparación y conocer sus límites.
 
 ## Participación y condiciones
 
