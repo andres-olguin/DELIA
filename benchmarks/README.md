@@ -24,12 +24,20 @@ La regeneración produce el mismo archivo byte por byte. Para agregar un
 escenario, se puede añadir al final del bloque de su tipo para preservar los
 identificadores de los casos existentes.
 
-El evaluador probado en el [diagnóstico inicial](../docs/benchmarks/ISSUE_16_DIAGNOSTICO_INICIAL.md)
-leyó los 96 casos y comparó tipo e intervalo exactos. Con el detector anterior
-a la implementación obtuvo 6 aciertos, 1 falso positivo y 49 falsos negativos.
-El falso positivo es la secuencia de 13 dígitos que pasa Luhn y está etiquetada
-como NIT boliviano. Este corpus sirve para comparar el comportamiento antes y
-después sobre las mismas entradas sintéticas.
+El evaluador `benchmarks/evaluate.py` está incorporado a esta rama y compara
+tipo e intervalo exactos. La medición sobre los mismos 96 casos pasó de 6
+aciertos, 1 falso positivo y 49 falsos negativos a 55 aciertos, 0 falsos positivos
+y 0 falsos negativos. Precisión, recall y F1 actuales alcanzan el 100 % en este
+corpus de desarrollo. La evaluación independiente sigue pendiente.
+[Resultados, límites y comandos reproducibles](../docs/benchmarks/RESULTADOS_MX_BO.md).
+
+```bash
+python3 -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_bo.jsonl
+```
+
+Los apartados de Ronda 3 y Ronda 4 que siguen conservan el estado histórico de
+esas evaluaciones. El documento de resultados anterior describe las herramientas
+y resultados de la rama de trabajo actual.
 
 # Ronda 3 — Corpus PII sintético y benchmarking reproducible
 
