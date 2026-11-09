@@ -4,7 +4,7 @@
 
 **Evolución de go-to-market:** una primera oferta de evaluación de procesos `Workflow Readiness Lab` (servicio profesional sujeto a alcance y contrato), un cliente ideal concreto —integradoras con agentes conectados a CRM/BPO de bajo riesgo— y un sistema de evidencia para ventas, margen, seguridad y decisiones de producto. **No hay clientes ni ventas acreditadas por estos documentos.**
 
-- [Plan maestro comercial y de producto](docs/commercial-master/README.md): 17 guías operativas con tareas, buyer discovery, pricing por hipótesis, partners, fondos, riesgos y decisiones de pivot.
+- [Plan maestro comercial y de producto](docs/commercial-master/README.md): 20 guías operativas con tareas, buyer discovery, pricing por hipótesis, partners, fondos, riesgos y decisiones de pivot.
 - [Ficha comercial DELIA](docs/commercial-master/15-onepager-para-compradores.md) y [programa de design partners](docs/commercial-master/04-design-partners.md).
 - [Herramienta comercial determinista](commercial_ops/decision_support.py): calificación **heurística, no probabilidad de venta**, escenarios financieros ficticios y bloqueo de autorizaciones implícitas de pilotos. `python -m commercial_ops.demo`.
 - [Financiación en revisión](docs/commercial-master/07-financiacion-y-capital.md): BIG13 Build/Ignite/Growth cierra el 24/11/2026 a las 13:00 de Chile; elegibilidad NO confirmada.
