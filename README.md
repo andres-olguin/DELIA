@@ -1,5 +1,16 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## Punto de entrada ejecutivo y técnico — Base de desarrollo (09/11/2026)
+
+**[START HERE · Estado real de DELIA y siguiente trabajo](docs/foundation/README.md).** La prioridad no es crear más líneas de producto: es **arranque reproducible → autenticación/aislamiento → DLP antes de egreso → control E2E de herramientas → resultado contrastado → adopción y costo de segundo cliente**. Las publicaciones y escenarios financieros existentes son borradores e hipótesis, no tracción demostrada.
+
+**[Verificador read-only de preparación](tools/foundation_doctor.py):** `python -m tools.foundation_doctor` muestra riesgos detectados y controles pendientes; `--require-production-ready` **bloquea por diseño**. No certifica seguridad. [13 controles y evidencias](docs/foundation/readiness-controls.json) · [Plan hasta el 15 de enero](docs/foundation/PLAN_10_SEMANAS.md) · [Tesis de producto única](docs/foundation/UNICA_APUESTA_Y_KILL_RULES.md) · [Primera oferta de diagnóstico](docs/foundation/SERVICIO_DIAGNOSTICO.md).
+
+**Estado:** main no está autorizado para clientes, PII real, SaaS productivo ni gateway externo protegido. No confundir PR #21 DRAFT con funcionalidades publicadas.
+
+---
+
+
 ## DELIA — Lanzamiento en redes y ventas hasta enero de 2027 (09/11/2026)
 
 **Programa práctico:** [comenzar presencia en LinkedIn/GitHub y videos originales](docs/growth/launch-2026-2027/plan-redes-y-captacion.md), [borradores de las primeras publicaciones](docs/growth/launch-2026-2027/publicaciones-iniciales.md), [18 competidores adicionales (40 referencias acumuladas)](docs/growth/launch-2026-2027/competencia-adicional.md) y [proyección CLP diciembre–enero](docs/growth/launch-2026-2027/proyeccion-comercial-dic-ene.md). Tres escenarios: CLP $290.000 conservador, $1.660.000 base y $3.320.000 expansión en **ingresos acumulados hipotéticos** (no ventas conseguidas, no pronóstico estadístico). **0 MRR SaaS en el plan**. Los posts son **borradores no publicados** y Metricool no tiene canales conectados.
