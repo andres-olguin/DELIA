@@ -1,0 +1,10 @@
+{
+  "status": "LAB",
+  "disclaimer": "Solo datos sintéticos; no autenticación, ejecución ni reconciliación con proveedor real.",
+  "contract_id": "commerce-refund-mx",
+  "version": 1,
+  "currency": "MXN",
+  "max_amount_minor": 2000000,
+  "require_customer_verification": true,
+  "require_paid_order": true
+}
