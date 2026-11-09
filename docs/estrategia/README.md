@@ -1,5 +1,10 @@
 # DELIA — Estrategia de plataforma, productos y expansión 2027
 
+## Red team de competidores del núcleo Outcome Assurance
+
+**Hallazgo 09/11/2026:** Pruvz, ACPT, AgentTrustOps y NIA describen funciones directamente similares a DELIA Outcome Assurance; Helio/Preloop cubren gateway y Beyryl/AIRA el canal MSP. No promover «único en resultados verificados» ni «único B2B2B». [Análisis de 22 competidores](red-team-competitivo-2026-11-09.md) y [propuesta de Contratos Portables para Integradoras](../competitive-assurance/README.md) que **por ahora solo tiene mocks**, no gateway real. Los hitos comerciales siguen condicionados a compradores y P0.
+
+
 ## Programa de expansión comercial y mediática basado en pruebas
 
 Se incorpora [DELIA Research × Product × Media × Revenue](../growth/README.md): investigación de cuatro videos, evidencia externa, posicionamiento ante compradores, guiones originales, kit de prensa, calendario editorial de 60 días y metas aceleradas hasta 15/02/2027. Los contenidos están **en borrador**, sin lanzamiento comercial ni publicaciones efectivas; consultar el [registro de fuentes](../growth/media-evidence/claims.json).

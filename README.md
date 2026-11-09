@@ -1,5 +1,14 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## Auditoría competitiva adversarial y DELIA ContractOps (09/11/2026)
+
+La [revisión de 22 competidores y estándares](docs/estrategia/red-team-competitivo-2026-11-09.md) encontró sustitutos **directos** de Outcome Assurance (Pruvz, ACPT, AgentTrustOps y NIA), de gateway/seguridad (Helio, Preloop) y canal B2B2B (Beyryl, AIRA). **No afirmamos que DELIA sea único ni superior.** La dirección de producto a validar es [DELIA ContractOps for Integrators](docs/competitive-assurance/README.md): contratos de proceso y pruebas comparables **sobre la infraestructura existente**. El [laboratorio de compatibilidad](competitive_assurance/) usa **dos adaptadores ficticios** para comprobar divergencias; no implementa seguridad productiva ni conecta proveedores.
+
+[Propuesta de valor y economía](docs/competitive-assurance/value-proposition-economics.md) · [Matriz de 22 fuentes](docs/estrategia/competidores-directos-2026-11-09.json). Se mantienen todos los riesgos P0 y la beta de enero es meta condicional.
+
+---
+
+
 ## Investigación, crecimiento y presencia pública (09/11/2026)
 
 **Nuevo programa:** [DELIA Research × Product × Media × Revenue](docs/growth/README.md) integra cuatro videos de divulgación (analizados con límites), fuentes verificables, un [calendario editorial de 60 días](docs/growth/media/editorial-engine.md), [metas aceleradas hasta enero/febrero](docs/growth/execution/roadmap-accelerated.md), [plan de captación B2B](docs/growth/business/gtm-experiments.md) y [registro de evidencia editorial con validación automatizada](docs/growth/media-evidence/claims.json). **Todo el calendario está en borrador; no se publicaron contenidos ni se adquirieron clientes mediante este trabajo.**
