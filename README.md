@@ -1,5 +1,12 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## AI Control Research — investigación sobre supervisión de agentes (09/11/2026)
+
+DELIA incorpora una [línea científica y técnica de control de agentes](docs/research/agent-control/README.md), motivada por debates públicos de seguridad de IA y respaldada por fuentes primarias (International AI Safety Report 2026, ONU, OWASP ACS, NIST, MITRE ATLAS y ControlArena). Incluye [14 escenarios y un protocolo de evaluación](docs/research/agent-control/controls-research-matrix.json) más [posibilidades comerciales específicas](docs/research/agent-control/product-opportunity.md). **Investigación y tests del inventario, NO prevención de riesgos existenciales, seguridad productiva o certificación.** No sustituye el enfoque inicial en integradoras CRM/BPO ni los controles P0 pendientes.
+
+---
+
+
 ## DELIA Master Commercial Operating System (09/11/2026)
 
 **Evolución de go-to-market:** una primera oferta de evaluación de procesos `Workflow Readiness Lab` (servicio profesional sujeto a alcance y contrato), un cliente ideal concreto —integradoras con agentes conectados a CRM/BPO de bajo riesgo— y un sistema de evidencia para ventas, margen, seguridad y decisiones de producto. **No hay clientes ni ventas acreditadas por estos documentos.**
