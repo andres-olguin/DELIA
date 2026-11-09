@@ -1,30 +1,35 @@
-from fastapi import FastAPI, Depends, HTTPException
-from sqlalchemy.orm import Session
-from . import models, schemas
-from .database import engine, get_db
-from .api import proxy  # 1. Importar el router del proxy
+"""Public API shell, deliberately fail-closed while core P0 controls remain open.
 
-# Crea las tablas en PostgreSQL automáticamente al arrancar
-models.Base.metadata.create_all(bind=engine)
+No database IO at import; no unprotected audit CRUD and no upstream requests.
+Only the documentation and synthetic demonstration are suitable for publication.
+"""
+from fastapi import FastAPI, HTTPException
+from .api import proxy
 
-app = FastAPI(title="TALIA Proxy & Audit Middleware", version="1.0.0")
-
-# 2. Registrar el router del proxy
+app = FastAPI(
+    title="DELIA research API (DANREXO naming pending)",
+    version="0.1.0-lab",
+    description="Experimental only. Not a production security service.",
+)
 app.include_router(proxy.router)
+
 
 @app.get("/")
 def read_root():
-    return {"status": "online", "system": "TALIA Middleware active"}
+    return {
+        "status": "laboratory",
+        "system": "DELIA / future DANREXO",
+        "production_ready": False,
+        "proxy_enabled": False,
+    }
 
-@app.post("/audit/", response_model=schemas.AuditLogResponse)
-def create_audit_log(log: schemas.AuditLogCreate, db: Session = Depends(get_db)):
-    db_log = models.AuditLog(**log.dict())
-    db.add(db_log)
-    db.commit()
-    db.refresh(db_log)
-    return db_log
 
-@app.get("/audit/", response_model=list[schemas.AuditLogResponse])
-def get_audit_logs(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    logs = db.query(models.AuditLog).offset(skip).limit(limit).all()
-    return logs
+@app.post("/audit/")
+def create_audit_log():
+    # Audit read/write must await real scoped identity and tenant isolation.
+    raise HTTPException(status_code=503, detail="Audit API disabled pending authentication")
+
+
+@app.get("/audit/")
+def get_audit_logs():
+    raise HTTPException(status_code=503, detail="Audit API disabled pending authentication")
