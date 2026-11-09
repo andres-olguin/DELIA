@@ -1,5 +1,8 @@
 # Roadmap y Carta Gantt Maestra — Proyecto DELIA
 
+> **Roadmap histórico:** este documento contiene la planificación inicial de octubre de 2026. La estrategia de producto, edición Cloud/Partner/Enterprise, sectores y fechas de desarrollo posteriores están descritas en [la actualización estratégica del 9 de noviembre de 2026](estrategia/roadmap-con-fechas-y-gates.md). No suponer que las tareas históricas ya fueron completadas. La fecha de enero es una **meta condicionada a controles P0**, no autorización automática para producción.
+
+
 **DELIA** (**D**ata **A**ncryption & **L**imiting **I**ntelligence **A**gent) es un proxy de seguridad, cifrado y control de cumplimiento normativo (Ley 21.719 en Chile y directrices de la SIC en Colombia) para agentes de inteligencia artificial.
 
 ---

@@ -1,0 +1,32 @@
+name: DELIA Strategic Portfolio — Validation
+on:
+  push:
+    branches: [main, docs/portfolio-verticals-commercial-2027]
+    paths:
+      - 'docs/estrategia/**'
+      - 'tests/test_strategy_catalog.py'
+      - 'tools/validate_strategy_catalog.py'
+      - '.github/workflows/strategy-catalog-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/estrategia/**'
+      - 'tests/test_strategy_catalog.py'
+      - 'tools/validate_strategy_catalog.py'
+      - '.github/workflows/strategy-catalog-ci.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validar estados, fechas y documentos
+        run: python -m unittest tests.test_strategy_catalog -v
+      - name: Reporte de catálogo
+        run: python -m tools.validate_strategy_catalog
