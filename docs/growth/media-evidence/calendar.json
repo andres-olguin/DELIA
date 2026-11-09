@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-11-09",
+  "disclaimer": "Editorial plans only. Not scheduled, approved or published. No automatic postings.",
+  "items": [
+    {
+      "id": "M-01",
+      "date": "2026-11-13",
+      "channel": "linkedin",
+      "audience": "CTO_integrators",
+      "topic": "Qué significa controlar una herramienta",
+      "claim_refs": [
+        "C-07",
+        "C-08"
+      ],
+      "cta": "Revisar pruebas y límites en GitHub",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    },
+    {
+      "id": "M-02",
+      "date": "2026-11-17",
+      "channel": "short_video",
+      "audience": "developers",
+      "topic": "Una IA que dice tener permiso no tiene autorización",
+      "claim_refs": [
+        "C-07",
+        "C-08"
+      ],
+      "cta": "Abrir laboratorio reproducible",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    },
+    {
+      "id": "M-03",
+      "date": "2026-11-20",
+      "channel": "github",
+      "audience": "security_engineers",
+      "topic": "P0 de aislamiento, revocación y herramientas",
+      "claim_refs": [
+        "C-04",
+        "C-07"
+      ],
+      "cta": "Revisar issue de pruebas",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    },
+    {
+      "id": "M-04",
+      "date": "2026-11-24",
+      "channel": "linkedin",
+      "audience": "Chile_B2B",
+      "topic": "Chile: gobernanza antes de escalar agentes",
+      "claim_refs": [
+        "C-06"
+      ],
+      "cta": "Conversación de discovery por proceso",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    },
+    {
+      "id": "M-05",
+      "date": "2026-11-27",
+      "channel": "technical_article",
+      "audience": "CTO_integrators",
+      "topic": "Cómo verificar el resultado de una acción de agente",
+      "claim_refs": [
+        "C-08",
+        "C-09"
+      ],
+      "cta": "Ejecutar demo sintética",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    },
+    {
+      "id": "M-06",
+      "date": "2026-12-04",
+      "channel": "short_video",
+      "audience": "developers",
+      "topic": "No ejecutar tools sin verificar identidad",
+      "claim_refs": [
+        "C-04",
+        "C-07"
+      ],
+      "cta": "Ver fuente y protocolo de evaluación",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    },
+    {
+      "id": "M-07",
+      "date": "2026-12-11",
+      "channel": "linkedin",
+      "audience": "integrator_owners",
+      "topic": "La segunda instalación de un agente debería ser más simple",
+      "claim_refs": [
+        "C-09",
+        "C-10"
+      ],
+      "cta": "Entrevista de costo actual",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    },
+    {
+      "id": "M-08",
+      "date": "2026-12-18",
+      "channel": "github",
+      "audience": "security_engineers",
+      "topic": "Benchmark honesto de deny, unknown y mismatch",
+      "claim_refs": [
+        "C-04",
+        "C-08"
+      ],
+      "cta": "Ver SHA y tests ejecutados",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    },
+    {
+      "id": "M-09",
+      "date": "2026-12-23",
+      "channel": "linkedin",
+      "audience": "technical_leaders",
+      "topic": "Un incidente documentado no prueba que todas las IA escapen",
+      "claim_refs": [
+        "C-04",
+        "C-12"
+      ],
+      "cta": "Leer análisis técnico",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    },
+    {
+      "id": "M-10",
+      "date": "2027-01-08",
+      "channel": "short_video",
+      "audience": "CTO_integrators",
+      "topic": "Estado de la beta: qué funciona y qué falta",
+      "claim_refs": [
+        "C-08",
+        "C-09"
+      ],
+      "cta": "Revisar avance verificable del repositorio",
+      "status": "DRAFT",
+      "approved": false,
+      "publication_url": null
+    }
+  ]
+}

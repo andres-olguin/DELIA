@@ -1,0 +1,55 @@
+name: DELIA public site · GitHub Pages
+
+on:
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'tools/check-public-site.mjs'
+      - '.github/workflows/public-site-pages.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'tools/check-public-site.mjs'
+      - '.github/workflows/public-site-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: delia-public-pages
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    name: Static site QA
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript syntax
+        run: node --check site/app.js
+      - name: Content and isolation checks
+        run: node tools/check-public-site.mjs
+  deploy:
+    if: github.event_name != 'pull_request'
+    name: Publish only site/ to Pages
+    needs: verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload public artifact (site/ only)
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site/
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

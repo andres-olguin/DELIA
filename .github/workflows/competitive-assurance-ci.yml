@@ -1,0 +1,44 @@
+name: DELIA — Competitive Assurance Research & Contract Mocks
+on:
+  push:
+    branches: [main, research/competitor-redteam-portable-contracts-2026]
+    paths:
+      - 'docs/competitive-assurance/**'
+      - 'docs/estrategia/competidores-directos-2026-11-09.json'
+      - 'competitive_assurance/**'
+      - 'tools/validate_competitor_research.py'
+      - 'tests/test_competitor_research.py'
+      - 'tests/test_contract_compat_lab.py'
+      - '.github/workflows/competitive-assurance-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/competitive-assurance/**'
+      - 'docs/estrategia/competidores-directos-2026-11-09.json'
+      - 'competitive_assurance/**'
+      - 'tools/validate_competitor_research.py'
+      - 'tests/test_competitor_research.py'
+      - 'tests/test_contract_compat_lab.py'
+      - '.github/workflows/competitive-assurance-ci.yml'
+permissions:
+  contents: read
+jobs:
+  research-and-mock-tests:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Pruebas de consistencia de investigación y simulación
+        run: python -m unittest tests.test_competitor_research tests.test_contract_compat_lab -v
+      - name: Resumen de competidores — sin benchmark real
+        run: python -m tools.validate_competitor_research
+      - name: Demo dos adaptadores ficticios
+        run: python -m competitive_assurance.demo

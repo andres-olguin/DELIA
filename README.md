@@ -1,5 +1,93 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+> **Decisión de naming (09/11/2026): DANREXO** es el nombre elegido para la futura identidad pública; se ejecutará como **migración controlada en Sprint 3**. La disponibilidad marcaria y los dominios **no están certificados ni registrados**; hasta completar sus verificaciones se conserva **DELIA** como nombre técnico y ruta histórica. [Acta, evidencia parcial, riesgos y checklist de Sprint 3](docs/branding/DANREXO_DECISION_Y_SPRINT3.md).
+
+## DELIA / frontend público (09/11/2026)
+
+El nuevo [frontend de investigación](site/README.md) se implementa con HTML/CSS/JS y una **demostración de tres casos ficticios**. Su flujo [GitHub Pages](.github/workflows/public-site-pages.yml) publica únicamente `site/` después de validación. **Preparado para revisión**; la URL prevista `https://andres-olguin.github.io/DELIA/` no se declara operativa hasta activar Pages, fusionar y verificar HTTP 200. No integra backend, datos reales ni controles productivos.
+
+
+## Punto de entrada ejecutivo y técnico — Base de desarrollo (09/11/2026)
+
+**[START HERE · Estado real de DELIA y siguiente trabajo](docs/foundation/README.md).** La prioridad no es crear más líneas de producto: es **arranque reproducible → autenticación/aislamiento → DLP antes de egreso → control E2E de herramientas → resultado contrastado → adopción y costo de segundo cliente**. Las publicaciones y escenarios financieros existentes son borradores e hipótesis, no tracción demostrada.
+
+**[Verificador read-only de preparación](tools/foundation_doctor.py):** `python -m tools.foundation_doctor` muestra riesgos detectados y controles pendientes; `--require-production-ready` **bloquea por diseño**. No certifica seguridad. [13 controles y evidencias](docs/foundation/readiness-controls.json) · [Plan hasta el 15 de enero](docs/foundation/PLAN_10_SEMANAS.md) · [Tesis de producto única](docs/foundation/UNICA_APUESTA_Y_KILL_RULES.md) · [Primera oferta de diagnóstico](docs/foundation/SERVICIO_DIAGNOSTICO.md).
+
+**Estado:** main no está autorizado para clientes, PII real, SaaS productivo ni gateway externo protegido. No confundir PR #21 DRAFT con funcionalidades publicadas.
+
+---
+
+
+## DELIA — Lanzamiento en redes y ventas hasta enero de 2027 (09/11/2026)
+
+**Programa práctico:** [comenzar presencia en LinkedIn/GitHub y videos originales](docs/growth/launch-2026-2027/plan-redes-y-captacion.md), [borradores de las primeras publicaciones](docs/growth/launch-2026-2027/publicaciones-iniciales.md), [18 competidores adicionales (40 referencias acumuladas)](docs/growth/launch-2026-2027/competencia-adicional.md) y [proyección CLP diciembre–enero](docs/growth/launch-2026-2027/proyeccion-comercial-dic-ene.md). Tres escenarios: CLP $290.000 conservador, $1.660.000 base y $3.320.000 expansión en **ingresos acumulados hipotéticos** (no ventas conseguidas, no pronóstico estadístico). **0 MRR SaaS en el plan**. Los posts son **borradores no publicados** y Metricool no tiene canales conectados.
+
+No anunciar software de seguridad productivo antes de P0, ni presentar «ContractOps» o «Agent Passport» como una marca/concepto exclusivo. [Cálculo reproducible](tools/forecast_delia_launch.py): `python -m tools.forecast_delia_launch`.
+
+---
+
+
+## Auditoría competitiva adversarial y DELIA ContractOps (09/11/2026)
+
+La [revisión de 22 competidores y estándares](docs/estrategia/red-team-competitivo-2026-11-09.md) encontró sustitutos **directos** de Outcome Assurance (Pruvz, ACPT, AgentTrustOps y NIA), de gateway/seguridad (Helio, Preloop) y canal B2B2B (Beyryl, AIRA). **No afirmamos que DELIA sea único ni superior.** La dirección de producto a validar es [DELIA ContractOps for Integrators](docs/competitive-assurance/README.md): contratos de proceso y pruebas comparables **sobre la infraestructura existente**. El [laboratorio de compatibilidad](competitive_assurance/) usa **dos adaptadores ficticios** para comprobar divergencias; no implementa seguridad productiva ni conecta proveedores.
+
+[Propuesta de valor y economía](docs/competitive-assurance/value-proposition-economics.md) · [Matriz de 22 fuentes](docs/estrategia/competidores-directos-2026-11-09.json). Se mantienen todos los riesgos P0 y la beta de enero es meta condicional.
+
+---
+
+
+## Investigación, crecimiento y presencia pública (09/11/2026)
+
+**Nuevo programa:** [DELIA Research × Product × Media × Revenue](docs/growth/README.md) integra cuatro videos de divulgación (analizados con límites), fuentes verificables, un [calendario editorial de 60 días](docs/growth/media/editorial-engine.md), [metas aceleradas hasta enero/febrero](docs/growth/execution/roadmap-accelerated.md), [plan de captación B2B](docs/growth/business/gtm-experiments.md) y [registro de evidencia editorial con validación automatizada](docs/growth/media-evidence/claims.json). **Todo el calendario está en borrador; no se publicaron contenidos ni se adquirieron clientes mediante este trabajo.**
+
+La línea mediática tiene un principio: **demostraciones con versión, pruebas y límites, no miedo ni noticias no verificadas.** El desarrollo productivo mantiene controles P0 pendientes y veto de seguridad para la evaluación de beta avanzada del 15/01/2027.
+
+---
+
+
+## AI Control Research — investigación sobre supervisión de agentes (09/11/2026)
+
+DELIA incorpora una [línea científica y técnica de control de agentes](docs/research/agent-control/README.md), motivada por debates públicos de seguridad de IA y respaldada por fuentes primarias (International AI Safety Report 2026, ONU, OWASP ACS, NIST, MITRE ATLAS y ControlArena). Incluye [14 escenarios y un protocolo de evaluación](docs/research/agent-control/controls-research-matrix.json) más [posibilidades comerciales específicas](docs/research/agent-control/product-opportunity.md). **Investigación y tests del inventario, NO prevención de riesgos existenciales, seguridad productiva o certificación.** No sustituye el enfoque inicial en integradoras CRM/BPO ni los controles P0 pendientes.
+
+---
+
+
+## DELIA Master Commercial Operating System (09/11/2026)
+
+**Evolución de go-to-market:** una primera oferta de evaluación de procesos `Workflow Readiness Lab` (servicio profesional sujeto a alcance y contrato), un cliente ideal concreto —integradoras con agentes conectados a CRM/BPO de bajo riesgo— y un sistema de evidencia para ventas, margen, seguridad y decisiones de producto. **No hay clientes ni ventas acreditadas por estos documentos.**
+
+- [Plan maestro comercial y de producto](docs/commercial-master/README.md): 20 guías operativas con tareas, buyer discovery, pricing por hipótesis, partners, fondos, riesgos y decisiones de pivot.
+- [Ficha comercial DELIA](docs/commercial-master/15-onepager-para-compradores.md) y [programa de design partners](docs/commercial-master/04-design-partners.md).
+- [Herramienta comercial determinista](commercial_ops/decision_support.py): calificación **heurística, no probabilidad de venta**, escenarios financieros ficticios y bloqueo de autorizaciones implícitas de pilotos. `python -m commercial_ops.demo`.
+- [Financiación en revisión](docs/commercial-master/07-financiacion-y-capital.md): BIG13 Build/Ignite/Growth cierra el 24/11/2026 a las 13:00 de Chile; elegibilidad NO confirmada.
+
+DELIA sigue en desarrollo y **no se autoriza un piloto con datos reales ni una operación irreversible mientras permanezcan riesgos P0**.
+
+---
+
+
+## Auditoría competitiva global y DELIA Outcome Assurance (09/11/2026)
+
+La investigación internacional identificó alternativas abiertas que **ya ofrecen aprobaciones, presupuestos, prerequisitos y reconciliación de acciones de agentes**, especialmente [Helio](https://github.com/gethelio/helio), [AgentTrustOps](https://github.com/teresaliu90/AgentTrustOps) y [Temporal](https://docs.temporal.io/ai). Por ello **no** afirmamos ser pioneros o exclusivos en estas funciones.
+
+**Nueva dirección propuesta:** [DELIA Outcome Assurance](docs/estrategia/delia-outcome-assurance.md): contratos operacionales sectoriales que diferencian precondiciones, autorización, ejecución y resultado verificado, con distribución para integradores y protección de datos regional. [Matriz de 26 referencias internacionales](docs/estrategia/investigacion-global-2026-11-09.md). [Laboratorio local de contratos](experiments/contract_assurance/README.md): pruebas sintéticas, no ejecución real ni protección productiva.
+
+**Estado:** el repositorio mantiene riesgos P0 de autenticación, egreso y aislamiento. El nuevo laboratorio no altera el proxy existente ni hace que DELIA sea apto para producción; su fecha de beta sigue siendo una **meta condicionada al 15 de enero de 2027**.
+
+---
+
+
+## Dirección comercial 2027 — DELIA como plataforma (09/11/2026)
+
+**Nuevo:** [Estrategia de productos, nichos, monetización y metas con fechas](docs/estrategia/README.md). Incluye **SaaS Cloud, API, Partner/OEM, licencias Enterprise privadas, packs sectoriales, servicios de integración, formación**, un mapa de **18 sectores** y un [catálogo verificable](docs/estrategia/catalogo-productos.json). Los modelos de ingreso y objetivos son **hipótesis**, no clientes ni ingresos reales.
+
+**Marca:** DELIA conserva la expansión técnica histórica *Data Encryption & Limiting Intelligence Agent*. La identidad comercial propuesta es **«DELIA — Infraestructura de confianza para la IA empresarial»**. No asumir que cifrado reversible o un firewall productivo estén ya implementados. La plataforma experimental de controles se desarrolla separadamente en el [PR #21](https://github.com/andres-olguin/DELIA/pull/21), sin estar integrada a `main`.
+
+**Fechas objetivo:** [15/01/2027 evaluación de beta avanzada](docs/estrategia/roadmap-con-fechas-y-gates.md) con veto de seguridad; objetivos comerciales exploratorios a marzo, junio, septiembre y diciembre de 2027. No utilizar DELIA con datos sensibles reales mientras haya riesgos P0.
+
+---
+
+
 ## Lectura rápida — situación comprobada al 4 de noviembre de 2026
 
 **DELIA es una investigación y un desarrollo de seguridad de IA, no un gateway de protección PII certificado ni listo para producción.** El benchmark sintético publicado identificó 71 verdaderos positivos, 3 falsos positivos y 79 falsos negativos: **recall 47,33 %**. El siguiente trabajo importante es corregir riesgos P0 y demostrar cobertura antes de tratar datos sensibles.

@@ -81,8 +81,9 @@ dependen del contexto definido para Bolivia, de los rangos de captura y de la
 validación estructural mexicana acordada. El cálculo matemático de los
 verificadores de CURP/RFC sigue pendiente. Los porcentajes tampoco miden tipos
 ajenos al alcance, como direcciones, ni reemplazan los resultados del corpus
-histórico de 172 casos. Presidio, Cloudflare DLP y Google Model Armor figuran como
-NO EJECUTADOS en los reportes.
+histórico de 172 casos. La [comparación histórica con el PR #20](REGRESION_HISTORICA_R3.md)
+documenta los resultados y las diferencias por caso. Presidio, Cloudflare DLP
+y Google Model Armor figuran como NO EJECUTADOS en los reportes.
 
 La [guía de pruebas](../../CONTRIBUTING.md#pruebas) explica cómo reproducir el
 entorno con dependencias fijadas. El

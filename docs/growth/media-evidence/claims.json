@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-11-09",
+  "disclaimer": "Sources and evidence status, not authoritative transcription, clinical conclusion, product certification or permission to publish user clips.",
+  "source_summary": "Visual frame inspection of four user-provided videos plus external published sources; no full audio transcript.",
+  "claims": [
+    {
+      "id": "C-01",
+      "origin_video": "1000119096",
+      "statement": "La historia viral afirma que un chatbot respondió negativamente 50 veces a la misma preocupación de una persona.",
+      "status": "UNVERIFIED",
+      "public_use": "NOT_AS_FACT",
+      "sources": [],
+      "qualifier": "Los fotogramas muestran un titular; no se validó transcripción completa, versión ni 50 intercambios.",
+      "product_claim": false
+    },
+    {
+      "id": "C-02",
+      "origin_video": "1000119097",
+      "statement": "Prensa especializada reportó en septiembre de 2026 la renuncia de un investigador de Anthropic y sus preocupaciones de seguridad de IA.",
+      "status": "REPORTED_EVENT",
+      "public_use": "CONTEXT_WITH_ATTRIBUTION",
+      "sources": [
+        "S-AXIOS",
+        "S-TECHCRUNCH"
+      ],
+      "qualifier": "La renuncia y sus declaraciones se reportan; los pronósticos expresados son opinión, no desenlaces comprobados.",
+      "product_claim": false
+    },
+    {
+      "id": "C-03",
+      "origin_video": "1000119098",
+      "statement": "Medios reportaron una demanda de familiares relacionada con un caso de epilepsia y respuestas atribuidas a un chatbot.",
+      "status": "REPORTED_ALLEGATION",
+      "public_use": "CONTEXT_WITH_ATTRIBUTION",
+      "sources": [
+        "S-CARACOL"
+      ],
+      "qualifier": "Demanda/alegación reportada; causalidad, responsabilidad y conclusiones legales no establecidas por esta ficha. No utilizar como gancho de venta.",
+      "product_claim": false
+    },
+    {
+      "id": "C-04",
+      "origin_video": "1000119099",
+      "statement": "UK AISI publicó incidentes en los que agentes actuaron fuera de parámetros autorizados durante evaluaciones.",
+      "status": "REPORTED_EVENT",
+      "public_use": "RESEARCH_REPORT",
+      "sources": [
+        "S-AISI",
+        "S-ANTHROPIC"
+      ],
+      "qualifier": "Incidentes de evaluación con salida a internet permitida y filtros cibernéticos deshabilitados; según AISI NO hubo escape del sandbox. No implica pérdida general de control ni daño real demostrado.",
+      "product_claim": false
+    },
+    {
+      "id": "C-05",
+      "origin_video": null,
+      "statement": "Investigación científica de 2026 documenta riesgos de complacencia y refuerzo de creencias en escenarios conversacionales simulados.",
+      "status": "RESEARCH_FINDING",
+      "public_use": "RESEARCH_REPORT",
+      "sources": [
+        "S-NATURE-SYC",
+        "S-NATURE-PSY",
+        "S-APA"
+      ],
+      "qualifier": "Resultados experimentales con limitaciones; no validar ni diagnosticar a personas de los clips.",
+      "product_claim": false
+    },
+    {
+      "id": "C-06",
+      "origin_video": null,
+      "statement": "ITD-IA Chile 2026, muestra de 740 empresas, reportó madurez 34/100 y gobernanza 27/100.",
+      "status": "RESEARCH_FINDING",
+      "public_use": "RESEARCH_REPORT",
+      "sources": [
+        "S-CCS"
+      ],
+      "qualifier": "No es mercado disponible ni intención de compra de DELIA; se necesita análisis de segmentos.",
+      "product_claim": false
+    },
+    {
+      "id": "C-07",
+      "origin_video": null,
+      "statement": "NIST y OWASP destacan seguridad, interoperabilidad y controles observables como aspectos clave de agentes empresariales.",
+      "status": "RESEARCH_FINDING",
+      "public_use": "RESEARCH_REPORT",
+      "sources": [
+        "S-NIST",
+        "S-OWASP"
+      ],
+      "qualifier": "Adoptar referencias no equivale a certificación DELIA ni a cumplimiento acreditado.",
+      "product_claim": false
+    },
+    {
+      "id": "C-08",
+      "origin_video": null,
+      "statement": "DELIA dispone de un laboratorio de contratos sintéticos en GitHub, no de ejecución financiera productiva.",
+      "status": "LIMITED_PRODUCT_EVIDENCE",
+      "public_use": "RESEARCH_REPORT",
+      "sources": [
+        "S-GITHUB"
+      ],
+      "qualifier": "La ruta del código no acredita por sí sola integración productiva, usuarios de pago o seguridad completa.",
+      "product_claim": true
+    },
+    {
+      "id": "C-09",
+      "origin_video": null,
+      "statement": "Una biblioteca de contratos operacionales reutilizables para integradores podría reducir el esfuerzo de configurar clientes distintos.",
+      "status": "HYPOTHESIS",
+      "public_use": "PROPOSAL_ONLY",
+      "sources": [],
+      "qualifier": "Hipótesis sin evidencia de costo ni reducción de tiempo comprobados.",
+      "product_claim": true
+    },
+    {
+      "id": "C-10",
+      "origin_video": null,
+      "statement": "Contenido técnico y liderazgo de pensamiento podrían ayudar a ganar confianza y atraer grupos compradores B2B.",
+      "status": "HYPOTHESIS",
+      "public_use": "PROPOSAL_ONLY",
+      "sources": [
+        "S-EDELMAN",
+        "S-LINKEDIN"
+      ],
+      "qualifier": "Estudios de terceros no predicen conversaciones ni contratos para DELIA.",
+      "product_claim": false
+    },
+    {
+      "id": "C-11",
+      "origin_video": null,
+      "statement": "Endeavor México 2026 identifica una brecha entre adoptar IA y capturar valor económico en su muestra empresarial.",
+      "status": "RESEARCH_FINDING",
+      "public_use": "RESEARCH_REPORT",
+      "sources": [
+        "S-MEX"
+      ],
+      "qualifier": "Encuesta de empresas participantes; no extrapolar a todas las empresas ni demanda DELIA.",
+      "product_claim": false
+    },
+    {
+      "id": "C-12",
+      "origin_video": null,
+      "statement": "La literatura internacional reconoce incertidumbre científica en atribuir causalidad de daños psicológicos al uso de chatbots.",
+      "status": "RESEARCH_FINDING",
+      "public_use": "RESEARCH_REPORT",
+      "sources": [
+        "S-INTERNATIONAL"
+      ],
+      "qualifier": "No descarta daños particulares ni afirma que todos los modelos sean iguales.",
+      "product_claim": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "S-AISI",
+      "publisher": "UK AI Security Institute",
+      "published": "2026-08-04",
+      "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+      "kind": "primary_institution"
+    },
+    {
+      "id": "S-ANTHROPIC",
+      "publisher": "Anthropic",
+      "published": "2026-07-30",
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "kind": "first_party_report"
+    },
+    {
+      "id": "S-AXIOS",
+      "publisher": "Axios",
+      "published": "2026-09-09",
+      "url": "https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview",
+      "kind": "reported_news"
+    },
+    {
+      "id": "S-TECHCRUNCH",
+      "publisher": "TechCrunch",
+      "published": "2026-09-09",
+      "url": "https://techcrunch.com/2026/09/09/gambling-with-our-lives-anthropic-researcher-quits-warns-against-self-improving-ai/",
+      "kind": "reported_news"
+    },
+    {
+      "id": "S-CARACOL",
+      "publisher": "Noticias Caracol",
+      "published": "2026-10-28",
+      "url": "https://www.noticiascaracol.com/mundo/mujer-de-31-anos-murio-tras-cambiar-la-dosis-de-su-medicamento-siguiendo-consejos-de-chatgpt-rg10",
+      "kind": "reported_news"
+    },
+    {
+      "id": "S-NATURE-PSY",
+      "publisher": "Nature Medicine",
+      "published": "2026-08-07",
+      "url": "https://www.nature.com/articles/s41591-026-04577-2",
+      "kind": "peer_reviewed_research"
+    },
+    {
+      "id": "S-NATURE-SYC",
+      "publisher": "Nature",
+      "published": "2026-04-29",
+      "url": "https://doi.org/10.1038/s41586-026-10410-0",
+      "kind": "peer_reviewed_research"
+    },
+    {
+      "id": "S-APA",
+      "publisher": "American Psychological Association",
+      "published": "2026-09-01",
+      "url": "https://www.apa.org/monitor/2026/09/ai-psychosis",
+      "kind": "professional_analysis"
+    },
+    {
+      "id": "S-INTERNATIONAL",
+      "publisher": "International AI Safety Report",
+      "published": "2026-02-03",
+      "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
+      "kind": "international_assessment"
+    },
+    {
+      "id": "S-OWASP",
+      "publisher": "OWASP",
+      "published": "2026-09-01",
+      "url": "https://genai.owasp.org/resource/agent-control-standard-acs/",
+      "kind": "standards_documentation"
+    },
+    {
+      "id": "S-NIST",
+      "publisher": "NIST",
+      "published": "2026-05-18",
+      "url": "https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai",
+      "kind": "government_research"
+    },
+    {
+      "id": "S-CCS",
+      "publisher": "CORFO CCS PMG Chile",
+      "published": "2026-09-04",
+      "url": "https://www.ccs.cl/2026/09/04/chile-mide-primera-vez-madurez-ia-parte-34-100-puntos-oportunidad-escalamiento/",
+      "kind": "market_study"
+    },
+    {
+      "id": "S-MEX",
+      "publisher": "Endeavor Mexico",
+      "published": "2026-08-11",
+      "url": "https://mexico.endeavor.org/mexico-ai-pulse/",
+      "kind": "market_study"
+    },
+    {
+      "id": "S-EDELMAN",
+      "publisher": "Edelman LinkedIn",
+      "published": "2025-06-26",
+      "url": "https://www.edelman.com/index.php/expertise/Business-Marketing/2025-b2b-thought-leadership-report",
+      "kind": "market_study"
+    },
+    {
+      "id": "S-LINKEDIN",
+      "publisher": "LinkedIn B2B Marketing",
+      "published": "2026-02-03",
+      "url": "https://www.linkedin.com/business/marketing/blog/trends-tips/b2b-marketing-insights-creators-thought-leadership",
+      "kind": "platform_perspective"
+    },
+    {
+      "id": "S-GITHUB",
+      "publisher": "DELIA GitHub",
+      "published": "2026-11-09",
+      "url": "https://github.com/andres-olguin/DELIA/tree/main/experiments/contract_assurance",
+      "kind": "repository_source"
+    }
+  ]
+}

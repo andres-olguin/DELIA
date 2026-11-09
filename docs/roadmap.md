@@ -1,5 +1,8 @@
 # Roadmap y Carta Gantt Maestra — Proyecto DELIA
 
+> **Roadmap histórico:** este documento contiene la planificación inicial de octubre de 2026. La estrategia de producto, edición Cloud/Partner/Enterprise, sectores y fechas de desarrollo posteriores están descritas en [la actualización estratégica del 9 de noviembre de 2026](estrategia/roadmap-con-fechas-y-gates.md). No suponer que las tareas históricas ya fueron completadas. La fecha de enero es una **meta condicionada a controles P0**, no autorización automática para producción.
+
+
 **DELIA** (**D**ata **A**ncryption & **L**imiting **I**ntelligence **A**gent) es un proxy de seguridad, cifrado y control de cumplimiento normativo (Ley 21.719 en Chile y directrices de la SIC en Colombia) para agentes de inteligencia artificial.
 
 ---
@@ -50,6 +53,9 @@
 ---
 
 ### ⚡ Sprint 3: Capa de Tráfico, Rate Limiting y Caché (Redis)
+
+> **Workstream de marca adicional, acordado el 09/11/2026:** transición de identidad **DELIA → DANREXO** durante el Sprint 3 (09–22/11), condicionada a verificar marcas semejantes, dominio, titularidad y disponibilidad; no se cambia automáticamente la URL del repositorio ni Pages. La decisión de naming está registrada en el [acta de DANREXO](branding/DANREXO_DECISION_Y_SPRINT3.md), con entregables BRAND-S3-01 a BRAND-S3-07 y criterios de Go/No-Go. Este trabajo **no reemplaza** la prioridad de controles P0 ni acredita marca registrada o producto lanzado.
+
 *Período:* 9 de noviembre de 2026 – 22 de noviembre de 2026  
 *Objetivo:* Garantizar la velocidad de respuesta, cuotas por usuario y persistencia transitoria.
 
