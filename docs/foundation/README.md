@@ -1,5 +1,10 @@
 # DELIA — Foundation 2026: guía corta, verdad de producto y límites de lanzamiento
 
+## Estado de sprints: Sprint 2 → Sprint 3 (09/11/2026)
+
+[Acta de transición](../sprints/TRANSICION_S2_S3_2026-11-09.md): Sprint 2 (26/10–08/11) agotó sus fechas **sin aceptación técnica**; Sprint 3 (09–22/11) comienza con P0 #6–#9/#11 y #54 branding DANREXO en paralelo. **No** iniciar tráfico Redis/caché sobre un proxy que todavía no controla auth, DLP y auditoría. `main` no está autorizado para datos reales.
+
+
 **Revisión:** 09/11/2026. **Estado real:** investigación y laboratorios sintéticos. La publicación de esta guía **NO convierte DELIA en SaaS, gateway productivo, herramienta certificada ni servicio que deba procesar datos reales**.
 
 ## 1. Qué estamos construyendo

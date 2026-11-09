@@ -1,5 +1,8 @@
 # Acta de decisión de nombre: DANREXO — transición desde DELIA
 
+> **Seguimiento S2→S3 09/11:** el Sprint 2 venció el 08/11 sin aceptación técnica; Sprint 3 empezó el 09/11 **solo en calendario** y no habilita cambio irreversible de nombre ni lanzamiento. El [acta de transición](../sprints/TRANSICION_S2_S3_2026-11-09.md) prioriza seguridad P0 en paralelo a los estudios de marca.
+
+
 **Fecha de decisión:** 2026-11-09 · **Responsable de la decisión comercial:** fundador/dirección de MasterTech SpA (declaración del usuario).  
 **Estado:** nombre elegido para la futura identidad comercial y actualización planificada en el **Sprint 3**; **marca no registrada ni jurídicamente despejada**.  
 **Carácter:** decisión de naming **no implica** que el producto esté listo para operar con clientes o datos reales.
