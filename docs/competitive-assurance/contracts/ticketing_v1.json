@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "mode": "MOCK_ONLY_NO_ENFORCEMENT",
+  "contract_id": "synthetic-ticketing-b2b",
+  "version": 1,
+  "description": "Fictitious multi-tenant ticketing conformance expectations, not a deployed policy",
+  "cases": [
+    {
+      "id": "read_a",
+      "tenant_id": "tenant-A",
+      "tool": "ticket.read",
+      "expected_decision": "ALLOW"
+    },
+    {
+      "id": "tag_a",
+      "tenant_id": "tenant-A",
+      "tool": "ticket.tag",
+      "expected_decision": "ALLOW"
+    },
+    {
+      "id": "update_a",
+      "tenant_id": "tenant-A",
+      "tool": "ticket.update",
+      "expected_decision": "REVIEW"
+    },
+    {
+      "id": "export_a",
+      "tenant_id": "tenant-A",
+      "tool": "contact.export",
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "delete_a",
+      "tenant_id": "tenant-A",
+      "tool": "ticket.delete",
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "cross_tenant",
+      "tenant_id": "tenant-B",
+      "tool": "tenant-A.ticket.read",
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "unknown_tool",
+      "tenant_id": "tenant-A",
+      "tool": "sys.exec",
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "read_b",
+      "tenant_id": "tenant-B",
+      "tool": "ticket.read",
+      "expected_decision": "ALLOW"
+    },
+    {
+      "id": "refund_a",
+      "tenant_id": "tenant-A",
+      "tool": "billing.refund",
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "change_owner",
+      "tenant_id": "tenant-B",
+      "tool": "ticket.owner.update",
+      "expected_decision": "REVIEW"
+    }
+  ]
+}

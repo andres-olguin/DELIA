@@ -1,5 +1,10 @@
 # DELIA — Master Commercial Operating System (MCOS)
 
+## Comparación ampliada: la ventaja de DELIA todavía debe demostrarse
+
+[Red team documental de 22 competidores](../estrategia/red-team-competitivo-2026-11-09.md) y [estudio ContractOps para integradoras](../competitive-assurance/README.md). Pruvz y ACPT ya anuncian validación independiente de resultados; Helio ofrece gateway MCP y servicios; Beyryl/AIRA ya comercializan soluciones MSP. Por eso **el prospecto económico depende de probar menor esfuerzo en el segundo cliente, costos y valor incremental**, no de una lista de funcionalidades ni de claims de exclusividad. [Hipótesis de precios y margen](../competitive-assurance/value-proposition-economics.md).
+
+
 ## Expansión mediática y crecimiento basado en pruebas (09/11/2026)
 
 El [programa Research × Product × Media × Revenue](../growth/README.md) estudia cuatro clips virales/periodísticos sin reproducirlos ni convertir sus alegaciones en hechos. Añade guiones originales, prensa, calendario por canal, experimentos de compradores y un validador de claims. **Su función es aumentar aprendizaje y distribución; no significa tracción comercial obtenida ni seguridad de producto.** La prioridad comercial continúa siendo integradoras con agentes CRM/BPO de bajo riesgo.

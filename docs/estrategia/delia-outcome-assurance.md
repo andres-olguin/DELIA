@@ -1,5 +1,8 @@
 # DELIA Outcome Assurance — Propuesta de valor de próxima generación
 
+> **Red team 09/11/2026:** Pruvz (https://pruvz.ai/), ACPT (https://www.acpt.cloud/), NIA (https://nia.sg/harness/) y AgentTrustOps ya describen verificación de efectos, políticas y evidencia, en niveles de madurez distintos. La combinación **no prueba exclusividad** de DELIA Outcome Assurance. Evaluar [ContractOps para integradoras](../competitive-assurance/README.md) como hipótesis de procesos portables/comparables, sin prometer integraciones o verificaciones productivas. Ver [22 competidores](red-team-competitivo-2026-11-09.md).
+
+
 **Versión:** 09-11-2026. **Estado:** propuesta de producto + motor **local de laboratorio** en `experiments/contract_assurance/`; ni el gateway, ni el SDK ni la conciliación real con un proveedor están implementados. En `main` este módulo experimental NO puede interceptar aplicaciones reales ni realizar transacciones.
 
 ## Nombre y tesis
