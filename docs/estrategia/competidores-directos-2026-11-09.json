@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-11-09",
+  "methodology": "Targeted search of original vendor/repository/docs; not an exhaustive census or instrumented benchmark; feature claims not independently verified.",
+  "claims_status": "EVIDENCE_IS_VENDOR_DOCS_NOT_TEST_RESULTS",
+  "market_position": "DELIA is an experimental project; no superiority, fully unique position or paying customers verified.",
+  "proposed_wedge": "DELIA ContractOps for Integrators: vendor-neutral business process conformance kits across existing gateways + tenant-aware templates + independent outcome assurance + transparent cost/installation evidence; HYPOTHESIS not shipped.",
+  "proof_required": [
+    {
+      "id": "P-1",
+      "test": "Same CRM tool contract executes as a deny/approve/allow fixture across at least two independent vendor adapters, not just in-memory mock.",
+      "status": "PLANNED",
+      "gate": "2026-12-18"
+    },
+    {
+      "id": "P-2",
+      "test": "Second tenant policy setup hours and false blocks vs configured Helio/OPA/AgentTrustOps and buyer's actual baseline.",
+      "status": "PLANNED",
+      "gate": "2027-01-08"
+    },
+    {
+      "id": "P-3",
+      "test": "Unknown outcome never mapped to success with authentic sandbox system-of-record read-back and durable idempotency.",
+      "status": "PLANNED",
+      "gate": "2027-01-08"
+    },
+    {
+      "id": "P-4",
+      "test": "5 qualified buyer conversations with documented alternative, budget and current cost.",
+      "status": "PLANNED",
+      "gate": "2026-12-18"
+    },
+    {
+      "id": "P-5",
+      "test": "At least one paid discovery workshop or an explicit no-fit/pivot decision; must be booked and collected in financial records.",
+      "status": "PLANNED",
+      "gate": "2027-03-31"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "AgentTrustOps",
+      "segment": "SIDE_EFFECT",
+      "relationship": "DIRECT",
+      "source": "https://github.com/teresaliu90/AgentTrustOps",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Bound approvals, idempotency, reconciliation, signed offline evidence and tested adapters are described; some capabilities are still early-stage.",
+      "commercial_consequence": "Do not claim novelty for commit-point transaction or reconciliation.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Pruvz",
+      "segment": "OUTCOME",
+      "relationship": "DIRECT",
+      "source": "https://pruvz.ai/",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Independent read-back, policy snapshots, evidence proofs and Stripe/HubSpot test integrations are claimed by the vendor.",
+      "commercial_consequence": "Outcome verification and signed evidence already have direct competition.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "ACPT",
+      "segment": "OUTCOME",
+      "relationship": "DIRECT",
+      "source": "https://www.acpt.cloud/",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Outcome contracts, run reconstruction, authoritative comparison and policy evaluation are described; roadmap separates current/next/later.",
+      "commercial_consequence": "Outcome assurance is not a unique DELIA invention.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "NIA AI Harness",
+      "segment": "OUTCOME",
+      "relationship": "DIRECT",
+      "source": "https://nia.sg/harness/",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Independent evaluators, permission budgets and evidence attestations are described.",
+      "commercial_consequence": "Budget+independent verdicts+evidence overlap.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Helio",
+      "segment": "MCP_GOVERNANCE",
+      "relationship": "DIRECT",
+      "source": "https://github.com/gethelio/helio",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "MCP proxy with approvals, prereqs, evidence, durable budgets, kill switch and audit, plus professional review offering.",
+      "commercial_consequence": "MCP governance, cumulative budget and paid deployment review not unique.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Preloop",
+      "segment": "AGENT_CONTROL",
+      "relationship": "DIRECT",
+      "source": "https://github.com/preloop/preloop",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Open source agent firewall, model gateway, policy approvals, observability, cost analytics and evidence packs.",
+      "commercial_consequence": "Avoid broad all-in-one firewall positioning.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Gravitee",
+      "segment": "AGENT_CONTROL",
+      "relationship": "INCUMBENT",
+      "source": "https://www.gravitee.io/platform/ai-gateway",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "LLM, MCP and A2A governance under common auth, policy and observability.",
+      "commercial_consequence": "Gateway breadth not a viable early differentiator.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "ServiceNow AI Passport",
+      "segment": "AGENT_CONTROL",
+      "relationship": "INCUMBENT",
+      "source": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-advances-its-operational-harness-for-enterprise-AI-with-AI-Passport-and-expanded-governance-capabilities/default.aspx",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Authority credential and central governance with spend-to-outcomes reporting announced October 2026.",
+      "commercial_consequence": "Large incumbents compete on delegated authority, traceability and business metrics.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Beyryl",
+      "segment": "MSP_PLATFORM",
+      "relationship": "DIRECT",
+      "source": "https://marketplace.microsoft.com/en-us/product/beyryl.beyryl_ms_2026?tab=overview",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "MSP multi-tenant governance, white label, onboarding templates and usage views described in listing.",
+      "commercial_consequence": "B2B2B and multi-tenant/white label not unique.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "AIRA by CinderLabs",
+      "segment": "MSP_PLATFORM",
+      "relationship": "DIRECT",
+      "source": "https://cinderlabs.ai/aira/msp",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "White-label evidence reports, client tenant portal and recurring-revenue program described.",
+      "commercial_consequence": "MSP go-to-market is established elsewhere.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Runlayer",
+      "segment": "AGENT_CONTROL",
+      "relationship": "ADJACENT",
+      "source": "https://www.runlayer.com/platform",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "MCP control, activity history, real-time policies, costs and ROI visibility described.",
+      "commercial_consequence": "No unique claim for ROI and policy control.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Check Point AI Agent Security",
+      "segment": "AGENT_SECURITY",
+      "relationship": "INCUMBENT",
+      "source": "https://docs.lakera.ai/docs/agent-security",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Agent inventory posture risk, runtime guardrails including DLP and tool responses; early access noted.",
+      "commercial_consequence": "Agent posture+runtime DLP already supplied by major vendors.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Promptfoo",
+      "segment": "EVALUATION",
+      "relationship": "ADJACENT",
+      "source": "https://www.promptfoo.dev/docs/guides/testing-guardrails/",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Open tooling for red-team and guardrail tests; explicit distinction between detection and enforcement.",
+      "commercial_consequence": "Evaluation as a category is established; differentiate by process economics.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "PrivAiTe",
+      "segment": "PII",
+      "relationship": "ADJACENT",
+      "source": "https://github.com/crp4222/PrivAiTe",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Privacy proxy claims structured tool arguments and reversible PII masking.",
+      "commercial_consequence": "PII filtering and tool argument redaction not unique.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "agentgateway",
+      "segment": "MCP_GOVERNANCE",
+      "relationship": "ADJACENT",
+      "source": "https://github.com/agentgateway/agentgateway",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Open agent, MCP and LLM data plane, authentication and observability.",
+      "commercial_consequence": "Prefer interoperable adapters over gateway rewrite.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Microsoft Agent 365",
+      "segment": "AGENT_CONTROL",
+      "relationship": "INCUMBENT",
+      "source": "https://learn.microsoft.com/en-us/microsoft-agent-365/guidance/scale-governance",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Agent governance templates to limit policy drift between deployments.",
+      "commercial_consequence": "Policy templates and drift are not unique.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "OWASP Agent Control Standard",
+      "segment": "STANDARD",
+      "relationship": "STANDARD",
+      "source": "https://genai.owasp.org/resource/agent-control-standard-acs/",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Portable agent control hooks and policy enforcement standard is published.",
+      "commercial_consequence": "DELIA should interoperate; no proprietary standard-first claim.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "NIST AI Agent Standards Initiative",
+      "segment": "STANDARD",
+      "relationship": "STANDARD",
+      "source": "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Industry standards, identity and interoperability initiative.",
+      "commercial_consequence": "Standards compliance requires actual implementation and validation.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Temporal",
+      "segment": "WORKFLOW",
+      "relationship": "ADJACENT",
+      "source": "https://docs.temporal.io/ai",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Durable workflows and recovery with human interaction patterns.",
+      "commercial_consequence": "Do not reinvent durable schedulers before economic justification.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Cerbos",
+      "segment": "POLICY",
+      "relationship": "ADJACENT",
+      "source": "https://www.cerbos.dev/ecosystem/agent-gateway",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Authorization via policy and gateway integration.",
+      "commercial_consequence": "Don't reinvent enterprise authorization policy engines.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Open Policy Agent",
+      "segment": "POLICY",
+      "relationship": "ADJACENT",
+      "source": "https://github.com/open-policy-agent/opa",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Declarative policy-as-code decision engine.",
+      "commercial_consequence": "Build portable business contracts as complementary layer.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    },
+    {
+      "name": "Salesforce Agentforce",
+      "segment": "VERTICAL_ENTERPRISE",
+      "relationship": "INCUMBENT",
+      "source": "https://architect.salesforce.com/docs/architect/fundamentals/guide/agentic-patterns",
+      "documentation_checked": "2026-11-09",
+      "evidence_type": "VENDOR_OR_REPOSITORY_ASSERTION",
+      "documented_overlaps": "Agent architecture includes CRM actions, policy guardrails and human intervention.",
+      "commercial_consequence": "CRM-native rules and action controls already exist.",
+      "independent_benchmark": "NOT_EXECUTED",
+      "delia_superiority_proven": false
+    }
+  ]
+}
