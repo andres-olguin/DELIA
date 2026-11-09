@@ -1,0 +1,6 @@
+# Isolated Sprint 3 API bootstrap and unit tests (not production stack)
+fastapi==0.115.12
+SQLAlchemy==2.0.41
+httpx==0.28.1
+pydantic==2.11.5
+pytest==8.3.5
