@@ -31,11 +31,14 @@ class FoundationDoctorTests(unittest.TestCase):
         ids = {x["id"] for x in static_signals()}
         for previous_risk in (
             "BROKEN_IMPORT", "RAW_UPSTREAM_PAYLOAD", "UNSANITIZED_FORWARD_CALL",
-            "AUDIT_AUTH_ABSENT", "RAW_PROMPT_LOG", "AUDIT_SCHEMA_MISMATCH",
+            "RAW_PROMPT_LOG", "AUDIT_SCHEMA_MISMATCH",
             "UPSTREAM_TOKEN_PASSTHROUGH", "HARDCODED_DATABASE_PASSWORD",
             "MIGRATION_BYPASS",
         ):
             self.assertNotIn(previous_risk, ids)
+        # Audit endpoints are disabled, but authentication is still unimplemented.
+        # Keep this risk visible until SEC-003 is tested, never claim it is closed.
+        self.assertIn("AUDIT_AUTH_ABSENT", ids)
         self.assertEqual(evaluate()["production_gateway"], "BLOCKED")
 
     def test_legacy_raw_egress_signature_is_still_detected(self):
