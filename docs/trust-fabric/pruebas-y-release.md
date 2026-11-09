@@ -5,8 +5,9 @@ Para cada cambio guardar: commit SHA, dataset hash, versión Python, dependencia
 
 ## Lo que ya se ejecuta
 ```bash
-python -m unittest discover -s tests -p test_trust_fabric.py -v
+python -m unittest discover -s tests -p 'test_trust_fabric*.py' -v
 python -m trust_fabric.demo
+python -m trust_fabric.lab
 ```
 En el branch Trust Fabric estas pruebas cubren allow/deny, precedencia, expiración, un solo uso, vinculación de argumentos, rechazo cross-tenant en aprobación **lógica**, validación de entradas, política versionada y HMAC. Los roles siguen declarados por el llamante: no probar contra servidor real.
 

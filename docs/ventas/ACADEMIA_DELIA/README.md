@@ -35,8 +35,9 @@ Elige un guion y cronómetro, ensaya de pie, graba con consentimiento, transcrib
 ## Evidencia de producto
 Para una demo técnica usar exclusivamente:
 ```bash
-python -m unittest discover -s tests -p test_trust_fabric.py -v
+python -m unittest discover -s tests -p 'test_trust_fabric*.py' -v
 python -m trust_fabric.demo
+python -m trust_fabric.lab
 ```
 El prototipo simula políticas y aprobaciones. **No** asegura que una herramienta externa no pueda actuar por una ruta ajena; el endpoint proxy actual y la identidad segura siguen como objetivos P0.
 

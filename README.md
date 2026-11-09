@@ -1,5 +1,20 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## Nuevo programa DELIA Trust Fabric — actualización propuesta (09-11-2026)
+
+**Estado: rama de desarrollo `feat/trust-fabric-2027-01`, no fusionada en `main`, no apta para producción.** DELIA amplía su visión de proxy PII hacia políticas de agentes, aprobaciones humanas y evidencia minimizada, sin afirmar exclusividad de mercado.
+
+- [Centro Trust Fabric: arquitectura, 20 capacidades y plan de 67 días hasta 15-01-2027](docs/trust-fabric/README.md).
+- [Código de laboratorio de decisiones](trust_fabric/policy.py) y [simulaciones ampliadas](trust_fabric/lab.py). Ejecutar `python -m trust_fabric.demo` y `python -m trust_fabric.lab`.
+- [Academia DELIA de presentaciones comerciales](docs/ventas/ACADEMIA_DELIA/README.md): guion 24 láminas, 30 roleplays, 40 objeciones, ROI, entrenamiento y evaluaciones.
+- [CI del prototipo](.github/workflows/trust-fabric-ci.yml): pruebas de reglas, simulaciones y casos negativos en Python 3.11 y 3.13.
+- Limitaciones críticas: **no hay IAM remoto**, no hay persistencia de tickets, no hay protección de egress real ni auditoría durable; PR #19 y #20 siguen separados.
+
+Los párrafos siguientes conservan principalmente la situación histórica verificada al 4 de noviembre de 2026.
+
+---
+
+
 ## Lectura rápida — situación comprobada al 4 de noviembre de 2026
 
 **DELIA es una investigación y un desarrollo de seguridad de IA, no un gateway de protección PII certificado ni listo para producción.** El benchmark sintético publicado identificó 71 verdaderos positivos, 3 falsos positivos y 79 falsos negativos: **recall 47,33 %**. El siguiente trabajo importante es corregir riesgos P0 y demostrar cobertura antes de tratar datos sensibles.

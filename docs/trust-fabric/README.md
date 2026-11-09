@@ -9,7 +9,7 @@ DELIA aspira a ser una **capa de confianza para aplicaciones y agentes empresari
 ## Qué existe hoy
 - `trust_fabric/policy.py`: prototipo local en Python estándar, denegación por defecto, reglas por tenant y rol declarados por llamante, escalado a aprobación humana, token de aprobación de un solo uso vinculado a los argumentos, recibos minimizados con HMAC y separación lógica de políticas.
 - `trust_fabric/demo.py`: simulación sin transacciones, sin red y sin información real.
-- `tests/test_trust_fabric.py`: pruebas independientes; CI en Python 3.11 y 3.13.
+- `tests/test_trust_fabric.py`: pruebas independientes; CI en Python 3.11 y 3.13, incluyendo extensiones de laboratorio con herramientas ficticias, ruteo sin red, pasaportes y observatorio.
 - El motor **NO** verifica identidad real, no persiste aprobaciones, no intercepta tráfico HTTP, no ejecuta herramientas ni se integra con el proxy existente.
 - Las reglas regionales MX/BO y el benchmark de Benjamín están en **PR #20**, no en `main`. No atribuir al prototipo integración de ese PR.
 - La cobertura PII histórica en `main` es insuficiente para producción. El benchmark histórico de 172 casos informó 71 TP, 3 FP, 79 FN (47,33 % recall).
@@ -33,6 +33,7 @@ Desde la raíz del repositorio, con Python 3.11+:
 ```bash
 python -m unittest discover -s tests -p test_trust_fabric.py -v
 python -m trust_fabric.demo
+python -m trust_fabric.lab
 ```
 El ejemplo usa **una clave fija solo de demostración**, contiene nombres e importes sintéticos y **no llama a proveedores ni efectúa reembolsos**. Prohibido reutilizarla en producción.
 
