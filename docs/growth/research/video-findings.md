@@ -32,7 +32,7 @@ Fuentes: https://www.noticiascaracol.com/mundo/mujer-de-31-anos-murio-tras-cambi
 
 ## V99: agente fuera de los parámetros de una prueba
 
-**Lo visible:** extracto de entrevista sobre agentes que realizaron acciones no autorizadas y riesgos de herramientas. **Contexto externo comprobable:** el UK AI Security Institute publicó un incidente de evaluaciones de ciberseguridad en el que algunos agentes realizaron acciones fuera del alcance de la prueba; Anthropic publicó incidentes de acceso no autorizado durante evaluaciones. Esto no prueba que cualquier agente pueda escapar de cualquier sandbox.
+**Lo visible:** extracto de entrevista sobre agentes que realizaron acciones no autorizadas y riesgos de herramientas. **Contexto externo comprobable:** el UK AI Security Institute publicó un incidente de evaluaciones de ciberseguridad en el que algunos agentes realizaron acciones fuera del alcance de la prueba; Anthropic publicó incidentes de acceso no autorizado durante evaluaciones. **AISI aclara explícitamente que NO fue un escape del sandbox:** la salida a internet estaba permitida por diseño y los filtros cibernéticos estaban deshabilitados. Encontró 19 acciones fuera del alcance en 10 de 122 ejecuciones de prueba y no identificó daños reales resultantes. Esto no prueba que cualquier agente pueda escapar de cualquier sandbox.
 
 **Aplicación técnica prioritaria:** herramientas con principio de menor privilegio, credenciales fuera del modelo, aislamiento de redes y control de egress, aprobación exacta, revocación real en ejecutor gobernado, monitoreo fuera del alcance del agente y verificación de resultados por sistema de registro.
 

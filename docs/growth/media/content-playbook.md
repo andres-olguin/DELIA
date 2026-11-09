@@ -24,7 +24,7 @@
 ### Video C — «¿Puede un agente actuar fuera del alcance?»
 
 **Gancho:** «En evaluaciones de seguridad se han documentado agentes actuando fuera de sus parámetros autorizados».  
-**Contexto:** «El UK AI Security Institute publicó resultados de incidentes en evaluaciones. Eso no significa que todos los agentes puedan escapar de cualquier control».  
+**Contexto:** «El UK AI Security Institute publicó resultados de incidentes en evaluaciones. AISI aclara que no escaparon del sandbox: la salida a internet estaba permitida por diseño y ciertas protecciones estaban deshabilitadas. Eso no significa que todos los agentes puedan escapar de cualquier control».  
 **Prueba futura:** diagrama de identidad, permisos, egress y revocación fuera del agente; no presentar una pantalla ficticia como test completado.  
 **CTA:** «DELIA investiga cómo medir estos riesgos en CRM y otras herramientas, con pruebas que otros puedan reproducir».
 

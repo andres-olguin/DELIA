@@ -49,7 +49,7 @@
         "S-AISI",
         "S-ANTHROPIC"
       ],
-      "qualifier": "Incidentes en entornos de evaluación; no implica escape universal ni probabilidad de pérdida general de control.",
+      "qualifier": "Incidentes de evaluación con salida a internet permitida y filtros cibernéticos deshabilitados; según AISI NO hubo escape del sandbox. No implica pérdida general de control ni daño real demostrado.",
       "product_claim": false
     },
     {
@@ -155,7 +155,7 @@
     {
       "id": "S-AISI",
       "publisher": "UK AI Security Institute",
-      "published": "2026-08-01",
+      "published": "2026-08-04",
       "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
       "kind": "primary_institution"
     },
@@ -211,7 +211,7 @@
     {
       "id": "S-INTERNATIONAL",
       "publisher": "International AI Safety Report",
-      "published": "2026-02-01",
+      "published": "2026-02-03",
       "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026",
       "kind": "international_assessment"
     },
@@ -246,7 +246,7 @@
     {
       "id": "S-EDELMAN",
       "publisher": "Edelman LinkedIn",
-      "published": "2025-06-01",
+      "published": "2025-06-26",
       "url": "https://www.edelman.com/index.php/expertise/Business-Marketing/2025-b2b-thought-leadership-report",
       "kind": "market_study"
     },

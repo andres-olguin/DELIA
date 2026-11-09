@@ -1,5 +1,10 @@
 # DELIA Agent Control Research — seguridad y control humano de agentes
 
+## Cuatro videos como insumo para la investigación (09/11/2026)
+
+[Análisis visual y verificación de fuentes](../../growth/research/video-findings.md): repetición/complacencia conversacional; advertencias de investigadores; alegaciones periodísticas sobre consejos médicos; conducta de agentes fuera del alcance de pruebas. **Los clips no prueban por sí solos sus afirmaciones y no han sido transcritos íntegramente.** El incidente de UK AISI fue una evaluación con internet permitido y filtros deshabilitados, **no un escape de sandbox**. Las ideas de evaluación se integran en el [plan de medios y crecimiento](../../growth/README.md) sin alterar el estado del producto.
+
+
 **Versión:** 09/11/2026. **Estado:** estudio y plan de evaluación. **No** es tecnología para controlar AGI, no está validado en producción y **no** afirma prevenir catástrofes ni pérdida global de control. Las evaluaciones y controles críticos descritos son futuros salvo el laboratorio sintético citado expresamente.
 
 ## Motivación y procedencia
