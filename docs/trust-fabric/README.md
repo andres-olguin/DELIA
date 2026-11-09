@@ -6,6 +6,11 @@
 ## Posicionamiento
 DELIA aspira a ser una **capa de confianza para aplicaciones y agentes empresariales de IA**: decide qué datos pueden salir, qué herramientas puede invocar un agente, cuándo debe intervenir una persona y qué evidencia mínima acredita la evaluación de una política. Se integra con gateways existentes cuando sea viable, sin reinventar cada función de red.
 
+## Packs verticales de laboratorio (sin sistemas externos)
+
+- [Primeras cuatro plantillas técnicas de sector](sector-packs.md): integradoras, SaaS B2B, ecommerce y contact centers; todos con política deny-by-default, ejemplos sintéticos y CI. **No constituyen SaaS, conectores reales ni producto listo para clientes.**
+- Prueba interactiva local por consola: `python -m trust_fabric.packs_demo`.
+
 ## Qué existe hoy
 - `trust_fabric/policy.py`: prototipo local en Python estándar, denegación por defecto, reglas por tenant y rol declarados por llamante, escalado a aprobación humana, token de aprobación de un solo uso vinculado a los argumentos, recibos minimizados con HMAC y separación lógica de políticas.
 - `trust_fabric/demo.py`: simulación sin transacciones, sin red y sin información real.

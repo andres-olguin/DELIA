@@ -1,0 +1,37 @@
+{
+  "id": "contact_center",
+  "name": "DELIA for Contact Centers",
+  "description": "Simulación de lectura de tickets, actualización de contactos y protección de exportaciones",
+  "rules": [
+    {
+      "id": "case_read",
+      "tool": "cases.read",
+      "effect": "allow",
+      "role": "agent"
+    },
+    {
+      "id": "contact_change",
+      "tool": "customer.update",
+      "effect": "approve",
+      "role": "agent"
+    },
+    {
+      "id": "export_deny",
+      "tool": "contact.export",
+      "effect": "deny",
+      "role": "agent"
+    },
+    {
+      "id": "admin_deny",
+      "tool": "admin.users.write",
+      "effect": "deny",
+      "role": "agent"
+    }
+  ],
+  "status": "lab",
+  "version": 1,
+  "default_effect": "deny",
+  "demo_tenant_id": "demo_contact_center",
+  "operates_real_tools": false,
+  "disclaimer": "Solo simulador. Roles y tenant sin autenticación. No controla sistemas reales."
+}

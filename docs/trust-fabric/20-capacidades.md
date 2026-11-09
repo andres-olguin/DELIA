@@ -44,3 +44,7 @@ Para cada TF crear tickets separados de **diseño, implementación, pruebas y re
 
 ## Definición de más que MVP: beta avanzada
 Una beta avanzada tiene interfaz operativa, API autenticada, controles de egreso probados, política versionada, aprobaciones durables, evidencias minimizadas, observabilidad por tenant, documentación y una demo E2E con datos sintéticos. **No necesita tener completas las veinte iniciativas para recibir el nombre beta avanzada**, ni puede llamarse producción por ello. Se prohíbe cambiar el estado de una capacidad por publicar un archivo o stub.
+
+## Anexo de empaquetado sectorial (09/11/2026)
+
+Se añadieron **4 manifests verticales de laboratorio**, sin identidad de usuario real ni tools externos, en `trust_fabric/packs/`: integradoras, SaaS B2B, ecommerce y contact centers. Se cargan mediante `trust_fabric/sector_packs.py` y pueden inspeccionarse con `python -m trust_fabric.packs_demo`. Es una prueba de empaquetado de políticas, **no cuatro soluciones desplegadas**. Su estado es `LAB`; ver [sector-packs.md](sector-packs.md).

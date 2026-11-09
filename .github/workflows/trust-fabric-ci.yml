@@ -29,3 +29,5 @@ jobs:
         run: python -m trust_fabric.demo
       - name: Laboratorio ampliado de herramientas, rutas, pasaportes, métricas y costos
         run: python -m trust_fabric.lab
+      - name: Simulación de cuatro packs verticales sin red
+        run: python -m trust_fabric.packs_demo

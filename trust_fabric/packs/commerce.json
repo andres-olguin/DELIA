@@ -1,0 +1,39 @@
+{
+  "id": "commerce",
+  "name": "DELIA for Commerce",
+  "description": "Simulación de permisos en reembolsos, lectura de pedidos y borrado",
+  "rules": [
+    {
+      "id": "order_read",
+      "tool": "orders.read",
+      "effect": "allow",
+      "role": "support"
+    },
+    {
+      "id": "refund_low",
+      "tool": "refund.issue",
+      "effect": "allow",
+      "role": "support",
+      "max_amount_minor": 1000000
+    },
+    {
+      "id": "refund_high",
+      "tool": "refund.issue",
+      "effect": "approve",
+      "role": "support",
+      "min_amount_minor": 1000001
+    },
+    {
+      "id": "orders_delete",
+      "tool": "orders.delete",
+      "effect": "deny",
+      "role": "support"
+    }
+  ],
+  "status": "lab",
+  "version": 1,
+  "default_effect": "deny",
+  "demo_tenant_id": "demo_commerce",
+  "operates_real_tools": false,
+  "disclaimer": "Solo simulador. Roles y tenant sin autenticación. No controla sistemas reales."
+}
