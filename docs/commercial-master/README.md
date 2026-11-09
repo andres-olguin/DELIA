@@ -51,6 +51,9 @@ El crecimiento de DELIA no vendrá de añadir 30 funciones indiferenciadas. La o
 15. [Ficha comercial de una página para compradores](15-onepager-para-compradores.md)
 16. [Plantilla de alcance de design partner, NO contrato jurídico](16-ficha-piloto-y-mou.md)
 17. [Programa de evidencia Product–Market Fit](17-programa-validacion-pmf.md)
+18. [Trust Center y preparación de compras empresariales](18-trust-center-procurement.md)
+19. [Expediente borrador Start-Up Chile BIG13, no enviado](19-startupchile-expediente-borrador.md)
+20. [Gobernanza de equipo, capacidad e incentivos](20-gobernanza-equipo-y-conversion.md)
 
 ## Herramienta ejecutable
 
