@@ -1,0 +1,44 @@
+name: DELIA Foundation — Release Truth & Risk Gates
+on:
+  push:
+    branches: [main, feat/foundation-release-gates-2026]
+    paths:
+      - 'docs/foundation/**'
+      - 'tools/foundation_doctor.py'
+      - 'tests/test_foundation_doctor.py'
+      - 'app/**'
+      - 'services/**'
+      - 'models/**'
+      - 'docker-compose.yml'
+      - '.github/workflows/foundation-readiness.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/foundation/**'
+      - 'tools/foundation_doctor.py'
+      - 'tests/test_foundation_doctor.py'
+      - 'app/**'
+      - 'services/**'
+      - 'models/**'
+      - 'docker-compose.yml'
+      - '.github/workflows/foundation-readiness.yml'
+permissions:
+  contents: read
+jobs:
+  foundation-truth:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11','3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit tests for release evidence and fail-closed checks
+        run: python -m unittest tests.test_foundation_doctor -v
+      - name: Print current red flags (expected while P0 is open)
+        run: python -m tools.foundation_doctor
