@@ -1,5 +1,10 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## DELIA / frontend público (09/11/2026)
+
+El nuevo [frontend de investigación](site/README.md) se implementa con HTML/CSS/JS y una **demostración de tres casos ficticios**. Su flujo [GitHub Pages](.github/workflows/public-site-pages.yml) publica únicamente `site/` después de validación. **Preparado para revisión**; la URL prevista `https://andres-olguin.github.io/DELIA/` no se declara operativa hasta activar Pages, fusionar y verificar HTTP 200. No integra backend, datos reales ni controles productivos.
+
+
 ## Punto de entrada ejecutivo y técnico — Base de desarrollo (09/11/2026)
 
 **[START HERE · Estado real de DELIA y siguiente trabajo](docs/foundation/README.md).** La prioridad no es crear más líneas de producto: es **arranque reproducible → autenticación/aislamiento → DLP antes de egreso → control E2E de herramientas → resultado contrastado → adopción y costo de segundo cliente**. Las publicaciones y escenarios financieros existentes son borradores e hipótesis, no tracción demostrada.
