@@ -1,5 +1,10 @@
 # DELIA — Master Commercial Operating System (MCOS)
 
+## Expansión mediática y crecimiento basado en pruebas (09/11/2026)
+
+El [programa Research × Product × Media × Revenue](../growth/README.md) estudia cuatro clips virales/periodísticos sin reproducirlos ni convertir sus alegaciones en hechos. Añade guiones originales, prensa, calendario por canal, experimentos de compradores y un validador de claims. **Su función es aumentar aprendizaje y distribución; no significa tracción comercial obtenida ni seguridad de producto.** La prioridad comercial continúa siendo integradoras con agentes CRM/BPO de bajo riesgo.
+
+
 ## Investigación complementaria de seguridad
 
 El plan comercial mantiene el ICP inicial y puede incorporar un futuro **Agent Control Readiness Pack** cuando existan pruebas de control en entornos aislados. [Programa AI Control Research](../research/agent-control/README.md), con 14 amenazas/escenarios y evaluación de riesgos. Los controles todavía no están certificados ni son aptos para operar con sistemas externos; no usar preocupaciones existenciales como argumentos de venta.

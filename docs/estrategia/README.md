@@ -1,5 +1,10 @@
 # DELIA — Estrategia de plataforma, productos y expansión 2027
 
+## Programa de expansión comercial y mediática basado en pruebas
+
+Se incorpora [DELIA Research × Product × Media × Revenue](../growth/README.md): investigación de cuatro videos, evidencia externa, posicionamiento ante compradores, guiones originales, kit de prensa, calendario editorial de 60 días y metas aceleradas hasta 15/02/2027. Los contenidos están **en borrador**, sin lanzamiento comercial ni publicaciones efectivas; consultar el [registro de fuentes](../growth/media-evidence/claims.json).
+
+
 ## Nuevo programa de investigación: AI Control y supervisión
 
 [Agent Control Research](../research/agent-control/README.md) traduce preocupaciones de supervisión, comportamientos adversariales y pérdida de control de agentes a **14 escenarios concretos de riesgo y pruebas propuestas**, vinculados con OWASP, NIST, MITRE y ControlArena. Es una **línea R&D**, no producto, certificación, kill switch universal ni evidencia de reducción de riesgo existencial. Priorizar restricciones de herramientas, revocación, aislamiento, controles pre-egress y verificación por fuente autoritativa.
