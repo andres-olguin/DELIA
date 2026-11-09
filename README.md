@@ -1,5 +1,14 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## Investigación, crecimiento y presencia pública (09/11/2026)
+
+**Nuevo programa:** [DELIA Research × Product × Media × Revenue](docs/growth/README.md) integra cuatro videos de divulgación (analizados con límites), fuentes verificables, un [calendario editorial de 60 días](docs/growth/media/editorial-engine.md), [metas aceleradas hasta enero/febrero](docs/growth/execution/roadmap-accelerated.md), [plan de captación B2B](docs/growth/business/gtm-experiments.md) y [registro de evidencia editorial con validación automatizada](docs/growth/media-evidence/claims.json). **Todo el calendario está en borrador; no se publicaron contenidos ni se adquirieron clientes mediante este trabajo.**
+
+La línea mediática tiene un principio: **demostraciones con versión, pruebas y límites, no miedo ni noticias no verificadas.** El desarrollo productivo mantiene controles P0 pendientes y veto de seguridad para la evaluación de beta avanzada del 15/01/2027.
+
+---
+
+
 ## AI Control Research — investigación sobre supervisión de agentes (09/11/2026)
 
 DELIA incorpora una [línea científica y técnica de control de agentes](docs/research/agent-control/README.md), motivada por debates públicos de seguridad de IA y respaldada por fuentes primarias (International AI Safety Report 2026, ONU, OWASP ACS, NIST, MITRE ATLAS y ControlArena). Incluye [14 escenarios y un protocolo de evaluación](docs/research/agent-control/controls-research-matrix.json) más [posibilidades comerciales específicas](docs/research/agent-control/product-opportunity.md). **Investigación y tests del inventario, NO prevención de riesgos existenciales, seguridad productiva o certificación.** No sustituye el enfoque inicial en integradoras CRM/BPO ni los controles P0 pendientes.
