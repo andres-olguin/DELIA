@@ -1,5 +1,15 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## Dirección comercial 2027 — DELIA como plataforma (09/11/2026)
+
+**Nuevo:** [Estrategia de productos, nichos, monetización y metas con fechas](docs/estrategia/README.md). Incluye **SaaS Cloud, API, Partner/OEM, licencias Enterprise privadas, packs sectoriales, servicios de integración, formación**, un mapa de **18 sectores** y un [catálogo verificable](docs/estrategia/catalogo-productos.json). Los modelos de ingreso y objetivos son **hipótesis**, no clientes ni ingresos reales.
+
+**Marca:** DELIA conserva la expansión técnica histórica *Data Encryption & Limiting Intelligence Agent*. La identidad comercial propuesta es **«DELIA — Infraestructura de confianza para la IA empresarial»**. No asumir que cifrado reversible o un firewall productivo estén ya implementados. La plataforma experimental de controles se desarrolla separadamente en el [PR #21](https://github.com/andres-olguin/DELIA/pull/21), sin estar integrada a `main`.
+
+**Fechas objetivo:** [15/01/2027 evaluación de beta avanzada](docs/estrategia/roadmap-con-fechas-y-gates.md) con veto de seguridad; objetivos comerciales exploratorios a marzo, junio, septiembre y diciembre de 2027. No utilizar DELIA con datos sensibles reales mientras haya riesgos P0.
+
+---
+
 ## Nuevo programa DELIA Trust Fabric — actualización propuesta (09-11-2026)
 
 **Estado: rama de desarrollo `feat/trust-fabric-2027-01`, no fusionada en `main`, no apta para producción.** DELIA amplía su visión de proxy PII hacia políticas de agentes, aprobaciones humanas y evidencia minimizada, sin afirmar exclusividad de mercado.

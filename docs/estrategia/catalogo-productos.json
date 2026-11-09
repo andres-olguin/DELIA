@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-11-09",
+  "disclaimer": "Oferta exploratoria: ningún producto listado está confirmado como servicio comercial disponible ni tiene clientes o ingresos comprobados.",
+  "brand": {
+    "name": "DELIA",
+    "current_expansion": "Data Encryption & Limiting Intelligence Agent",
+    "commercial_tagline": "Infraestructura de confianza para la inteligencia artificial empresarial",
+    "alternate_expansion_proposal": "Data Enforcement Layer for Intelligent Agents",
+    "alternate_official": false
+  },
+  "products": [
+    {
+      "id": "DL-DEV",
+      "name": "DELIA Developer",
+      "type": "sdk",
+      "state": "planned",
+      "pricing_model": "free_lab_plus_optional_support",
+      "first_target": "2027-01-15",
+      "evidence": "El motor experimental está en PR #21; no incluye IAM remoto."
+    },
+    {
+      "id": "DL-CLOUD",
+      "name": "DELIA Cloud",
+      "type": "saas",
+      "state": "planned",
+      "pricing_model": "subscription_plus_usage",
+      "first_target": "2027-06-30",
+      "evidence": "Requiere S2-S4 según datos y contratos."
+    },
+    {
+      "id": "DL-PARTNER",
+      "name": "DELIA Partner",
+      "type": "oem_partner",
+      "state": "planned",
+      "pricing_model": "partner_subscription_plus_tenants",
+      "first_target": "2027-04-30",
+      "evidence": "Requiere aislamiento multitenant y soporte."
+    },
+    {
+      "id": "DL-ENTERPRISE",
+      "name": "DELIA Enterprise",
+      "type": "self_hosted",
+      "state": "planned",
+      "pricing_model": "annual_license_maintenance",
+      "first_target": "2027-10-31",
+      "evidence": "Requiere despliegue, hardening y contrato."
+    },
+    {
+      "id": "DL-API",
+      "name": "DELIA Policy API",
+      "type": "api",
+      "state": "planned",
+      "pricing_model": "metered_decisions",
+      "first_target": "2027-02-28",
+      "evidence": "La API productiva no existe en PR #21."
+    },
+    {
+      "id": "DL-VERIFY",
+      "name": "DELIA Verify",
+      "type": "assurance_service",
+      "state": "planned",
+      "pricing_model": "retainer_or_project",
+      "first_target": "2027-07-31",
+      "evidence": "El laboratorio contiene pruebas sintéticas, no auditoría acreditada."
+    },
+    {
+      "id": "DL-ACADEMY",
+      "name": "DELIA Academy",
+      "type": "training",
+      "state": "planned",
+      "pricing_model": "workshop",
+      "first_target": "2027-03-31",
+      "evidence": "Documentos en PR #21; no es certificación reconocida."
+    },
+    {
+      "id": "DL-SECTOR",
+      "name": "DELIA Sector Packs",
+      "type": "industry_module",
+      "state": "planned",
+      "pricing_model": "subscription_addon",
+      "first_target": "2027-07-31",
+      "evidence": "Requiere demanda, acuerdos sectoriales y tests."
+    }
+  ],
+  "priority_sectors": [
+    "Integradores B2B",
+    "SaaS B2B",
+    "Comercio electrónico",
+    "Contact centers/BPO"
+  ],
+  "security_gates": [
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "sales_verified": false,
+  "pricing_verified": false,
+  "security_certified": false,
+  "production_ready": false,
+  "source_docs": [
+    "docs/estrategia/portafolio-y-modelos-de-negocio.md",
+    "docs/estrategia/verticales-y-casos-de-uso.md",
+    "docs/estrategia/roadmap-con-fechas-y-gates.md"
+  ]
+}
