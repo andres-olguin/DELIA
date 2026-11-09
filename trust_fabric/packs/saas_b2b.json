@@ -1,0 +1,37 @@
+{
+  "id": "saas_b2b",
+  "name": "DELIA for SaaS B2B",
+  "description": "Simulación de API de registros empresariales y bloqueo de exportación de claves",
+  "rules": [
+    {
+      "id": "record_read",
+      "tool": "records.read",
+      "effect": "allow",
+      "role": "service_agent"
+    },
+    {
+      "id": "record_write",
+      "tool": "records.write",
+      "effect": "approve",
+      "role": "service_agent"
+    },
+    {
+      "id": "secret_export",
+      "tool": "keys.export",
+      "effect": "deny",
+      "role": "service_agent"
+    },
+    {
+      "id": "users_manage",
+      "tool": "users.manage",
+      "effect": "deny",
+      "role": "service_agent"
+    }
+  ],
+  "status": "lab",
+  "version": 1,
+  "default_effect": "deny",
+  "demo_tenant_id": "demo_saas_b2b",
+  "operates_real_tools": false,
+  "disclaimer": "Solo simulador. Roles y tenant sin autenticación. No controla sistemas reales."
+}

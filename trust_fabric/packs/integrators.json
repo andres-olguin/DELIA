@@ -1,0 +1,37 @@
+{
+  "id": "integrators",
+  "name": "DELIA for Integrators",
+  "description": "Simulación aislada de políticas CRM por cliente de una integradora",
+  "rules": [
+    {
+      "id": "crm_read",
+      "tool": "crm.read",
+      "effect": "allow",
+      "role": "consultant"
+    },
+    {
+      "id": "crm_write",
+      "tool": "crm.write",
+      "effect": "approve",
+      "role": "consultant"
+    },
+    {
+      "id": "crm_delete",
+      "tool": "crm.delete",
+      "effect": "deny",
+      "role": "consultant"
+    },
+    {
+      "id": "secret_export",
+      "tool": "secrets.export",
+      "effect": "deny",
+      "role": "consultant"
+    }
+  ],
+  "status": "lab",
+  "version": 1,
+  "default_effect": "deny",
+  "demo_tenant_id": "demo_integrators",
+  "operates_real_tools": false,
+  "disclaimer": "Solo simulador. Roles y tenant sin autenticación. No controla sistemas reales."
+}

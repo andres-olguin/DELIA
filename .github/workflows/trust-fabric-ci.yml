@@ -1,0 +1,33 @@
+name: DELIA Trust Fabric - tests de políticas
+on:
+  push:
+    branches:
+      - feat/trust-fabric-2027-01
+      - main
+  pull_request:
+    branches:
+      - main
+permissions:
+  contents: read
+jobs:
+  policy-tests:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Pruebas de políticas y extensiones Trust Fabric
+        run: python -m unittest discover -s tests -p 'test_trust_fabric*.py' -v
+      - name: Demostración base sin efectos externos
+        run: python -m trust_fabric.demo
+      - name: Laboratorio ampliado de herramientas, rutas, pasaportes, métricas y costos
+        run: python -m trust_fabric.lab
+      - name: Simulación de cuatro packs verticales sin red
+        run: python -m trust_fabric.packs_demo
