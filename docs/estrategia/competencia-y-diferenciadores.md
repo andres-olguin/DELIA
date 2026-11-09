@@ -1,5 +1,8 @@
 # DELIA — Competencia real y diferenciación comprobable
 
+> **Actualización 09/11/2026:** Helio (https://github.com/gethelio/helio) ya documenta aprobación, prerequisitos y presupuestos acumulados; AgentTrustOps (https://github.com/teresaliu90/AgentTrustOps) aborda efectos, idempotencia y reconciliación; Temporal (https://docs.temporal.io/ai) cubre durabilidad. **No presentar DELIA Verified Workflows como categoría inédita.** Ver [matriz internacional](investigacion-global-2026-11-09.md) y [Outcome Assurance](delia-outcome-assurance.md).
+
+
 **Investigación 09/11/2026.** No se han ejecutado pruebas comparativas estandarizadas de DELIA contra estos proveedores. Sus páginas pueden cambiar; toda comparación debe indicar versión, fecha, política, región y contexto.
 
 ## Competencia por categoría
