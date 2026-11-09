@@ -1,5 +1,19 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## DELIA Master Commercial Operating System (09/11/2026)
+
+**Evolución de go-to-market:** una primera oferta de evaluación de procesos `Workflow Readiness Lab` (servicio profesional sujeto a alcance y contrato), un cliente ideal concreto —integradoras con agentes conectados a CRM/BPO de bajo riesgo— y un sistema de evidencia para ventas, margen, seguridad y decisiones de producto. **No hay clientes ni ventas acreditadas por estos documentos.**
+
+- [Plan maestro comercial y de producto](docs/commercial-master/README.md): 17 guías operativas con tareas, buyer discovery, pricing por hipótesis, partners, fondos, riesgos y decisiones de pivot.
+- [Ficha comercial DELIA](docs/commercial-master/15-onepager-para-compradores.md) y [programa de design partners](docs/commercial-master/04-design-partners.md).
+- [Herramienta comercial determinista](commercial_ops/decision_support.py): calificación **heurística, no probabilidad de venta**, escenarios financieros ficticios y bloqueo de autorizaciones implícitas de pilotos. `python -m commercial_ops.demo`.
+- [Financiación en revisión](docs/commercial-master/07-financiacion-y-capital.md): BIG13 Build/Ignite/Growth cierra el 24/11/2026 a las 13:00 de Chile; elegibilidad NO confirmada.
+
+DELIA sigue en desarrollo y **no se autoriza un piloto con datos reales ni una operación irreversible mientras permanezcan riesgos P0**.
+
+---
+
+
 ## Auditoría competitiva global y DELIA Outcome Assurance (09/11/2026)
 
 La investigación internacional identificó alternativas abiertas que **ya ofrecen aprobaciones, presupuestos, prerequisitos y reconciliación de acciones de agentes**, especialmente [Helio](https://github.com/gethelio/helio), [AgentTrustOps](https://github.com/teresaliu90/AgentTrustOps) y [Temporal](https://docs.temporal.io/ai). Por ello **no** afirmamos ser pioneros o exclusivos en estas funciones.

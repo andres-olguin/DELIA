@@ -1,4 +1,4 @@
-# 06 — Roadmap maestro y 120 días de reducción de riesgos
+# 06 — Roadmap maestro hasta el 31 de marzo de 2027
 
 **Fecha base:** 09-11-2026. Fechas objetivo de gestión, no compromisos de entrega; sujetas a disponibilidad y veto técnico. **Objetivo 15/01/2027 = evaluación de beta avanzada, no lanzamiento productivo automático.**
 

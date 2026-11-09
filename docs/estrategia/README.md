@@ -1,5 +1,12 @@
 # DELIA — Estrategia de plataforma, productos y expansión 2027
 
+## Actualización comercial — Master Operating System (09/11/2026)
+
+La ejecución comercial se reorienta hacia **integradoras con agentes conectados a CRM/ticketing de bajo riesgo**, y al **DELIA Workflow Readiness Lab** como servicio profesional de alcance limitado que puede evaluarse antes de disponer de SaaS seguro. [Centro maestro de 17 documentos](../commercial-master/README.md) · [Ficha de una página](../commercial-master/15-onepager-para-compradores.md) · [Riesgos, métricas y gates](../commercial-master/08-metricas-y-decisiones.md).
+
+**No se han validado ventas, precio, tracción ni seguridad de software productivo.** Las 18 verticales se mantienen como opciones; se prioriza un solo proceso durante la primera validación.
+
+
 ## Actualización: competencia global y contratos operacionales verificables
 
 La comparación del 09-11-2026 revela **competencia directa significativa**: Helio, AgentTrustOps, Temporal, Agentgateway/Cerbos, proveedores cloud globales y proyectos de China, Japón, Francia, Alemania y Brasil. Las funciones de autorización, aprobación, presupuesto, reconciliación y auditoría **no son exclusivas de DELIA**.

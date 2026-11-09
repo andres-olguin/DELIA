@@ -48,6 +48,9 @@ El crecimiento de DELIA no vendrá de añadir 30 funciones indiferenciadas. La o
 12. [Árbol de productos y opciones estratégicas a 2028](12-expansion-y-opciones.md)
 13. [Sprint comercial de 14 días listo para delegar](13-sprint-14-dias.md)
 14. [Evidencia del mercado, estudios y fuentes oficiales](14-fuentes-y-supuestos.md)
+15. [Ficha comercial de una página para compradores](15-onepager-para-compradores.md)
+16. [Plantilla de alcance de design partner, NO contrato jurídico](16-ficha-piloto-y-mou.md)
+17. [Programa de evidencia Product–Market Fit](17-programa-validacion-pmf.md)
 
 ## Herramienta ejecutable
 
