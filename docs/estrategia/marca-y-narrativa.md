@@ -1,5 +1,7 @@
 # DELIA — Identidad, nombre, arquitectura de marca y propuesta
 
+> **NOTA DE VIGENCIA (09/11/2026):** este documento preserva la propuesta histórica de identidad DELIA. La dirección ha elegido **DANREXO** para la identidad futura; cualquier afirmación de «DELIA nombre principal» más abajo es **histórica y queda supeditada al acta actual** [DANREXO: decisión y Sprint 3](../branding/DANREXO_DECISION_Y_SPRINT3.md). Aún no se ha confirmado registrabilidad, dominios ni ejecutado el rebranding. No usar material de esta narrativa como identidad comercial definitiva.
+
 **Estado de marca: propuestas, no comprobaciones de registro comercial.**
 Fecha de trabajo: 09-11-2026.
 
