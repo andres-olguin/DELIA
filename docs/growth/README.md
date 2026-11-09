@@ -1,5 +1,10 @@
 # DELIA — Research × Product × Media × Revenue
 
+## Lanzamiento comercial y redes: dic 2026–ene 2027
+
+El [programa de lanzamiento y presencia](launch-2026-2027/plan-redes-y-captacion.md) revisa 18 competidores adicionales, descarta reclamos de unicidad sobre nombres ocupados, propone LinkedIn como canal B2B prioritario y aporta [borradores originales](launch-2026-2027/publicaciones-iniciales.md) y [escenarios comerciales reproducibles](launch-2026-2027/proyeccion-comercial-dic-ene.md). **No hay posts programados/publicados, ventas ni MRR de SaaS acreditados.** La previsión se limita a servicios profesionales que requieren alcance y capacidad verificados.
+
+
 **Programa de aceleración:** 09/11/2026–15/02/2027. **Estado:** investigación, estrategia y herramientas de integridad editorial; no publicaciones realizadas, ventas, socios, financiación adjudicada ni release de seguridad empresarial. La planificación técnica del 15/01/2027 sigue sujeta a veto P0.
 
 ## Tesis de crecimiento

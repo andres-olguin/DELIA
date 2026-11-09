@@ -1,5 +1,14 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## DELIA — Lanzamiento en redes y ventas hasta enero de 2027 (09/11/2026)
+
+**Programa práctico:** [comenzar presencia en LinkedIn/GitHub y videos originales](docs/growth/launch-2026-2027/plan-redes-y-captacion.md), [borradores de las primeras publicaciones](docs/growth/launch-2026-2027/publicaciones-iniciales.md), [18 competidores adicionales (40 referencias acumuladas)](docs/growth/launch-2026-2027/competencia-adicional.md) y [proyección CLP diciembre–enero](docs/growth/launch-2026-2027/proyeccion-comercial-dic-ene.md). Tres escenarios: CLP $290.000 conservador, $1.660.000 base y $3.320.000 expansión en **ingresos acumulados hipotéticos** (no ventas conseguidas, no pronóstico estadístico). **0 MRR SaaS en el plan**. Los posts son **borradores no publicados** y Metricool no tiene canales conectados.
+
+No anunciar software de seguridad productivo antes de P0, ni presentar «ContractOps» o «Agent Passport» como una marca/concepto exclusivo. [Cálculo reproducible](tools/forecast_delia_launch.py): `python -m tools.forecast_delia_launch`.
+
+---
+
+
 ## Auditoría competitiva adversarial y DELIA ContractOps (09/11/2026)
 
 La [revisión de 22 competidores y estándares](docs/estrategia/red-team-competitivo-2026-11-09.md) encontró sustitutos **directos** de Outcome Assurance (Pruvz, ACPT, AgentTrustOps y NIA), de gateway/seguridad (Helio, Preloop) y canal B2B2B (Beyryl, AIRA). **No afirmamos que DELIA sea único ni superior.** La dirección de producto a validar es [DELIA ContractOps for Integrators](docs/competitive-assurance/README.md): contratos de proceso y pruebas comparables **sobre la infraestructura existente**. El [laboratorio de compatibilidad](competitive_assurance/) usa **dos adaptadores ficticios** para comprobar divergencias; no implementa seguridad productiva ni conecta proveedores.

@@ -1,0 +1,154 @@
+{
+  "as_of": "2026-11-09",
+  "kind": "DOCUMENTARY_ONLY",
+  "previous_count": 22,
+  "additional_count": 18,
+  "all_benchmark_results": "NOT_EXECUTED",
+  "novelty_or_trademark_proven": false,
+  "additional": [
+    {
+      "name": "NVIDIA OpenShell",
+      "category": "agent runtime isolation",
+      "source": "https://www.nvidia.com/en-us/ai/openshell/",
+      "documented": "Runtime sandbox policy, credential mediation, egress controls and auditing",
+      "implication": "DELIA no puede diferenciarse por sandbox/kill-switch o bloqueo de egress.",
+      "tested": false
+    },
+    {
+      "name": "NVIDIA Agent Policy Fabric",
+      "category": "policy federation",
+      "source": "https://docs.nvidia.com/agent-policy-fabric/integrations/openshell",
+      "documented": "Separates enforcement/runtime boundary and policy decision service",
+      "implication": "La integración entre políticas y runtime también tiene un competidor; interoperar.",
+      "tested": false
+    },
+    {
+      "name": "APort",
+      "category": "agent authorization passport",
+      "source": "https://aport.io/",
+      "documented": "AI Agent Passport, pre-action policies and signed decisions",
+      "implication": "No inventar nombre comercial Agent Passport ni decir que firma de decisiones es exclusivo.",
+      "tested": false
+    },
+    {
+      "name": "ContractOps by Kopilot",
+      "category": "contract test reliability",
+      "source": "https://kopilot-ai.github.io/contractops/",
+      "documented": "CI contracts, scenarios, release gates, drift and reliability budgets",
+      "implication": "El nombre ContractOps ya se utiliza; no registrarlo ni reclamar exclusividad sin due diligence.",
+      "tested": false
+    },
+    {
+      "name": "EcoKure Assurance Fabric",
+      "category": "evidence-based decision gates",
+      "source": "https://jarvi3.com/showcase",
+      "documented": "Deterministic checks, signed evidence, replayable contract checks",
+      "implication": "Gates + evidence + verifier no son un concepto exclusivo.",
+      "tested": false
+    },
+    {
+      "name": "Arcade",
+      "category": "agent tool authorization",
+      "source": "https://agents.arcade.dev/",
+      "documented": "Auth, scopes, tool execution, governance, broad tool catalog",
+      "implication": "Un catálogo de conectores y permisos no basta como ventaja.",
+      "tested": false
+    },
+    {
+      "name": "Aembit",
+      "category": "agent workload IAM",
+      "source": "https://aembit.io/",
+      "documented": "Blended user+agent identity, secretless short-lived credentials and policy",
+      "implication": "IAM de agentes especializado ya existe, conviene integrar.",
+      "tested": false
+    },
+    {
+      "name": "Astrix / Cisco",
+      "category": "agent identity inventory",
+      "source": "https://astrix.security/",
+      "documented": "Discovery, NHI graph and agent access governance; no new standalone sales since June 30 2026",
+      "implication": "Estado comercial importa: comparar con Cisco, no presentar Astrix como startup independiente.",
+      "tested": false
+    },
+    {
+      "name": "Noma Security",
+      "category": "runtime agent governance",
+      "source": "https://noma.security/platform",
+      "documented": "Discovery, policy enforcement and runtime security using existing gateways",
+      "implication": "La superposición sin reemplazar gateway está ya comercializada.",
+      "tested": false
+    },
+    {
+      "name": "Zenity",
+      "category": "agent runtime security",
+      "source": "https://zenity.io/",
+      "documented": "Agent discovery, identity, policy and runtime defense",
+      "implication": "La gobernanza transversal está disputada por empresas financiadas.",
+      "tested": false
+    },
+    {
+      "name": "Agent Control",
+      "category": "open agent policy SDK",
+      "source": "https://agentcontrol.dev/",
+      "documented": "Policy control with allow/deny/steer/warn and SDK hooks",
+      "implication": "Delia debe competir con paquete de pruebas de proceso y costo, no por API de allow/deny.",
+      "tested": false
+    },
+    {
+      "name": "LangSmith",
+      "category": "agent eval and observability",
+      "source": "https://www.langchain.com/langsmith/evaluation",
+      "documented": "Trajectory-level evaluations, online/offline tests, human review and tracing",
+      "implication": "Evals y regresión tampoco son exclusivos; concentrarse en efecto empresarial.",
+      "tested": false
+    },
+    {
+      "name": "Arize Phoenix",
+      "category": "open-source agent eval",
+      "source": "https://arize.com/phoenix/",
+      "documented": "Open-source OpenTelemetry tracing and evaluator workflows",
+      "implication": "No recrear observabilidad genérica.",
+      "tested": false
+    },
+    {
+      "name": "OpenAI Agents SDK",
+      "category": "agent development runtime",
+      "source": "https://openai.github.io/openai-agents-python/guardrails/",
+      "documented": "Input/output and function-tool guardrails, approvals and traces; limits for hosted tools noted",
+      "implication": "Foco en cobertura entre frameworks, casos negativos y fallos específicos.",
+      "tested": false
+    },
+    {
+      "name": "Amazon Bedrock Automated Reasoning",
+      "category": "formal policy validation",
+      "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html",
+      "documented": "Logic-backed policy checks; limited to defined variables, English US, detect mode",
+      "implication": "No decir que verificar políticas formales no existe; analizar tradeoffs regionales y alcance.",
+      "tested": false
+    },
+    {
+      "name": "F5 AI Guardrails",
+      "category": "runtime AI protection",
+      "source": "https://www.f5.com/company/news/press-releases/f5-accelerates-ai-security-with-integrated-runtime-protection-for-enterprise-ai-at-scale",
+      "documented": "Runtime AI policies and red-team services for enterprises",
+      "implication": "No competir por plataforma de seguridad completa a corto plazo.",
+      "tested": false
+    },
+    {
+      "name": "NVIDIA NeMo Guardrails",
+      "category": "model and agent rails",
+      "source": "https://docs.nvidia.com/nemo/guardrails/configure-guardrails/guardrail-catalog/agentic-security",
+      "documented": "Injection detection and agentic guardrails",
+      "implication": "Complementar con contratos de negocio y evidencia real.",
+      "tested": false
+    },
+    {
+      "name": "Braintrust",
+      "category": "agent eval/observability",
+      "source": "https://www.braintrust.dev/manifesto",
+      "documented": "Evals, tracing and iterative agent quality measurement",
+      "implication": "Calidad de observabilidad/evals no es barrera competitiva suficiente.",
+      "tested": false
+    }
+  ]
+}
