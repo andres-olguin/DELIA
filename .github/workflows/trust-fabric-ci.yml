@@ -23,7 +23,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Pruebas de política, aprobación y recibos
-        run: python -m unittest discover -s tests -p test_trust_fabric.py -v
-      - name: Demostración sin efectos externos
+      - name: Pruebas de políticas y extensiones Trust Fabric
+        run: python -m unittest discover -s tests -p 'test_trust_fabric*.py' -v
+      - name: Demostración base sin efectos externos
         run: python -m trust_fabric.demo
+      - name: Laboratorio ampliado de herramientas, rutas, pasaportes, métricas y costos
+        run: python -m trust_fabric.lab
