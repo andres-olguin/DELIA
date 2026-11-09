@@ -1,0 +1,36 @@
+name: DELIA — Commercial Master Plan Integrity
+on:
+  push:
+    branches: [main, feat/commercial-master-plan-2026]
+    paths:
+      - 'commercial_ops/**'
+      - 'tests/test_commercial_decision_support.py'
+      - 'docs/commercial-master/**'
+      - '.github/workflows/commercial-master-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'commercial_ops/**'
+      - 'tests/test_commercial_decision_support.py'
+      - 'docs/commercial-master/**'
+      - '.github/workflows/commercial-master-ci.yml'
+permissions:
+  contents: read
+jobs:
+  synthetic-qualification:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11','3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Tests de calificacion y unit economics sin datos reales
+        run: python -m unittest tests.test_commercial_decision_support -v
+      - name: Simulacion comercial local
+        run: python -m commercial_ops.demo
