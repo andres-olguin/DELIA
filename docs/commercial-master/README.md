@@ -1,5 +1,10 @@
 # DELIA — Master Commercial Operating System (MCOS)
 
+## Ventas iniciales y proyección condicionada (09/11/2026)
+
+[Modelo conservador/base/expansión para dic 2026–ene 2027](../growth/launch-2026-2027/proyeccion-comercial-dic-ene.md) basado **solo** en posibles ventas de diagnósticos de proceso y laboratorios sintéticos con contrato/capacidad. El escenario base **no es forecast**; no hay clientes ni ingresos acreditados. [Plan de canales](../growth/launch-2026-2027/plan-redes-y-captacion.md) y [comparación acumulada de 40 referencias](../growth/launch-2026-2027/competencia-adicional.md). No ofrecer licencias de SaaS antes de seguridad y producción.
+
+
 ## Comparación ampliada: la ventaja de DELIA todavía debe demostrarse
 
 [Red team documental de 22 competidores](../estrategia/red-team-competitivo-2026-11-09.md) y [estudio ContractOps para integradoras](../competitive-assurance/README.md). Pruvz y ACPT ya anuncian validación independiente de resultados; Helio ofrece gateway MCP y servicios; Beyryl/AIRA ya comercializan soluciones MSP. Por eso **el prospecto económico depende de probar menor esfuerzo en el segundo cliente, costos y valor incremental**, no de una lista de funcionalidades ni de claims de exclusividad. [Hipótesis de precios y margen](../competitive-assurance/value-proposition-economics.md).

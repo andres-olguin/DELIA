@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-11-09",
+  "currency": "CLP",
+  "revenue_basis": "NET_OF_IVA_IF_APPLICABLE",
+  "status": "SCENARIOS_NOT_STATISTICAL_FORECAST",
+  "saas_mrr_included": 0,
+  "assumptions": {
+    "diagnostic_price_clp": 290000,
+    "sandbox_lab_price_clp": 790000,
+    "diagnostic_direct_cost_fraction": 0.35,
+    "sandbox_lab_direct_cost_fraction": 0.5
+  },
+  "limitations": [
+    "No DELIA customers, sales or paid subscriptions verified by this document",
+    "SaaS launch and production security not assumed",
+    "Lab project only under agreement, synthetic data and technical delivery capacity",
+    "Direct costs are illustrative not audited actuals",
+    "Marketing spend is not necessarily ad spend; no ad campaigns activated",
+    "Contribution excludes taxes, general overhead, funding, dev R&D and founder fixed costs",
+    "Contact and close volumes are planning assumptions not measured conversion probabilities"
+  ],
+  "rows": [
+    {
+      "scenario": "Conservador",
+      "month": "2026-12",
+      "accounts_contacted_or_researched": 20,
+      "meetings": 3,
+      "proposals": 1,
+      "diagnostic_sales": 0,
+      "lab_sales": 0,
+      "marketing_spend_clp": 20000
+    },
+    {
+      "scenario": "Conservador",
+      "month": "2027-01",
+      "accounts_contacted_or_researched": 35,
+      "meetings": 6,
+      "proposals": 2,
+      "diagnostic_sales": 1,
+      "lab_sales": 0,
+      "marketing_spend_clp": 40000
+    },
+    {
+      "scenario": "Base",
+      "month": "2026-12",
+      "accounts_contacted_or_researched": 45,
+      "meetings": 8,
+      "proposals": 3,
+      "diagnostic_sales": 1,
+      "lab_sales": 0,
+      "marketing_spend_clp": 40000
+    },
+    {
+      "scenario": "Base",
+      "month": "2027-01",
+      "accounts_contacted_or_researched": 70,
+      "meetings": 14,
+      "proposals": 6,
+      "diagnostic_sales": 2,
+      "lab_sales": 1,
+      "marketing_spend_clp": 60000
+    },
+    {
+      "scenario": "Expansion",
+      "month": "2026-12",
+      "accounts_contacted_or_researched": 70,
+      "meetings": 15,
+      "proposals": 7,
+      "diagnostic_sales": 2,
+      "lab_sales": 0,
+      "marketing_spend_clp": 80000
+    },
+    {
+      "scenario": "Expansion",
+      "month": "2027-01",
+      "accounts_contacted_or_researched": 110,
+      "meetings": 24,
+      "proposals": 11,
+      "diagnostic_sales": 4,
+      "lab_sales": 2,
+      "marketing_spend_clp": 120000
+    }
+  ]
+}
