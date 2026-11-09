@@ -1,5 +1,7 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+> **Decisión de naming (09/11/2026): DANREXO** es el nombre elegido para la futura identidad pública; se ejecutará como **migración controlada en Sprint 3**. La disponibilidad marcaria y los dominios **no están certificados ni registrados**; hasta completar sus verificaciones se conserva **DELIA** como nombre técnico y ruta histórica. [Acta, evidencia parcial, riesgos y checklist de Sprint 3](docs/branding/DANREXO_DECISION_Y_SPRINT3.md).
+
 ## DELIA / frontend público (09/11/2026)
 
 El nuevo [frontend de investigación](site/README.md) se implementa con HTML/CSS/JS y una **demostración de tres casos ficticios**. Su flujo [GitHub Pages](.github/workflows/public-site-pages.yml) publica únicamente `site/` después de validación. **Preparado para revisión**; la URL prevista `https://andres-olguin.github.io/DELIA/` no se declara operativa hasta activar Pages, fusionar y verificar HTTP 200. No integra backend, datos reales ni controles productivos.
