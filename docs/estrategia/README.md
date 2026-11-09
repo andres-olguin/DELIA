@@ -1,5 +1,10 @@
 # DELIA — Estrategia de plataforma, productos y expansión 2027
 
+## Nuevo programa de investigación: AI Control y supervisión
+
+[Agent Control Research](../research/agent-control/README.md) traduce preocupaciones de supervisión, comportamientos adversariales y pérdida de control de agentes a **14 escenarios concretos de riesgo y pruebas propuestas**, vinculados con OWASP, NIST, MITRE y ControlArena. Es una **línea R&D**, no producto, certificación, kill switch universal ni evidencia de reducción de riesgo existencial. Priorizar restricciones de herramientas, revocación, aislamiento, controles pre-egress y verificación por fuente autoritativa.
+
+
 ## Actualización comercial — Master Operating System (09/11/2026)
 
 La ejecución comercial se reorienta hacia **integradoras con agentes conectados a CRM/ticketing de bajo riesgo**, y al **DELIA Workflow Readiness Lab** como servicio profesional de alcance limitado que puede evaluarse antes de disponer de SaaS seguro. [Centro maestro de 20 documentos](../commercial-master/README.md) · [Ficha de una página](../commercial-master/15-onepager-para-compradores.md) · [Riesgos, métricas y gates](../commercial-master/08-metricas-y-decisiones.md).

@@ -1,0 +1,36 @@
+name: DELIA — Agent Control Research Integrity
+on:
+  push:
+    branches: [main, docs/ai-control-safety-research-2026]
+    paths:
+      - 'docs/research/agent-control/**'
+      - 'tools/validate_agent_control_research.py'
+      - 'tests/test_agent_control_research.py'
+      - '.github/workflows/agent-control-research-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/research/agent-control/**'
+      - 'tools/validate_agent_control_research.py'
+      - 'tests/test_agent_control_research.py'
+      - '.github/workflows/agent-control-research-ci.yml'
+permissions:
+  contents: read
+jobs:
+  research-integrity:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11','3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Validación de claims y escenarios de investigación
+        run: python -m unittest tests.test_agent_control_research -v
+      - name: Informe de cobertura de amenazas planificadas
+        run: python -m tools.validate_agent_control_research
