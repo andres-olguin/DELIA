@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-11-09",
+  "main_commit_observed": "e79b36897d7843f7256b3db60ecd61f3d66e1a8d",
+  "readiness_meaning": "MANUAL_EVIDENCE_REQUIRED_STATIC_CODE_SIGNALS_ONLY",
+  "product_stage": "RESEARCH_AND_SYNTHETIC_LAB",
+  "release_claims": {
+    "production_gateway": false,
+    "real_customer_pilot": false,
+    "partner_saas": false,
+    "certified_security": false,
+    "customers_paid_by_this_manifest": false
+  },
+  "controls": [
+    {
+      "id": "SEC-001",
+      "name": "Arranque e importaciones reproducibles",
+      "severity": "P0",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Clean install and deterministic startup; all imports resolved; CI on 3.11/3.13 without external live provider",
+      "issues": [
+        6
+      ]
+    },
+    {
+      "id": "SEC-002",
+      "name": "Privacidad antes del egreso",
+      "severity": "P0",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Instrumented upstream mock receives only authorized and sanitized fields in every provider route; negative synthetic sentinel test",
+      "issues": [
+        9
+      ]
+    },
+    {
+      "id": "SEC-003",
+      "name": "Identidad, autenticación y aislamiento tenant",
+      "severity": "P0",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Authenticated principal/scopes on audit, proxy and tool entry; cross-tenant negative tests; no agent-provided authority",
+      "issues": [
+        7
+      ]
+    },
+    {
+      "id": "SEC-004",
+      "name": "Registros minimizados y secretos de producción",
+      "severity": "P0",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "No raw prompts, keys or sensitive fields persisted; env/secret manager; retention policy and negative log tests",
+      "issues": [
+        8
+      ]
+    },
+    {
+      "id": "SEC-005",
+      "name": "Modelo y auditoría compatibles con migraciones",
+      "severity": "P0",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Schema-field compatibility tested, Alembic migration and DB reset/recovery; no create_all production side effects",
+      "issues": [
+        6,
+        8
+      ]
+    },
+    {
+      "id": "SEC-006",
+      "name": "Tool runtime control sin bypass",
+      "severity": "P0",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Authenticated gateway controls execution; denied tool yields zero observed effects across alternative paths",
+      "issues": [
+        22,
+        31,
+        38
+      ]
+    },
+    {
+      "id": "SEC-007",
+      "name": "Aprobaciones, idempotencia y revocación durable",
+      "severity": "P0",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Approval exact-args bound; one-time atomic consume, replay/concurrency/revocation tests and recovery",
+      "issues": [
+        22,
+        31,
+        38
+      ]
+    },
+    {
+      "id": "SEC-008",
+      "name": "Reconciliación independiente contra fuente de verdad",
+      "severity": "P0",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Independent sandbox system-of-record readback; unknown never success; signed versioned decision scope",
+      "issues": [
+        31,
+        38
+      ]
+    },
+    {
+      "id": "VAL-001",
+      "name": "Comparación real entre dos infraestructuras",
+      "severity": "P1",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Two real allowed adapters, fixed versions, equivalent tests and no unreported missing cases",
+      "issues": [
+        45
+      ]
+    },
+    {
+      "id": "VAL-002",
+      "name": "QA independiente y ensayo de instalación externa",
+      "severity": "P1",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Independent reviewer, negative E2E suite and external install on documented fixture with SHA",
+      "issues": [
+        24,
+        45
+      ]
+    },
+    {
+      "id": "BIZ-001",
+      "name": "Precio/costo de entrega y prueba de compra",
+      "severity": "P1",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "A real authorized buyer interview with current alternatives and delivery cost; paid transaction only if contract & receipt documented privately",
+      "issues": [
+        34,
+        46,
+        49
+      ]
+    },
+    {
+      "id": "BIZ-002",
+      "name": "Marca, titularidad IP y contratación",
+      "severity": "P1",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Trademark/rights/OSS counsel-reviewed, contractual offer and approved spokesperson; no unique-brand or certification claim",
+      "issues": [
+        27,
+        50
+      ]
+    },
+    {
+      "id": "MKT-001",
+      "name": "Perfiles sociales, CTA y medición",
+      "severity": "P1",
+      "status": "OPEN",
+      "owner": "UNASSIGNED",
+      "evidence_url": null,
+      "acceptance": "Confirmed account admin/MFA, real public post URL, source attribution and buyer-relevant follow-up; no claims of publication until live",
+      "issues": [
+        41,
+        48
+      ]
+    }
+  ],
+  "decisions": {
+    "lab": "Only synthetic, non-production, clearly labeled demonstrations; no live secrets.",
+    "professional_diagnostic": "Subject to signed scope, team capacity, privacy/legal review; not an automatic approval.",
+    "production_gateway": "DENY until SEC-001..SEC-008 verified and code findings resolved plus independent security review.",
+    "commercial_saas": "DENY until product security, operating model, pricing, support and partner economics verified."
+  }
+}
