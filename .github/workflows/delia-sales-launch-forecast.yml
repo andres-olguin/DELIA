@@ -1,0 +1,36 @@
+name: DELIA — Social Launch Forecast Integrity
+on:
+  push:
+    branches: [main, feat/social-launch-forecast-2026-2027]
+    paths:
+      - 'docs/growth/launch-2026-2027/**'
+      - 'tools/forecast_delia_launch.py'
+      - 'tests/test_forecast_delia_launch.py'
+      - '.github/workflows/delia-sales-launch-forecast.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/growth/launch-2026-2027/**'
+      - 'tools/forecast_delia_launch.py'
+      - 'tests/test_forecast_delia_launch.py'
+      - '.github/workflows/delia-sales-launch-forecast.yml'
+permissions:
+  contents: read
+jobs:
+  transparent-scenarios:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11','3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Test finance assumptions, no fake sales or SaaS
+        run: python -m unittest tests.test_forecast_delia_launch -v
+      - name: Print clearly labeled illustrative scenario totals
+        run: python -m tools.forecast_delia_launch
