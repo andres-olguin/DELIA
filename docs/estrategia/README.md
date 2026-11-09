@@ -1,5 +1,18 @@
 # DELIA — Estrategia de plataforma, productos y expansión 2027
 
+## Actualización: competencia global y contratos operacionales verificables
+
+La comparación del 09-11-2026 revela **competencia directa significativa**: Helio, AgentTrustOps, Temporal, Agentgateway/Cerbos, proveedores cloud globales y proyectos de China, Japón, Francia, Alemania y Brasil. Las funciones de autorización, aprobación, presupuesto, reconciliación y auditoría **no son exclusivas de DELIA**.
+
+La siguiente dirección de producto es **DELIA Outcome Assurance**: contratos de procesos empresariales con precondiciones, acciones autorizadas, ejecución controlada, verificación de resultados y paquete de evidencia, orientados primero a ecommerce/BPO e integradoras. **Solo existe un laboratorio sintético**, separado de la API actual.
+
+- [Investigación de 26 soluciones y evidencia multilingüe](investigacion-global-2026-11-09.md)
+- [Tesis técnica y comercial Outcome Assurance](delia-outcome-assurance.md)
+- [Roadmap adicional con fechas](hoja-de-ruta-outcome-assurance.md)
+- [Programa de comparaciones, pilotos y precio](experimentos-comerciales-y-benchmark.md)
+- [Laboratorio de contratos, sin operaciones reales](../../experiments/contract_assurance/README.md)
+
+
 **Versión:** 2026-11-09 · **Estado:** estrategia propuesta y documentación de producto, NO funcionalidades desplegadas. **Patrocinador empresarial previsto:** MasterTech SpA.
 
 > **Tesis:** DELIA puede convertirse en una infraestructura para que organizaciones e integradores **gobiernen los datos, permisos, acciones y evidencias de sus sistemas de inteligencia artificial**. Los motores de control deben imponerse a nivel de ejecución; una pantalla o un booleano de autorización no bastan.
@@ -19,7 +32,7 @@
 | `main` del repositorio | Prototipo inicial, riesgos P0, no producción | Seguridad de gateway desplegado |
 | PR #19 | Benchmark histórico de 172 casos, aún sujeto a revisión | Comparación ejecutada con competidores |
 | PR #20 | Detectores MX/BO y CI documentada de 170 pruebas, sin fusionar | Precisión universal ni cifrado real |
-| PR #21 | Laboratorio de políticas/decisiones, 33 pruebas por Python 3.11 y 3.13; rama no fusionada | Identidad real, aprobación durable o interceptación segura |
+| PR #21 | Laboratorio de políticas/decisiones, 48 pruebas por Python 3.11 y 3.13 (SHA cca34797); rama no fusionada | Identidad real, aprobación durable o interceptación segura |
 | Esta estrategia | Ofertas, verticales, objetivos, escenarios y backlog | Clientes, contratos, certificaciones, ingresos o funcionalidades ya vendibles |
 
 **Nada de lo siguiente autoriza tratar información sensible de clientes, automatizar pagos o comprometer SLA.**

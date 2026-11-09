@@ -81,6 +81,15 @@
       "pricing_model": "subscription_addon",
       "first_target": "2027-07-31",
       "evidence": "Requiere demanda, acuerdos sectoriales y tests."
+    },
+    {
+      "id": "DL-OUTCOME",
+      "name": "DELIA Outcome Assurance",
+      "type": "industry_module",
+      "state": "planned",
+      "pricing_model": "partner_base_plus_verified_workflow_volume_and_services_to_validate",
+      "first_target": "2027-03-31",
+      "evidence": "Solo existe laboratorio sintético de invariantes y reconciliación en experiments/contract_assurance; autorización y resultados reales no implementados."
     }
   ],
   "priority_sectors": [
@@ -103,6 +112,8 @@
   "source_docs": [
     "docs/estrategia/portafolio-y-modelos-de-negocio.md",
     "docs/estrategia/verticales-y-casos-de-uso.md",
-    "docs/estrategia/roadmap-con-fechas-y-gates.md"
+    "docs/estrategia/roadmap-con-fechas-y-gates.md",
+    "docs/estrategia/delia-outcome-assurance.md",
+    "docs/estrategia/investigacion-global-2026-11-09.md"
   ]
 }

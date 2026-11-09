@@ -58,3 +58,12 @@ No-Go obligatorio frente a fallo de auth, bypass, cross-tenant, egress PII, repl
 
 ## Pregunta de control editorial obligatoria
 «¿Este mensaje describe algo que funciona en un commit verificable, una función de laboratorio, una intención futura o una oportunidad de mercado?» Si no está claro, reescribir con estado, fuente, limitación y fecha.
+
+## Nuevos límites de comunicación comercial (investigación global 09/11)
+
+- **No decir:** «primera plataforma que autoriza tool calls», «primer sistema que reconcilia resultados de agentes» o «único con presupuestos cruzados». Helio, AgentTrustOps, Temporal y otros ya declaran esas capacidades.
+- **Sí decir:** «DELIA investiga contratos de operación por industria con protección regional, evidencia de resultado y un canal de integradoras». Es hipótesis de producto, no ventaja medida.
+- **Nunca equiparar** `ELIGIBLE_FOR_AUTHORIZATION` con autorización real ni `VERIFIED_SIMULATED` con operación bancaria confirmada.
+- Los informes de comparación deben citar fuente, fecha y versión, y declarar que no se ejecutó un benchmark competitivo hasta que exista.
+- Toda política con datos reales requiere controles S1–S4 y consentimiento contractual pertinente. Un laboratorio local es exclusivamente S0.
+

@@ -1,5 +1,16 @@
 # DELIA — Data Encryption & Limiting Intelligence Agent
 
+## Auditoría competitiva global y DELIA Outcome Assurance (09/11/2026)
+
+La investigación internacional identificó alternativas abiertas que **ya ofrecen aprobaciones, presupuestos, prerequisitos y reconciliación de acciones de agentes**, especialmente [Helio](https://github.com/gethelio/helio), [AgentTrustOps](https://github.com/teresaliu90/AgentTrustOps) y [Temporal](https://docs.temporal.io/ai). Por ello **no** afirmamos ser pioneros o exclusivos en estas funciones.
+
+**Nueva dirección propuesta:** [DELIA Outcome Assurance](docs/estrategia/delia-outcome-assurance.md): contratos operacionales sectoriales que diferencian precondiciones, autorización, ejecución y resultado verificado, con distribución para integradores y protección de datos regional. [Matriz de 26 referencias internacionales](docs/estrategia/investigacion-global-2026-11-09.md). [Laboratorio local de contratos](experiments/contract_assurance/README.md): pruebas sintéticas, no ejecución real ni protección productiva.
+
+**Estado:** el repositorio mantiene riesgos P0 de autenticación, egreso y aislamiento. El nuevo laboratorio no altera el proxy existente ni hace que DELIA sea apto para producción; su fecha de beta sigue siendo una **meta condicionada al 15 de enero de 2027**.
+
+---
+
+
 ## Dirección comercial 2027 — DELIA como plataforma (09/11/2026)
 
 **Nuevo:** [Estrategia de productos, nichos, monetización y metas con fechas](docs/estrategia/README.md). Incluye **SaaS Cloud, API, Partner/OEM, licencias Enterprise privadas, packs sectoriales, servicios de integración, formación**, un mapa de **18 sectores** y un [catálogo verificable](docs/estrategia/catalogo-productos.json). Los modelos de ingreso y objetivos son **hipótesis**, no clientes ni ingresos reales.

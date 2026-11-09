@@ -1,0 +1,38 @@
+name: DELIA — Outcome Contracts Lab
+on:
+  push:
+    branches:
+      - feat/global-market-outcome-assurance-2026
+      - main
+    paths:
+      - 'experiments/contract_assurance/**'
+      - 'experiments/__init__.py'
+      - 'tests/test_outcome_contracts.py'
+      - '.github/workflows/outcome-contracts-lab-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'experiments/contract_assurance/**'
+      - 'experiments/__init__.py'
+      - 'tests/test_outcome_contracts.py'
+      - '.github/workflows/outcome-contracts-lab-ci.yml'
+permissions:
+  contents: read
+jobs:
+  lab-tests:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Contratos empresariales de laboratorio
+        run: python -m unittest tests.test_outcome_contracts -v
+      - name: Simulacion de resultado
+        run: python -m experiments.contract_assurance.demo

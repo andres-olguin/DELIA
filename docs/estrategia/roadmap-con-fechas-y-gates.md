@@ -1,5 +1,8 @@
 # DELIA — Roadmap ejecutivo y tecnológico con fechas concretas (2026–2028)
 
+> **Actualización estratégica 09/11/2026:** se incorpora [DELIA Outcome Assurance](delia-outcome-assurance.md) y su [plan de verificación de resultados y benchmark comparativo](hoja-de-ruta-outcome-assurance.md). No elimina los P0, no promete disponibilidad el 15 de enero y no reemplaza el calendario existente.
+
+
 **Fecha de elaboración:** 09/11/2026. **Estado:** metas propuestas, no compromisos firmados, productos operativos ni disponibilidad laboral confirmada. El calendario **no sustituye** los gates de seguridad. Corte central: **viernes 15/01/2027**, beta avanzada sujeta a revisión.
 
 ## Noviembre 2026 – enero 2027
