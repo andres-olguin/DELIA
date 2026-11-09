@@ -1,5 +1,10 @@
 # DELIA — Master Commercial Operating System (MCOS)
 
+## Investigación complementaria de seguridad
+
+El plan comercial mantiene el ICP inicial y puede incorporar un futuro **Agent Control Readiness Pack** cuando existan pruebas de control en entornos aislados. [Programa AI Control Research](../research/agent-control/README.md), con 14 amenazas/escenarios y evaluación de riesgos. Los controles todavía no están certificados ni son aptos para operar con sistemas externos; no usar preocupaciones existenciales como argumentos de venta.
+
+
 **Revisión:** 09/11/2026. **Dueño comercial propuesto:** dirección de MasterTech SpA; DRI y capacidad deben confirmarse. **Estado:** estrategia y herramientas de planificación, no clientes, ventas, pilotos productivos ni producto certificado. Versionado en GitHub; no divulgar datos de prospectos.
 
 ## La decisión que cambia el plan
