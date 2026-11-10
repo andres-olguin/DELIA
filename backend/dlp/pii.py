@@ -129,8 +129,11 @@ _RULES = (
     ("TELEFONO", r"\+(?:57|56)[\s-]?\d(?:[\s-]?\d){7,9}\b", None, 0),
     # La cédula no tiene dígito verificador: solo se detecta con una palabra de contexto.
     ("CEDULA",
-     r"(?i)\b(?:c\.\s?c\.?|cc|c[eé]dula(?:\s+de\s+ciudadan[ií]a)?)\s*(?:no\.?|n[oº°]\.?|n[uú]mero|#)?\s*:?\s*"
-     r"(\d{1,3}(?:\.\d{3}){1,2}|\d{6,10})\b", None, 1),
+     r"(?i)\b(?:c\.\s?c\.?|cc|c(?:[eé]|\\u00[ce]9)dula"
+     r"(?:\s+de\s+ciudadan(?:[ií]|\\u00[ce]d)a)?)\s*"
+     r"(?:no\.?|n[oº°]\.?|n[uú]mero|#)?\s*:?\s*"
+     r"(\d(?:\.\d{3}){3}|\d{1,3}(?:\.\d{3}){1,2}|\d{6,10})"
+     r"(?![\w-]|[.,/][0-9])", None, 1),
     # El verificador o el contexto inmediato se comprueban en detect().
     ("CURP", _CURP_PATTERN, _valid_curp, 0),
     ("RFC", _RFC_PATTERN, _valid_rfc, 0),
@@ -143,6 +146,11 @@ def detect(text: str) -> list[Finding]:
             if kind in _REGIONAL_TYPES and _has_combining_boundary(text, m.start(group), m.end(group)):
                 continue
             if kind in _MX_CONTEXT_PATTERNS and not _valid_mx_checksum(kind, m.group(0)):
+                # La homonimia se obtiene de 000–999 dividido entre 34.
+                # Su cociente máximo es 29 (V en el Anexo II del SAT).
+                # W/X/Y/Z no justifican aceptar un verificador fallido por contexto.
+                if kind == "RFC" and m.group(0)[-3].upper() in "WXYZ":
+                    continue
                 context = _MX_CONTEXT_PATTERNS[kind].search(text, 0, m.start(group))
                 if context is None or _has_combining_boundary(text, context.start(), m.start(group)):
                     continue

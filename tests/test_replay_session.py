@@ -73,6 +73,17 @@ def test_masks_regional_identifiers_in_json_body():
     assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
 
 
+def test_masks_full_cedula_and_preserves_rejected_rfc_in_prepared_body():
+    s, adapter = session()
+    s.post("https://x.test", json={
+        "message": "cédula: 2.345.678.901; RFC: QQZ850224X20",
+    })
+    assert json.loads(adapter.sent.body) == {
+        "message": "cédula: [[CEDULA]]; RFC: QQZ850224X20",
+    }
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
+
+
 @pytest.mark.parametrize("as_bytes", [False, True])
 def test_masks_regional_identifiers_in_text_body(as_bytes):
     s, adapter = session()

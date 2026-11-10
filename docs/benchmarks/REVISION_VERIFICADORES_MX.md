@@ -1,5 +1,55 @@
 # Revisión de verificadores y contexto de CURP/RFC
 
+## Corrección de los cuatro falsos positivos, 10 de noviembre de 2026
+
+La referencia anterior es `b7d0294bf95a2d9c89257d2ab42de8ba3b45efa3`.
+El [reporte de corrección](../../benchmarks/resultados_correccion_fp.json)
+registra hashes de los detectores, los corpus y el evaluador, así como las
+diferencias y los errores restantes por caso. Los tres corpus se evaluaron
+con las mismas entradas y etiquetas que en esa referencia.
+
+| Corpus | Antes TP / FP / FN | Después TP / FP / FN |
+|---|---:|---:|
+| Histórico, 172 casos | 95 / 4 / 55 | 98 / 0 / 52 |
+| Desarrollo MX/BO, 96 casos | 55 / 0 / 0 | 55 / 0 / 0 |
+| Política MX, 60 casos | 29 / 0 / 0 | 29 / 0 / 0 |
+
+En el histórico se modifican exactamente cuatro casos. T0041, T0045 y T0049
+repiten una cédula de diez dígitos con puntos. Se captura ahora el intervalo
+completo en lugar de recortarlo. Cada corrección elimina un FP y un FN y agrega
+un TP. Se bloquean también las capturas parciales de números más largos o con
+agrupaciones incorrectas. El consumidor `LoggedSession` queda cubierto con un
+JSON preparado que usa la palabra cédula con su tilde escapada.
+
+T0162 deja de clasificarse como RFC. Se refinó la protección por contexto cuando
+falla el verificador. En ese caso una homonimia iniciada en W/X/Y/Z se descarta,
+incluso con etiqueta inmediata. El cálculo publicado toma las tres últimas
+cifras de una suma, las divide por 34 y usa el cociente y el residuo para
+construir la homonimia. El cociente máximo es 29, que corresponde a V. Esta
+restricción se aplica a la clase de candidatos, con pruebas adicionales de las
+cuatro letras, minúsculas y JSON.
+[Documento técnico SAT, copia consultada, procedimiento y Anexo II](https://www.mariovaldez.net/files/IFAI%200610100135506%20065%20Algoritmo%20para%20generar%20el%20RFC%20con%20homoclave%20para%20personas%20fisicas%20y%20morales.pdf).
+
+Se mantiene la protección conservadora de candidatos con verificador coherente
+y la tolerancia previa a otros errores del verificador con etiqueta inmediata.
+La cota adicional de homonimia endurece solamente esta última vía. La regla
+local sigue teniendo un objetivo de enmascaramiento y requiere una comprobación
+distinta para demostrar inscripción o titularidad.
+
+Los otros 168 casos históricos conservan exactamente sus detecciones. Los
+95 aciertos de la revisión anterior se mantienen y se agregan tres. Los
+resultados son precisión 100 %, recall 65,33 % y F1 79,03 % en este corpus.
+Las 52 omisiones restantes se conservan en el reporte. Las cifras describen
+el laboratorio sintético y requieren revisión independiente de las etiquetas.
+
+Se ejecutó la suite completa con 418 pruebas aprobadas y 12 advertencias de
+obsolescencia. Las 25 pruebas añadidas cubren los cuatro casos históricos,
+dieciséis variantes de cédula, cuatro grupos de RFC y un cuerpo JSON preparado
+por el consumidor HTTP. Los comandos de los tres benchmarks figuran más abajo.
+Los resultados del 9 de noviembre que siguen se conservan como antecedentes.
+
+## Medición del ajuste inicial, 9 de noviembre de 2026
+
 Ejecución local del 9 de noviembre de 2026 con Python 3.14.4. La referencia
 anterior del PR #20 es `f2e3f5a7c7fea090a5d1e68fc194403675fc4d4b`.
 El [reporte JSON](../../benchmarks/resultados_revision_politica_mx.json)

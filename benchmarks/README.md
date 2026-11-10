@@ -1,5 +1,12 @@
 # Corpus sintético de México y Bolivia
 
+La [corrección del 10 de noviembre](../docs/benchmarks/REVISION_VERIFICADORES_MX.md)
+obtuvo 98 TP, 0 FP y 52 FN en los 172 casos históricos, y mantuvo 55/0/0 y
+29/0/0 en los corpus de 96 y 60 casos, respectivamente. Se conservaron las
+entradas y etiquetas de los tres corpus para esa comparación. El
+[reporte de corrección](resultados_correccion_fp.json) detalla los cuatro casos
+modificados y los hashes de las mediciones.
+
 La revisión de verificadores del 9 de noviembre ajustó los valores positivos
 del corpus de desarrollo para incluir verificadores coherentes y dos errores de
 captura con etiqueta inmediata. Los conteos de casos y entidades se mantienen.

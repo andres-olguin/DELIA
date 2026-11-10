@@ -19,8 +19,9 @@ personal en el resto del identificador.
 | Condición del candidato CURP/RFC | Acción propuesta |
 |---|---|
 | Formato, límites, fecha y verificador correctos | Enmascarar, también cuando aparezca sin etiqueta o en un inventario. |
-| Formato, límites y fecha correctos, verificador incorrecto y etiqueta inmediata del mismo tipo | Enmascarar por el contexto explícito de identidad. |
+| Formato, límites y fecha correctos, verificador incorrecto y etiqueta inmediata del mismo tipo | Enmascarar por el contexto explícito de identidad, salvo la excepción de homonimia RFC indicada abajo. |
 | Formato, límites y fecha correctos, verificador incorrecto y ausencia de etiqueta inmediata del mismo tipo | Descartar el candidato de esa regla. Otras reglas pueden detectar el texto. |
+| RFC con verificador incorrecto y homonimia iniciada en W/X/Y/Z | Descartar como RFC, incluso con etiqueta inmediata. Refinamiento del 10 de noviembre. |
 | Formato, límites o fecha fuera de los requisitos actuales | Descartar el candidato de esa regla. |
 | RFC genérico nacional o extranjero | Mantener la excepción pública ya documentada. |
 
@@ -49,7 +50,7 @@ comportamiento contextual.
 
 | Caso | Evidencia revisada | Salida propuesta |
 |---|---|---|
-| T0162 | RFC con fecha y forma aceptadas, verificador que falla y etiqueta inmediata `RFC`. | Enmascarar. Sigue contando como FP frente a la etiqueta histórica negativa. |
+| T0162 | RFC aparente con verificador incorrecto y homonimia iniciada en X, fuera de la cota admitida para la protección por contexto. | Descartar como RFC tras el refinamiento del 10 de noviembre. |
 | T0163 | Valor con forma de CURP y verificador que falla, presentado como código de inventario sin etiqueta inmediata `CURP`. | Descartar como CURP. |
 
 La revisión previa contrastó el cálculo con el código de
@@ -59,9 +60,17 @@ y con una
 El control matemático comprueba consistencia interna. La titularidad y la
 inscripción requieren evidencia distinta.
 
-La decisión conserva T0162 como un falso positivo conocido del corpus histórico.
-Su aceptación por el revisor queda pendiente. Se reportarán los conteos con las
-etiquetas históricas originales y se distinguirá este desacuerdo de política.
+El refinamiento del 10 de noviembre aplica la cota de homonimia a los RFC
+con verificador incorrecto. T0162 deja de producir el falso positivo.
+Los candidatos con verificador coherente conservan la protección. La
+[revisión de resultados](REVISION_VERIFICADORES_MX.md) documenta la evidencia,
+la compatibilidad y los límites de esta decisión.
+
+Las cédulas colombianas con diez dígitos agrupados como `1.234.567.890` se
+capturan completas. Se comprueban los límites del número para evitar
+truncamientos en agrupaciones incorrectas o valores más largos. La palabra
+cédula y su variante de ciudadanía admiten también las tildes escapadas
+de un cuerpo JSON preparado.
 
 ### Criterios para implementar y validar
 
