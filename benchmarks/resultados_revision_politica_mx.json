@@ -1563,5 +1563,17 @@
       ],
       "after_case_errors": []
     }
+  },
+  "validation": {
+    "suite_command": ".venv/bin/python -m pytest -q --tb=short tests/",
+    "before_main_sync": {
+      "passed": 390,
+      "warnings": 22
+    },
+    "after_main_sync": {
+      "passed": 393,
+      "warnings": 12
+    },
+    "main_revision_integrated": "a3db7ff32ac646fc914e5b9018f35c25fcbb2f9b"
   }
 }

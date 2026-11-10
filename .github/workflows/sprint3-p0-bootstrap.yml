@@ -1,0 +1,54 @@
+name: DANREXO / DELIA — Sprint 3 P0 Fail-Closed Bootstrap
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - 'services/**'
+      - 'models/**'
+      - 'tests/test_api.py'
+      - 'tests/test_models.py'
+      - 'tests/test_pii.py'
+      - 'tests/conftest.py'
+      - 'tests/test_foundation_doctor.py'
+      - 'requirements-bootstrap.txt'
+      - '.github/workflows/sprint3-p0-bootstrap.yml'
+  push:
+    branches: [main, fix/s3-p0-bootstrap-failclosed-2026]
+    paths:
+      - 'app/**'
+      - 'services/**'
+      - 'models/**'
+      - 'tests/test_api.py'
+      - 'tests/test_models.py'
+      - 'tests/test_pii.py'
+      - 'tests/conftest.py'
+      - 'tests/test_foundation_doctor.py'
+      - 'requirements-bootstrap.txt'
+      - '.github/workflows/sprint3-p0-bootstrap.yml'
+permissions:
+  contents: read
+jobs:
+  api-bootstrap-regression:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements-bootstrap.txt
+      - name: Install isolated API/test dependencies
+        run: python -m pip install -r requirements-bootstrap.txt
+      - name: Run HTTP denial + isolated ORM + regional PII tests
+        run: python -m pytest -q tests/test_api.py tests/test_models.py tests/test_pii.py
+      - name: Run security readiness assertions
+        run: python -m unittest tests.test_foundation_doctor -v
+      - name: Read-only readiness report (expected BLOCKED)
+        run: python -m tools.foundation_doctor

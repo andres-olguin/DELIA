@@ -1,5 +1,8 @@
 # Roadmap y Carta Gantt Maestra — Proyecto DELIA
 
+> **Estado actualizado 09/11/2026 — transición controlada:** Sprint 2 (26/10–08/11) **terminó en calendario, pero NO fue aceptado técnicamente**. Ya comienza la ventana Sprint 3 (09–22/11), con arrastre P0 obligatorio; Redis/caché no desplazan privacidad ni autorización. [Acta de traspaso y criterios de cierre](sprints/TRANSICION_S2_S3_2026-11-09.md). El nombre DANREXO fue elegido, no registrado ni despejado jurídicamente.
+
+
 > **Roadmap histórico:** este documento contiene la planificación inicial de octubre de 2026. La estrategia de producto, edición Cloud/Partner/Enterprise, sectores y fechas de desarrollo posteriores están descritas en [la actualización estratégica del 9 de noviembre de 2026](estrategia/roadmap-con-fechas-y-gates.md). No suponer que las tareas históricas ya fueron completadas. La fecha de enero es una **meta condicionada a controles P0**, no autorización automática para producción.
 
 

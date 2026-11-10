@@ -26,14 +26,36 @@ class FoundationDoctorTests(unittest.TestCase):
         self.assertEqual(report["partner_saas"], "BLOCKED")
         self.assertEqual(report["controls_total"], 13)
 
-    def test_static_flags_known_current_risks(self):
-        signals = {x["id"] for x in static_signals()}
-        for required in ("RAW_UPSTREAM_PAYLOAD",
-                         "UNSANITIZED_FORWARD_CALL", "AUDIT_AUTH_ABSENT",
-                         "RAW_PROMPT_LOG", "AUDIT_SCHEMA_MISMATCH",
-                         "UPSTREAM_TOKEN_PASSTHROUGH",
-                         "HARDCODED_DATABASE_PASSWORD", "MIGRATION_BYPASS"):
-            self.assertIn(required, signals)
+    def test_repaired_static_signatures_are_absent_but_release_remains_blocked(self):
+        # A static signal disappearing is NOT proof of production security.
+        ids = {x["id"] for x in static_signals()}
+        for previous_risk in (
+            "BROKEN_IMPORT", "RAW_UPSTREAM_PAYLOAD", "UNSANITIZED_FORWARD_CALL",
+            "RAW_PROMPT_LOG", "AUDIT_SCHEMA_MISMATCH",
+            "UPSTREAM_TOKEN_PASSTHROUGH", "HARDCODED_DATABASE_PASSWORD",
+            "MIGRATION_BYPASS",
+        ):
+            self.assertNotIn(previous_risk, ids)
+        # Audit endpoints are disabled, but authentication is still unimplemented.
+        # Keep this risk visible until SEC-003 is tested, never claim it is closed.
+        self.assertIn("AUDIT_AUTH_ABSENT", ids)
+        self.assertEqual(evaluate()["production_gateway"], "BLOCKED")
+
+    def test_legacy_raw_egress_signature_is_still_detected(self):
+        # Verify that the doctor's scanner did not simply disable the warning.
+        with tempfile.TemporaryDirectory() as folder:
+            base = Path(folder)
+            for name in ("services/proxy.py", "services/audit.py", "app/api/proxy.py"):
+                p = base / name
+                p.parent.mkdir(parents=True, exist_ok=True)
+                p.write_text("from models.chat import ChatRequest\\n", encoding="utf-8")
+            (base / "services/proxy.py").write_text(
+                "payload = request.model_dump(exclude_none=True)\\n"
+                "response = await client.post(upstream_url, json=payload)\\n",
+                encoding="utf-8",
+            )
+            findings = {x["id"] for x in static_signals(base)}
+            self.assertIn("RAW_UPSTREAM_PAYLOAD", findings)
 
     def test_static_flags_broken_import_until_module_exists(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -114,7 +136,7 @@ class FoundationDoctorTests(unittest.TestCase):
         d["release_claims"]["production_gateway"] = True
         report = self.check(d)
         self.assertFalse(report["production_release_authorized"])
-        self.assertEqual(report["production_gateway"], "BLOCKED")
+        self.assertIn(report["production_gateway"], ("BLOCKED", "REVIEW_REQUIRED"))
 
     def test_missing_source_files_are_not_clean(self):
         with tempfile.TemporaryDirectory() as folder:

@@ -1,26 +1,21 @@
-from uuid import uuid4
+"""Synthetic audit experiment; NOT a production authorization decision."""
 from dataclasses import dataclass
+from uuid import uuid4
+
 from models.chat import ChatRequest
 
-@dataclass
+
+@dataclass(frozen=True)
 class AuditResult:
     allowed: bool
     request_id: str
     reason: str | None = None
 
+
 async def audit_prompt(request: ChatRequest) -> AuditResult:
-    # Generar ID único para la trazabilidad de la solicitud
-    req_id = str(uuid4())
-    
+    request_id = str(uuid4())
+    # This is a synthetic regression sentinel, not a data protection policy.
     for message in request.messages:
-        if message.role == "user":
-            prompt = message.content
-            # Regla de prueba para verificar el bloqueo de políticas de TALIA
-            if "PROMPT_BLOCK_TEST" in prompt:
-                return AuditResult(
-                    allowed=False,
-                    request_id=req_id,
-                    reason="Test policy triggered"
-                )
-                
-    return AuditResult(allowed=True, request_id=req_id)
+        if message.role == "user" and "PROMPT_BLOCK_TEST" in message.content:
+            return AuditResult(False, request_id, "Synthetic test sentinel")
+    return AuditResult(True, request_id)

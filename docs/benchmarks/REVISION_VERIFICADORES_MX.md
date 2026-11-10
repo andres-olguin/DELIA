@@ -77,7 +77,9 @@ de 172 casos.
 ## Verificación y reproducción
 
 Se ejecutó `.venv/bin/python -m pytest -q --tb=short tests/` con resultado
-de 390 pruebas aprobadas y 22 advertencias de obsolescencia. Los 78 casos
+inicial de 390 pruebas aprobadas y 22 advertencias de obsolescencia. Tras
+incorporar `main` en `a3db7ff` y resolver sus conflictos, la suite completa
+obtuvo 393 pruebas aprobadas y 12 advertencias. Los 78 casos
 adicionales de pytest comprueban los 60 ejemplos nuevos, seis grupos de
 mutaciones del verificador y doce variantes de contexto. Cada ejemplo del
 corpus comprueba tipo, intervalos y texto enmascarado.
@@ -85,6 +87,11 @@ corpus comprueba tipo, intervalos y texto enmascarado.
 La regeneración del corpus MX/BO se contrastó byte por byte con el generador.
 GitHub Actions ejecutará la suite y los tres benchmarks. El resultado remoto
 debe consultarse en el commit publicado.
+
+La sincronización conservó íntegros los cambios de `main` en
+`app/api/proxy.py`, `services/audit.py` y `services/proxy.py`, que deshabilitan
+el envío antiguo al proveedor. Se conservaron también las pruebas nuevas de
+Foundation de `main` y el caso aislado de importación rota del PR #20.
 
 ```bash
 .venv/bin/python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_bo.jsonl
