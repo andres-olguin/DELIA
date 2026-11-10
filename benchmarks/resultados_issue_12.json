@@ -1,0 +1,294 @@
+{
+  "dataset": "benchmarks/synthetic_pii_r3.jsonl",
+  "dataset_sha256": "191ae4de8598321402460e8367a2944a239f69a54d569a6065c287cef6bf4f3f",
+  "detector_sha256": "a1bd0c1af4e75547a9b9f4aa2414c352e5655ce45a5262ba67496496e780799f",
+  "cases": 172,
+  "matching": "exact_type_and_span",
+  "comparators": {
+    "Presidio": "NO EJECUTADO",
+    "Cloudflare DLP": "NO EJECUTADO",
+    "Google Model Armor": "NO EJECUTADO"
+  },
+  "results": {
+    "country/BO": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 27,
+      "precision": 1.0,
+      "recall": 0.1,
+      "f1": 0.18181818181818182
+    },
+    "country/CL": {
+      "tp": 21,
+      "fp": 0,
+      "fn": 11,
+      "precision": 1.0,
+      "recall": 0.65625,
+      "f1": 0.7924528301886793
+    },
+    "country/CO": {
+      "tp": 32,
+      "fp": 3,
+      "fn": 14,
+      "precision": 0.9142857142857143,
+      "recall": 0.6956521739130435,
+      "f1": 0.7901234567901234
+    },
+    "country/GLOBAL": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country/MX": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 27,
+      "precision": 1.0,
+      "recall": 0.1,
+      "f1": 0.18181818181818182
+    },
+    "country_entity/BO/CI_BO": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country_entity/BO/DIRECCION": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country_entity/BO/EMAIL": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country_entity/BO/NIT_BO": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country_entity/CL/DIRECCION": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country_entity/CL/EMAIL": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country_entity/CL/RUT": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+    },
+    "country_entity/CL/TELEFONO": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country_entity/CO/CEDULA": {
+      "tp": 11,
+      "fp": 3,
+      "fn": 3,
+      "precision": 0.7857142857142857,
+      "recall": 0.7857142857142857,
+      "f1": 0.7857142857142857
+    },
+    "country_entity/CO/DIRECCION": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country_entity/CO/EMAIL": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country_entity/CO/NIT": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+    },
+    "country_entity/CO/TELEFONO": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country_entity/GLOBAL/TARJETA": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country_entity/MX/CURP": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country_entity/MX/DIRECCION": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country_entity/MX/EMAIL": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country_entity/MX/RFC": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/CEDULA": {
+      "tp": 11,
+      "fp": 3,
+      "fn": 3,
+      "precision": 0.7857142857142857,
+      "recall": 0.7857142857142857,
+      "f1": 0.7857142857142857
+    },
+    "entity/CI_BO": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/CURP": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/DIRECCION": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/EMAIL": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "entity/NIT": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+    },
+    "entity/NIT_BO": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/RFC": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 12,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/RUT": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+    },
+    "entity/TARJETA": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "entity/TELEFONO": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "total": {
+      "tp": 71,
+      "fp": 3,
+      "fn": 79,
+      "precision": 0.9594594594594594,
+      "recall": 0.47333333333333333,
+      "f1": 0.6339285714285714
+    }
+  }
+}
