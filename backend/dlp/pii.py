@@ -9,6 +9,8 @@ class Finding(NamedTuple):
     end: int
 
 _NIT_PRIMES = (3, 7, 13, 17, 19, 23, 29, 37, 41, 43, 47, 53, 59, 67, 71)
+_CURP_CHECKSUM_ALPHABET = "0123456789ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+_RFC_CHECKSUM_ALPHABET = "0123456789ABCDEFGHIJKLMN&OPQRSTUVWXYZ Ñ"
 
 def rut_dv(body: str) -> str:
     total = sum(int(d) * (2 + i % 6) for i, d in enumerate(reversed(body)))
@@ -52,6 +54,23 @@ def _valid_rfc(raw: str) -> bool:
     return _valid_date(value, 1900) or _valid_date(value, 2000)
 
 
+def _valid_mx_checksum(kind: str, raw: str) -> bool:
+    # Normalizar solo para el cálculo, preservando los índices del cuerpo original.
+    value = re.sub(r"\\u00[df]1", "Ñ", raw, flags=re.IGNORECASE).upper()
+    if kind == "CURP":
+        total = sum(
+            _CURP_CHECKSUM_ALPHABET.index(char) * (18 - index)
+            for index, char in enumerate(value[:-1])
+        )
+        return value[-1] == str((-total) % 10)
+    body = value[:-1].rjust(12)
+    total = sum(
+        _RFC_CHECKSUM_ALPHABET.index(char) * (13 - index)
+        for index, char in enumerate(body)
+    )
+    return value[-1] == "0123456789A"[(-total) % 11]
+
+
 # Los límites conservan semántica Unicode, mientras los bloques de identificador
 # usan letras y dígitos explícitos. Así se evita aceptar letras Unicode similares.
 _CURP_PATTERN = (
@@ -69,6 +88,10 @@ _RFC_PATTERN = (
 
 # Etiqueta y valor en la misma línea, incluyendo claves y valores JSON citados.
 _ID_SEPARATOR = r'"?(?:[ \t]*[:=#][ \t]*|[ \t]+)"?'
+_MX_CONTEXT_PATTERNS = {
+    kind: re.compile(r"(?<![\w&-])(?ai:" + kind + ")" + _ID_SEPARATOR + r"\Z")
+    for kind in ("CURP", "RFC")
+}
 _NUMERIC_END = r"(?![\w-]|[.,/][0-9])(?![ \t]*-)"
 _CI_BO_PATTERN = (
     r"(?<!\w)(?ai:ci(?:[ \t]+(?:bolivia|bo))?|c\.i\.|c[eéÉ]dula[ \t]+boliviana)"
@@ -108,7 +131,7 @@ _RULES = (
     ("CEDULA",
      r"(?i)\b(?:c\.\s?c\.?|cc|c[eé]dula(?:\s+de\s+ciudadan[ií]a)?)\s*(?:no\.?|n[oº°]\.?|n[uú]mero|#)?\s*:?\s*"
      r"(\d{1,3}(?:\.\d{3}){1,2}|\d{6,10})\b", None, 1),
-    # Validación estructural y de calendario, sin consulta de identidad ni checksum.
+    # El verificador o el contexto inmediato se comprueban en detect().
     ("CURP", _CURP_PATTERN, _valid_curp, 0),
     ("RFC", _RFC_PATTERN, _valid_rfc, 0),
 )
@@ -119,6 +142,10 @@ def detect(text: str) -> list[Finding]:
         for m in re.finditer(pattern, text):
             if kind in _REGIONAL_TYPES and _has_combining_boundary(text, m.start(group), m.end(group)):
                 continue
+            if kind in _MX_CONTEXT_PATTERNS and not _valid_mx_checksum(kind, m.group(0)):
+                context = _MX_CONTEXT_PATTERNS[kind].search(text, 0, m.start(group))
+                if context is None or _has_combining_boundary(text, context.start(), m.start(group)):
+                    continue
             if validate is None or validate(m.group(0)):
                 found.append(Finding(kind, m.start(group), m.end(group)))
     # Ante solapes gana el hallazgo que empieza antes y, a igual inicio, el más largo.

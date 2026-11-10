@@ -1,5 +1,9 @@
 # Evaluación de identificadores de México y Bolivia
 
+La [revisión posterior de verificadores](REVISION_VERIFICADORES_MX.md) documenta
+el ajuste de contexto, la versión actualizada del corpus de desarrollo y las
+mediciones con las etiquetas históricas originales.
+
 Fecha de ejecución, 7 de noviembre de 2026. Python 3.14.4.
 
 Se compararon el detector inicial y el detector implementado sobre el mismo

@@ -1,5 +1,9 @@
 # Comparación del PR #20 con el benchmark histórico de 172 casos
 
+Este documento registra la revisión `c2a1c9f` y conserva sus resultados.
+El ajuste posterior de verificadores y contexto se evalúa en la
+[revisión de verificadores](REVISION_VERIFICADORES_MX.md).
+
 Ejecución local del 9 de noviembre de 2026 con Python 3.14.4. Se usó el mismo
 [corpus sintético de Ronda 3](../../benchmarks/synthetic_pii_r3.jsonl) para ambos
 detectores, con 150 entidades anotadas y 22 casos sin entidades. Cada acierto

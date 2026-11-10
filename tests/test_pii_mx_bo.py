@@ -8,6 +8,8 @@ from backend.dlp.pii import Finding, detect, redact
 
 CORPUS = Path(__file__).resolve().parents[1] / "benchmarks" / "synthetic_pii_mx_bo.jsonl"
 CASES = [json.loads(line) for line in CORPUS.read_text(encoding="utf-8").splitlines()]
+POLICY_CORPUS = CORPUS.with_name("synthetic_pii_mx_policy.jsonl")
+CASES += [json.loads(line) for line in POLICY_CORPUS.read_text(encoding="utf-8").splitlines()]
 
 
 @pytest.mark.parametrize("case", CASES, ids=[case["id"] for case in CASES])
@@ -29,6 +31,42 @@ def test_detection_and_redaction(case):
     masked, findings = redact(case["text"])
     assert masked == expected_text, case["note"]
     assert findings == expected
+
+
+@pytest.mark.parametrize(("kind", "value"), [
+    ("CURP", "NAQZ860412HJCPLR03"),
+    ("CURP", "VEQX000229MNEBRCA7"),
+    ("RFC", "ZAÑQ870614R22"),
+    ("RFC", "&QZ030725L77"),
+    ("RFC", "YQZ94061803A"),
+    ("RFC", "YQZ940618080"),
+])
+def test_checksum_mutations_require_matching_context(kind, value):
+    for digit in "0123456789A" if kind == "RFC" else "0123456789":
+        candidate = value[:-1] + digit
+        expected = [Finding(kind, 0, len(candidate))] if digit == value[-1] else []
+        assert detect(candidate) == expected
+        assert redact(f"{kind}: {candidate}")[0] == f"{kind}: [[{kind}]]"
+
+
+@pytest.mark.parametrize(("prefix", "expected"), [
+    ("curp = ", True),
+    ("CURP # ", True),
+    ("CURP\t", True),
+    ('"CURP": "', True),
+    ("miCURP: ", False),
+    ("CURP:\n", False),
+    ("CURP de contacto ", False),
+    ("RFC: ", False),
+    ("&CURP: ", False),
+    ("-CURP: ", False),
+    ("\u0301CURP: ", False),
+    ("CÜRP: ", False),
+])
+def test_mx_context_boundaries(prefix, expected):
+    value = "NAQZ860412HJCPLR04"
+    findings = detect(prefix + value)
+    assert findings == ([Finding("CURP", len(prefix), len(prefix) + len(value))] if expected else [])
 
 
 @pytest.mark.parametrize(

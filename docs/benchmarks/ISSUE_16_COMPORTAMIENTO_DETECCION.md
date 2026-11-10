@@ -4,6 +4,78 @@ Paso 4 de la fase 2. La [investigación de formatos](ISSUE_16_FORMATOS_Y_FUENTES
 define la base de estas decisiones de diseño. El paso 5 convertirá la
 especificación en casos sintéticos con tipos e intervalos esperados.
 
+## Política propuesta tras la revisión de falsos positivos
+
+Fecha de definición, 9 de noviembre de 2026. Estado, implementada y probada
+localmente, pendiente de revisión independiente. Esta sección define el ajuste de CURP y RFC para el
+PR #20. Los apartados posteriores describen el comportamiento que produjo las
+mediciones previas al ajuste. La [revisión de verificadores](REVISION_VERIFICADORES_MX.md)
+registra sus resultados y los cambios en los corpus.
+
+El objetivo es combinar la comprobación matemática con una señal explícita de
+identidad. Un error en el carácter verificador puede conservar información
+personal en el resto del identificador.
+
+| Condición del candidato CURP/RFC | Acción propuesta |
+|---|---|
+| Formato, límites, fecha y verificador correctos | Enmascarar, también cuando aparezca sin etiqueta o en un inventario. |
+| Formato, límites y fecha correctos, verificador incorrecto y etiqueta inmediata del mismo tipo | Enmascarar por el contexto explícito de identidad. |
+| Formato, límites y fecha correctos, verificador incorrecto y ausencia de etiqueta inmediata del mismo tipo | Descartar el candidato de esa regla. Otras reglas pueden detectar el texto. |
+| Formato, límites o fecha fuera de los requisitos actuales | Descartar el candidato de esa regla. |
+| RFC genérico nacional o extranjero | Mantener la excepción pública ya documentada. |
+
+Una etiqueta inmediata es la palabra completa `CURP` o `RFC`, sin distinguir
+mayúsculas, antes del candidato y en la misma línea. Se admiten espacios
+horizontales y los separadores `:`, `=` o `#`, con las comillas dobles opcionales
+que requiere un campo JSON. Por ejemplo, `CURP: valor`, `RFC valor` o
+`"rfc": "valor"`. La etiqueta debe corresponder al tipo del candidato.
+Las palabras intermedias, los saltos de línea y las etiquetas contenidas dentro
+de otra palabra quedan fuera de este contexto inmediato.
+
+Expresiones como «inventario», «ejemplo» o «sin contexto» no conceden una
+exención adicional. Un valor que cumple los requisitos y el verificador se
+protege incluso si el texto circundante lo presenta como una referencia interna.
+Los errores de longitud, fecha o estructura requieren una política adicional
+antes de ampliar el reconocimiento de errores de captura.
+
+El cálculo del verificador debe verificarse con ejemplos de referencia, incluidos
+RFC de personas físicas y morales, Ñ, ampersand, minúsculas y escapes JSON.
+La normalización para calcularlo debe conservar los índices sobre el texto
+original. Se mantienen las etiquetas `[[CURP]]` y `[[RFC]]` y la precedencia
+actual de correos y solapes. Las reglas de CI/NIT bolivianos conservan su
+comportamiento contextual.
+
+### Efecto esperado sobre los casos históricos
+
+| Caso | Evidencia revisada | Salida propuesta |
+|---|---|---|
+| T0162 | RFC con fecha y forma aceptadas, verificador que falla y etiqueta inmediata `RFC`. | Enmascarar. Sigue contando como FP frente a la etiqueta histórica negativa. |
+| T0163 | Valor con forma de CURP y verificador que falla, presentado como código de inventario sin etiqueta inmediata `CURP`. | Descartar como CURP. |
+
+La revisión previa contrastó el cálculo con el código de
+[python-stdnum para CURP](https://github.com/arthurdejong/python-stdnum/blob/master/stdnum/mx/curp.py)
+y con una
+[copia del documento técnico SAT para RFC](https://www.mariovaldez.net/files/IFAI%200610100135506%20065%20Algoritmo%20para%20generar%20el%20RFC%20con%20homoclave%20para%20personas%20fisicas%20y%20morales.pdf).
+El control matemático comprueba consistencia interna. La titularidad y la
+inscripción requieren evidencia distinta.
+
+La decisión conserva T0162 como un falso positivo conocido del corpus histórico.
+Su aceptación por el revisor queda pendiente. Se reportarán los conteos con las
+etiquetas históricas originales y se distinguirá este desacuerdo de política.
+
+### Criterios para implementar y validar
+
+- Agregar ejemplos nuevos que crucen tipo, contexto, verificador y límites,
+  incluyendo un mismo candidato con y sin etiqueta y un inventario con un
+  verificador correcto. Registrar la procedencia y revisión de las etiquetas.
+- Distinguir en el corpus de desarrollo los positivos con verificador correcto
+  y los errores de captura que se protegen por contexto. Conservar las
+  revisiones anteriores para reproducir las métricas publicadas.
+- Mantener el corpus histórico y evaluar cada diferencia, incluidos los
+  aciertos que se perderían al exigir verificador sin contexto.
+- Ejecutar las pruebas de detección y enmascaramiento, los dos benchmarks y
+  GitHub Actions antes de considerar implementada esta política.
+
 ## Contrato de salida
 
 `detect(text)` devuelve hallazgos `Finding(type, start, end)` ordenados por
