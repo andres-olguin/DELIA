@@ -5,9 +5,9 @@ Fecha, 10 de noviembre de 2026. Revisión del diff desde `a3db7ff` hasta
 El [reporte JSON](../../benchmarks/resultados_revision_final.json) registra el
 hash del detector corregido, los datos evaluados y los resultados.
 
-Codex realizó esta revisión adicional en la misma sesión de implementación,
-por solicitud del autor del PR. Se usaron comprobaciones adicionales y
-escenarios generados después de la implementación. La procedencia corresponde
+Benjamín (`benjadiaz112`) realizó la revisión técnica junto a Codex en la misma
+sesión de implementación. Se usaron comprobaciones adicionales y escenarios
+generados por Codex después de la implementación. La procedencia corresponde
 a una revisión técnica propia. La independencia entre autores requiere una
 revisión distinta y estos resultados deben conservar esa distinción.
 

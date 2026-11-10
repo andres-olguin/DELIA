@@ -1,7 +1,8 @@
 {
   "date": "2026-11-10",
   "reviewed_revision": "ed8c24047f9075136cbd98919f1bbf99254dd2b7",
-  "review_type": "additional_technical_self_review",
+  "review_type": "collaborative_technical_self_review",
+  "review_participants": ["Benjamín (benjadiaz112)", "Codex"],
   "after_detector_sha256": "8a114f2ef64f53af6657f58274e8fe35f667eb1e4cc35f83923d87f036552af9",
   "scope": "detector_and_prepared_utf8_json_body_not_production_certification",
   "additional_scenarios": {
