@@ -72,6 +72,26 @@ truncamientos en agrupaciones incorrectas o valores más largos. La palabra
 cédula y su variante de ciudadanía admiten también las tildes escapadas
 de un cuerpo JSON preparado.
 
+### Ampliación de formatos RUT/NIT del 10 de noviembre
+
+La revisión de cobertura incorpora formatos adicionales de los tipos heredados.
+RUT admite cuerpo continuo o agrupado con puntos y espacios horizontales a
+ambos lados del guion. NIT colombiano admite nueve dígitos continuos o tres
+grupos de tres separados consistentemente por puntos o espacios horizontales,
+con guion explícito antes del verificador.
+
+Un RUT continuo de siete u ocho dígitos puede llevar su verificador separado
+solo por espacio cuando aparece en un campo rotulado RUT. El rótulo admite
+hasta tres palabras descriptivas de 24 letras cada una, en la misma línea.
+El intervalo enmascarado incluye el número y su verificador. Se exige siempre
+coincidencia del DV, también en esta vía contextual.
+
+Los límites impiden capturar sufijos de tokens más largos, valores con
+agrupaciones incorrectas, dígitos adicionales, marcas combinantes o saltos de
+línea dentro del número. La normalización quita puntos, espacios y tabuladores
+únicamente para calcular el DV, conservando el intervalo sobre el texto original.
+El RUT agrupado con espacios y sin guion queda fuera de esta ampliación.
+
 ### Criterios para implementar y validar
 
 - Agregar ejemplos nuevos que crucen tipo, contexto, verificador y límites,

@@ -28,9 +28,14 @@ def luhn(number: str) -> bool:
 
 def _check_id(dv_fn):
     def check(raw: str) -> bool:
-        body, dv = raw.replace(".", "").upper().split("-")
+        body, dv = re.sub(r"[. \t]", "", raw).upper().split("-")
         return dv_fn(body) == dv
     return check
+
+
+def _valid_rut_without_hyphen(raw: str) -> bool:
+    body, digit = raw.split()
+    return rut_dv(body) == digit.upper()
 
 
 def _valid_date(value: str, century: int) -> bool:
@@ -93,6 +98,21 @@ _MX_CONTEXT_PATTERNS = {
     for kind in ("CURP", "RFC")
 }
 _NUMERIC_END = r"(?![\w-]|[.,/][0-9])(?![ \t]*-)"
+_RUT_PATTERN = (
+    r"(?<![\w.-])(?:[0-9]{1,2}(?:\.[0-9]{3}){2}|[0-9]{7,8})"
+    r"[ \t]*-[ \t]*[0-9kK]" + _NUMERIC_END
+)
+_RUT_FIELD_PATTERN = (
+    r"(?<!\w)(?ai:rut)(?:[ \t]+[^\W\d_]{1,24}){0,3}"
+    + _ID_SEPARATOR
+    + r"([0-9]{7,8}[ \t]+[0-9kK])"
+    + _NUMERIC_END
+)
+_NIT_CO_PATTERN = (
+    r"(?<![\w.-])(?:[0-9]{3}(?:\.[0-9]{3}){2}|"
+    r"[0-9]{3}(?:[ \t]+[0-9]{3}){2}|[0-9]{9})"
+    r"[ \t]*-[ \t]*[0-9]" + _NUMERIC_END
+)
 _CI_BO_PATTERN = (
     r"(?<!\w)(?ai:ci(?:[ \t]+(?:bolivia|bo))?|c\.i\.|c[eéÉ]dula[ \t]+boliviana)"
     + _ID_SEPARATOR
@@ -106,7 +126,7 @@ _NIT_BO_PATTERN = (
     + r"([0-9]{8,13})"
     + _NUMERIC_END
 )
-_REGIONAL_TYPES = {"CURP", "RFC", "CI_BO", "NIT_BO"}
+_REGIONAL_TYPES = {"CURP", "RFC", "CI_BO", "NIT_BO", "RUT", "NIT"}
 
 
 def _has_combining_boundary(text: str, start: int, end: int) -> bool:
@@ -116,15 +136,16 @@ def _has_combining_boundary(text: str, start: int, end: int) -> bool:
             return True
     return False
 
-# (tipo, regex, validador opcional sobre el texto encontrado, grupo a enmascarar)
+# (tipo, regex, validador opcional sobre el grupo a enmascarar, grupo)
 # shortcut: NIT colombiano de 9 dígitos y RUT de 7-8, ampliar si aparecen falsos negativos.
 _RULES = (
     # El orden resuelve empates de intervalo a favor del contexto boliviano.
     ("CI_BO", _CI_BO_PATTERN, None, 1),
     ("NIT_BO", _NIT_BO_PATTERN, None, 1),
     ("EMAIL", r"(?:[\w.+&-]|\\u00[dDfF]1)+@[\w-]+(?:\.[\w-]+)+", None, 0),
-    ("RUT", r"\b\d{1,2}\.?\d{3}\.?\d{3}-[\dkK]\b", _check_id(rut_dv), 0),
-    ("NIT", r"\b\d{3}\.?\d{3}\.?\d{3}-\d\b", _check_id(nit_dv), 0),
+    ("RUT", _RUT_PATTERN, _check_id(rut_dv), 0),
+    ("RUT", _RUT_FIELD_PATTERN, _valid_rut_without_hyphen, 1),
+    ("NIT", _NIT_CO_PATTERN, _check_id(nit_dv), 0),
     ("TARJETA", r"\b\d(?:[ -]?\d){12,18}\b", lambda s: luhn(re.sub(r"\D", "", s)), 0),
     ("TELEFONO", r"\+(?:57|56)[\s-]?\d(?:[\s-]?\d){7,9}\b", None, 0),
     # La cédula no tiene dígito verificador: solo se detecta con una palabra de contexto.
@@ -154,7 +175,7 @@ def detect(text: str) -> list[Finding]:
                 context = _MX_CONTEXT_PATTERNS[kind].search(text, 0, m.start(group))
                 if context is None or _has_combining_boundary(text, context.start(), m.start(group)):
                     continue
-            if validate is None or validate(m.group(0)):
+            if validate is None or validate(m.group(group)):
                 found.append(Finding(kind, m.start(group), m.end(group)))
     # Ante solapes gana el hallazgo que empieza antes y, a igual inicio, el más largo.
     # A igualdad de intervalo prevalece el orden de _RULES.

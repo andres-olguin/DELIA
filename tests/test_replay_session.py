@@ -84,6 +84,13 @@ def test_masks_full_cedula_and_preserves_rejected_rfc_in_prepared_body():
     assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
 
 
+def test_masks_spaced_rut_and_colombian_nit_in_prepared_json():
+    s, adapter = session()
+    s.post("https://x.test", json={"rut": "8234567 1", "nit_co": "812 345 678 - 1"})
+    assert json.loads(adapter.sent.body) == {"rut": "[[RUT]]", "nit_co": "[[NIT]]"}
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
+
+
 @pytest.mark.parametrize("as_bytes", [False, True])
 def test_masks_regional_identifiers_in_text_body(as_bytes):
     s, adapter = session()

@@ -39,3 +39,4 @@ jobs:
           python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_bo.jsonl
           python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_policy.jsonl
           python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_r3.jsonl
+          python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_coverage.jsonl

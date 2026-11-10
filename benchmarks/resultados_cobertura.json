@@ -1,0 +1,1026 @@
+{
+  "date": "2026-11-10",
+  "python": "3.14.4",
+  "before_revision": "658dbad5b4112b44d3658922ee2bc7f5dfacb14e",
+  "before_detector_sha256": "c381a15460ed98035c95b304394e74729d4cdea880e322ec93e032fd6f59179b",
+  "after_source": "working_tree",
+  "after_detector_sha256": "9adfc36decc7ce2c6300fd9516baa4b4d0cdf93a8066d51bc5836c791fdd8ff3",
+  "evaluator_sha256": "e69874d38c559c8ba35bb9f27490f91b14ff7c4a0983eecf6f188dfa4cc3d68f",
+  "matching": "exact_type_and_span",
+  "additional_cases_provenance": "authored_by_codex_before_implementation_human_review_pending",
+  "evaluations": {
+    "synthetic_pii_r3.jsonl": {
+      "dataset_sha256": "191ae4de8598321402460e8367a2944a239f69a54d569a6065c287cef6bf4f3f",
+      "cases": 172,
+      "entities": 150,
+      "negative_cases": 22,
+      "before": {
+        "tp": 98,
+        "fp": 0,
+        "fn": 52,
+        "precision": 1.0,
+        "recall": 0.6533333333333333,
+        "f1": 0.7903225806451613
+      },
+      "after": {
+        "tp": 114,
+        "fp": 0,
+        "fn": 36,
+        "precision": 1.0,
+        "recall": 0.76,
+        "f1": 0.8636363636363636
+      },
+      "lost_true_positive_cases": [],
+      "case_changes": [
+        {
+          "id": "T0013",
+          "added": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0014",
+          "added": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0015",
+          "added": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0016",
+          "added": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0017",
+          "added": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0018",
+          "added": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0019",
+          "added": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0020",
+          "added": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0033",
+          "added": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0034",
+          "added": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0035",
+          "added": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0036",
+          "added": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0037",
+          "added": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0038",
+          "added": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0039",
+          "added": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "T0040",
+          "added": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ],
+          "removed": []
+        }
+      ],
+      "after_case_errors": [
+        {
+          "id": "T0061",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0062",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0064",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0065",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0067",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0068",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0070",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0071",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0073",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0076",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0079",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0082",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0085",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "T0088",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              24
+            ]
+          ]
+        },
+        {
+          "id": "T0091",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "T0094",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              24
+            ]
+          ]
+        },
+        {
+          "id": "T0097",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0099",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0100",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0102",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0103",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0105",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0106",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0108",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0145",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0146",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0147",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0148",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0149",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0150",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0151",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0152",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0153",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0154",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0155",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0156",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        }
+      ],
+      "remaining_false_negatives_by_type": {
+        "CURP": 8,
+        "RFC": 4,
+        "CI_BO": 4,
+        "NIT_BO": 8,
+        "DIRECCION": 12
+      }
+    },
+    "synthetic_pii_mx_bo.jsonl": {
+      "dataset_sha256": "abb838ab22c23254f783e505e055ab317d2caa02ebcef233b139b29531aa0baf",
+      "cases": 96,
+      "entities": 55,
+      "negative_cases": 45,
+      "before": {
+        "tp": 55,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after": {
+        "tp": 55,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "lost_true_positive_cases": [],
+      "case_changes": [],
+      "after_case_errors": [],
+      "remaining_false_negatives_by_type": {}
+    },
+    "synthetic_pii_mx_policy.jsonl": {
+      "dataset_sha256": "75b1a97a50ab2610ed3544472905480b186abc1ccdd0b2f3b6c536b1eb49bf9e",
+      "cases": 60,
+      "entities": 29,
+      "negative_cases": 32,
+      "before": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "lost_true_positive_cases": [],
+      "case_changes": [],
+      "after_case_errors": [],
+      "remaining_false_negatives_by_type": {}
+    },
+    "synthetic_pii_coverage.jsonl": {
+      "dataset_sha256": "a73457c7482229be3fdefe844fa3421c895c962671f33f4354b52c946a3acb0a",
+      "cases": 60,
+      "entities": 35,
+      "negative_cases": 28,
+      "before": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 29,
+        "precision": 0.75,
+        "recall": 0.17142857142857143,
+        "f1": 0.27906976744186046
+      },
+      "after": {
+        "tp": 35,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "lost_true_positive_cases": [],
+      "case_changes": [
+        {
+          "id": "COVERAGE-001",
+          "added": [
+            [
+              "RUT",
+              5,
+              18
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-002",
+          "added": [
+            [
+              "RUT",
+              9,
+              20
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-003",
+          "added": [
+            [
+              "RUT",
+              9,
+              22
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-005",
+          "added": [
+            [
+              "RUT",
+              5,
+              14
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-006",
+          "added": [
+            [
+              "RUT",
+              17,
+              26
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-011",
+          "added": [
+            [
+              "RUT",
+              5,
+              14
+            ],
+            [
+              "RUT",
+              27,
+              36
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-012",
+          "added": [
+            [
+              "RUT",
+              8,
+              21
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-013",
+          "added": [
+            [
+              "RUT",
+              5,
+              19
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-014",
+          "added": [
+            [
+              "RUT",
+              9,
+              21
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-015",
+          "added": [
+            [
+              "RUT",
+              9,
+              23
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-017",
+          "added": [
+            [
+              "RUT",
+              5,
+              15
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-018",
+          "added": [
+            [
+              "RUT",
+              17,
+              27
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-023",
+          "added": [
+            [
+              "RUT",
+              5,
+              15
+            ],
+            [
+              "RUT",
+              28,
+              38
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-024",
+          "added": [
+            [
+              "RUT",
+              8,
+              22
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-025",
+          "added": [
+            [
+              "NIT",
+              5,
+              20
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-026",
+          "added": [
+            [
+              "NIT",
+              5,
+              18
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-027",
+          "added": [
+            [
+              "NIT",
+              5,
+              20
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-028",
+          "added": [
+            [
+              "NIT",
+              9,
+              22
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-034",
+          "added": [],
+          "removed": [
+            [
+              "NIT",
+              5,
+              18
+            ]
+          ]
+        },
+        {
+          "id": "COVERAGE-036",
+          "added": [
+            [
+              "NIT",
+              11,
+              26
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-037",
+          "added": [
+            [
+              "NIT",
+              5,
+              20
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-038",
+          "added": [
+            [
+              "NIT",
+              5,
+              18
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-039",
+          "added": [
+            [
+              "NIT",
+              5,
+              20
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-040",
+          "added": [
+            [
+              "NIT",
+              9,
+              22
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-046",
+          "added": [],
+          "removed": [
+            [
+              "NIT",
+              5,
+              18
+            ]
+          ]
+        },
+        {
+          "id": "COVERAGE-048",
+          "added": [
+            [
+              "NIT",
+              11,
+              26
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-056",
+          "added": [
+            [
+              "NIT",
+              5,
+              20
+            ]
+          ],
+          "removed": []
+        },
+        {
+          "id": "COVERAGE-060",
+          "added": [
+            [
+              "NIT",
+              23,
+              38
+            ],
+            [
+              "RUT",
+              7,
+              16
+            ]
+          ],
+          "removed": []
+        }
+      ],
+      "after_case_errors": [],
+      "remaining_false_negatives_by_type": {}
+    }
+  },
+  "validation": {
+    "suite_command": ".venv/bin/python -m pytest -q --tb=short tests/",
+    "passed": 484,
+    "warnings": 12
+  }
+}

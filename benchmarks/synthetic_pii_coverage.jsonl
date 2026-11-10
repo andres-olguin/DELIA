@@ -1,0 +1,60 @@
+{"id":"COVERAGE-001","country":"CL","target":"RUT","text":"RUT: 8.234.567 - 1.","entities":[{"type":"RUT","start":5,"end":18}],"difficulty":"positivo","note":"Puntos y espacios alrededor del guion."}
+{"id":"COVERAGE-002","country":"CL","target":"RUT","text":"Registro 8234567 - 1.","entities":[{"type":"RUT","start":9,"end":20}],"difficulty":"positivo","note":"Número continuo y espacios alrededor del guion."}
+{"id":"COVERAGE-003","country":"CL","target":"RUT","text":"Registro 8.234.567\t-\t1.","entities":[{"type":"RUT","start":9,"end":22}],"difficulty":"positivo","note":"Tabuladores horizontales alrededor del guion."}
+{"id":"COVERAGE-004","country":"CL","target":"RUT","text":"Dato (8234567-1).","entities":[{"type":"RUT","start":6,"end":15}],"difficulty":"positivo","note":"Formato canónico ya soportado."}
+{"id":"COVERAGE-005","country":"CL","target":"RUT","text":"RUT: 8234567 1.","entities":[{"type":"RUT","start":5,"end":14}],"difficulty":"positivo","note":"Sin guion con etiqueta inmediata y DV correcto."}
+{"id":"COVERAGE-006","country":"CL","target":"RUT","text":"RUT del titular: 8234567 1.","entities":[{"type":"RUT","start":17,"end":26}],"difficulty":"positivo","note":"Campo RUT con descriptor acotado y DV correcto."}
+{"id":"COVERAGE-007","country":"CL","target":"RUT","text":"Orden 8234567 1.","entities":[],"difficulty":"negativo","note":"Sin guion ni etiqueta RUT."}
+{"id":"COVERAGE-008","country":"CL","target":"RUT","text":"RUT: 8.234.567 - 2.","entities":[],"difficulty":"negativo","note":"DV incorrecto pese al contexto."}
+{"id":"COVERAGE-009","country":"CL","target":"RUT","text":"Orden ref8234567 - 1.","entities":[],"difficulty":"negativo","note":"Valor embebido en una palabra."}
+{"id":"COVERAGE-010","country":"CL","target":"RUT","text":"RUT: 8 234 567 1.","entities":[],"difficulty":"negativo","note":"Agrupación con espacios y DV sin guion excluidos."}
+{"id":"COVERAGE-011","country":"CL","target":"RUT","text":"RUT: 8234567 1; copia RUT: 8234567 1.","entities":[{"type":"RUT","start":5,"end":14},{"type":"RUT","start":27,"end":36}],"difficulty":"positivo","note":"Dos ocurrencias con sus intervalos completos."}
+{"id":"COVERAGE-012","country":"CL","target":"RUT","text":"{\"rut\":\"8.234.567 - 1\"}","entities":[{"type":"RUT","start":8,"end":21}],"difficulty":"positivo","note":"Valor citado dentro de un JSON."}
+{"id":"COVERAGE-013","country":"CL","target":"RUT","text":"RUT: 94.285.716 - 0.","entities":[{"type":"RUT","start":5,"end":19}],"difficulty":"positivo","note":"Puntos y espacios alrededor del guion."}
+{"id":"COVERAGE-014","country":"CL","target":"RUT","text":"Registro 94285716 - 0.","entities":[{"type":"RUT","start":9,"end":21}],"difficulty":"positivo","note":"Número continuo y espacios alrededor del guion."}
+{"id":"COVERAGE-015","country":"CL","target":"RUT","text":"Registro 94.285.716\t-\t0.","entities":[{"type":"RUT","start":9,"end":23}],"difficulty":"positivo","note":"Tabuladores horizontales alrededor del guion."}
+{"id":"COVERAGE-016","country":"CL","target":"RUT","text":"Dato (94285716-0).","entities":[{"type":"RUT","start":6,"end":16}],"difficulty":"positivo","note":"Formato canónico ya soportado."}
+{"id":"COVERAGE-017","country":"CL","target":"RUT","text":"RUT: 94285716 0.","entities":[{"type":"RUT","start":5,"end":15}],"difficulty":"positivo","note":"Sin guion con etiqueta inmediata y DV correcto."}
+{"id":"COVERAGE-018","country":"CL","target":"RUT","text":"RUT del titular: 94285716 0.","entities":[{"type":"RUT","start":17,"end":27}],"difficulty":"positivo","note":"Campo RUT con descriptor acotado y DV correcto."}
+{"id":"COVERAGE-019","country":"CL","target":"RUT","text":"Orden 94285716 0.","entities":[],"difficulty":"negativo","note":"Sin guion ni etiqueta RUT."}
+{"id":"COVERAGE-020","country":"CL","target":"RUT","text":"RUT: 94.285.716 - 2.","entities":[],"difficulty":"negativo","note":"DV incorrecto pese al contexto."}
+{"id":"COVERAGE-021","country":"CL","target":"RUT","text":"Orden ref94285716 - 0.","entities":[],"difficulty":"negativo","note":"Valor embebido en una palabra."}
+{"id":"COVERAGE-022","country":"CL","target":"RUT","text":"RUT: 94 285 716 0.","entities":[],"difficulty":"negativo","note":"Agrupación con espacios y DV sin guion excluidos."}
+{"id":"COVERAGE-023","country":"CL","target":"RUT","text":"RUT: 94285716 0; copia RUT: 94285716 0.","entities":[{"type":"RUT","start":5,"end":15},{"type":"RUT","start":28,"end":38}],"difficulty":"positivo","note":"Dos ocurrencias con sus intervalos completos."}
+{"id":"COVERAGE-024","country":"CL","target":"RUT","text":"{\"rut\":\"94.285.716 - 0\"}","entities":[{"type":"RUT","start":8,"end":22}],"difficulty":"positivo","note":"Valor citado dentro de un JSON."}
+{"id":"COVERAGE-025","country":"CO","target":"NIT","text":"NIT: 812.345.678 - 1.","entities":[{"type":"NIT","start":5,"end":20}],"difficulty":"positivo","note":"Puntos y espacios alrededor del guion."}
+{"id":"COVERAGE-026","country":"CO","target":"NIT","text":"NIT: 812 345 678-1.","entities":[{"type":"NIT","start":5,"end":18}],"difficulty":"positivo","note":"Tres grupos separados por espacios y guion explícito."}
+{"id":"COVERAGE-027","country":"CO","target":"NIT","text":"NIT: 812\t345\t678\t-\t1.","entities":[{"type":"NIT","start":5,"end":20}],"difficulty":"positivo","note":"Agrupación y separadores horizontales con tabuladores."}
+{"id":"COVERAGE-028","country":"CO","target":"NIT","text":"Registro 812345678 - 1.","entities":[{"type":"NIT","start":9,"end":22}],"difficulty":"positivo","note":"Número continuo con guion separado por espacios."}
+{"id":"COVERAGE-029","country":"CO","target":"NIT","text":"Dato (812345678-1).","entities":[{"type":"NIT","start":6,"end":17}],"difficulty":"positivo","note":"Formato canónico ya soportado."}
+{"id":"COVERAGE-030","country":"CO","target":"NIT","text":"NIT: 812.345.678 - 2.","entities":[],"difficulty":"negativo","note":"DV incorrecto."}
+{"id":"COVERAGE-031","country":"CO","target":"NIT","text":"NIT: 812.345 678-1.","entities":[],"difficulty":"negativo","note":"Agrupación mixta de puntos y espacios."}
+{"id":"COVERAGE-032","country":"CO","target":"NIT","text":"Registro ref_812345678-1.","entities":[],"difficulty":"negativo","note":"Valor dentro de un token."}
+{"id":"COVERAGE-033","country":"CO","target":"NIT","text":"NIT: 812.345.678-18.","entities":[],"difficulty":"negativo","note":"Dígito adicional después del verificador."}
+{"id":"COVERAGE-034","country":"CO","target":"NIT","text":"NIT: 812.345.678-1.25.","entities":[],"difficulty":"negativo","note":"Sufijo decimal unido al número."}
+{"id":"COVERAGE-035","country":"CO","target":"NIT","text":"NIT: 812.345.678\n- 1.","entities":[],"difficulty":"negativo","note":"El número no atraviesa líneas."}
+{"id":"COVERAGE-036","country":"CO","target":"NIT","text":"{\"nit_co\":\"812 345 678 - 1\"}","entities":[{"type":"NIT","start":11,"end":26}],"difficulty":"positivo","note":"Valor colombiano agrupado en JSON."}
+{"id":"COVERAGE-037","country":"CO","target":"NIT","text":"NIT: 913.572.846 - 1.","entities":[{"type":"NIT","start":5,"end":20}],"difficulty":"positivo","note":"Puntos y espacios alrededor del guion."}
+{"id":"COVERAGE-038","country":"CO","target":"NIT","text":"NIT: 913 572 846-1.","entities":[{"type":"NIT","start":5,"end":18}],"difficulty":"positivo","note":"Tres grupos separados por espacios y guion explícito."}
+{"id":"COVERAGE-039","country":"CO","target":"NIT","text":"NIT: 913\t572\t846\t-\t1.","entities":[{"type":"NIT","start":5,"end":20}],"difficulty":"positivo","note":"Agrupación y separadores horizontales con tabuladores."}
+{"id":"COVERAGE-040","country":"CO","target":"NIT","text":"Registro 913572846 - 1.","entities":[{"type":"NIT","start":9,"end":22}],"difficulty":"positivo","note":"Número continuo con guion separado por espacios."}
+{"id":"COVERAGE-041","country":"CO","target":"NIT","text":"Dato (913572846-1).","entities":[{"type":"NIT","start":6,"end":17}],"difficulty":"positivo","note":"Formato canónico ya soportado."}
+{"id":"COVERAGE-042","country":"CO","target":"NIT","text":"NIT: 913.572.846 - 2.","entities":[],"difficulty":"negativo","note":"DV incorrecto."}
+{"id":"COVERAGE-043","country":"CO","target":"NIT","text":"NIT: 913.572 846-1.","entities":[],"difficulty":"negativo","note":"Agrupación mixta de puntos y espacios."}
+{"id":"COVERAGE-044","country":"CO","target":"NIT","text":"Registro ref_913572846-1.","entities":[],"difficulty":"negativo","note":"Valor dentro de un token."}
+{"id":"COVERAGE-045","country":"CO","target":"NIT","text":"NIT: 913.572.846-18.","entities":[],"difficulty":"negativo","note":"Dígito adicional después del verificador."}
+{"id":"COVERAGE-046","country":"CO","target":"NIT","text":"NIT: 913.572.846-1.25.","entities":[],"difficulty":"negativo","note":"Sufijo decimal unido al número."}
+{"id":"COVERAGE-047","country":"CO","target":"NIT","text":"NIT: 913.572.846\n- 1.","entities":[],"difficulty":"negativo","note":"El número no atraviesa líneas."}
+{"id":"COVERAGE-048","country":"CO","target":"NIT","text":"{\"nit_co\":\"913 572 846 - 1\"}","entities":[{"type":"NIT","start":11,"end":26}],"difficulty":"positivo","note":"Valor colombiano agrupado en JSON."}
+{"id":"COVERAGE-049","country":"CL","target":"RUT","text":"Contacto 8234567-1@correo.invalid.","entities":[{"type":"EMAIL","start":9,"end":33}],"difficulty":"regresion","note":"El correo cubre el identificador aparente."}
+{"id":"COVERAGE-050","country":"CO","target":"NIT","text":"Contacto 812345678-1@correo.invalid.","entities":[{"type":"EMAIL","start":9,"end":35}],"difficulty":"regresion","note":"El correo cubre el identificador aparente."}
+{"id":"COVERAGE-051","country":"CL","target":"RUT","text":"RUT: 8234567 2.","entities":[],"difficulty":"negativo","note":"El DV sigue siendo obligatorio sin guion."}
+{"id":"COVERAGE-052","country":"CL","target":"RUT","text":"NIT: 8234567 1.","entities":[],"difficulty":"negativo","note":"Una etiqueta de otro tipo no habilita RUT sin guion."}
+{"id":"COVERAGE-053","country":"CL","target":"RUT","text":"RUT de este antiguo registro del titular: 8234567 1.","entities":[],"difficulty":"negativo","note":"Descriptor más largo que el límite propuesto."}
+{"id":"COVERAGE-054","country":"CL","target":"RUT","text":"RUT:\n8234567 1.","entities":[],"difficulty":"negativo","note":"El contexto sin guion no atraviesa líneas."}
+{"id":"COVERAGE-055","country":"CO","target":"NIT","text":"NIT: 812.345.678.1.","entities":[],"difficulty":"negativo","note":"El guion antes del DV es obligatorio para NIT."}
+{"id":"COVERAGE-056","country":"CO","target":"NIT","text":"Dato 812 345 678 - 1.","entities":[{"type":"NIT","start":5,"end":20}],"difficulty":"positivo","note":"Preservar el punto final del texto."}
+{"id":"COVERAGE-057","country":"CL","target":"RUT","text":"RUT: 8.234.567 - 1XYZ.","entities":[],"difficulty":"negativo","note":"Sufijo unido al DV."}
+{"id":"COVERAGE-058","country":"CL","target":"RUT","text":"Dato ref8234567 - 1.","entities":[],"difficulty":"negativo","note":"Prefijo unido a un número con DV correcto."}
+{"id":"COVERAGE-059","country":"CO","target":"NIT","text":"NIT: ８１２ ３４５ ６７８ - １.","entities":[],"difficulty":"negativo","note":"Dígitos de ancho completo fuera del formato soportado."}
+{"id":"COVERAGE-060","country":"CL","target":"RUT","text":"🧪 RUT: 8234567 1; NIT: 913 572 846 - 1.","entities":[{"type":"RUT","start":7,"end":16},{"type":"NIT","start":23,"end":38}],"difficulty":"positivo","note":"Dos tipos con posiciones Unicode."}

@@ -1,5 +1,12 @@
 # Corpus sintético de México y Bolivia
 
+La [ampliación de cobertura del 10 de noviembre](../docs/benchmarks/REVISION_VERIFICADORES_MX.md)
+obtuvo 114 TP, 0 FP y 36 FN en los 172 casos históricos. Se conservaron los
+98 aciertos anteriores y se agregaron 16 por formatos de RUT/NIT con espacios.
+Los corpus de 96 y 60 casos de México/Bolivia conservan sus resultados. El
+[reporte de cobertura](resultados_cobertura.json) registra las cuatro evaluaciones,
+sus hashes y las diferencias por caso.
+
 La [corrección del 10 de noviembre](../docs/benchmarks/REVISION_VERIFICADORES_MX.md)
 obtuvo 98 TP, 0 FP y 52 FN en los 172 casos históricos, y mantuvo 55/0/0 y
 29/0/0 en los corpus de 96 y 60 casos, respectivamente. Se conservaron las
@@ -99,6 +106,29 @@ mediciones y los errores por caso.
 
 ```bash
 .venv/bin/python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_policy.jsonl
+```
+
+# Ejemplos adicionales de cobertura de RUT y NIT colombiano
+
+[synthetic_pii_coverage.jsonl](synthetic_pii_coverage.jsonl) contiene 60 ejemplos
+preparados antes de implementar la ampliación del 10 de noviembre. Hay 35
+entidades esperadas y 28 casos sin entidades. Se cubren puntos, espacios,
+tabuladores, guiones, RUT sin guion dentro de campos etiquetados, verificadores
+incorrectos, límites de token, formatos mixtos, JSON, correos, repeticiones e
+índices Unicode.
+
+Los valores se construyeron localmente con dos bases RUT y dos bases NIT
+distintas de las del corpus histórico. Las etiquetas se asignaron a partir de
+los escenarios y sus intervalos se calcularon con anotaciones explícitas. Codex
+preparó los ejemplos. Su revisión independiente por otra persona sigue pendiente.
+
+La comparación pasó de TP=6, FP=2, FN=29 a TP=35, FP=0, FN=0. Las dos
+detecciones incorrectas previas correspondían a candidatos truncados ante
+sufijos decimales. Las pruebas también verifican las mutaciones de los
+verificadores y el cuerpo JSON preparado por `LoggedSession`.
+
+```bash
+.venv/bin/python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_coverage.jsonl
 ```
 
 # Ronda 3 — Corpus PII sintético y benchmarking reproducible

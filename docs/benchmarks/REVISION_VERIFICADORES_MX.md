@@ -1,5 +1,67 @@
 # Revisión de verificadores y contexto de CURP/RFC
 
+## Ampliación de cobertura, 10 de noviembre de 2026
+
+La referencia anterior es `658dbad5b4112b44d3658922ee2bc7f5dfacb14e`.
+El [reporte de cobertura](../../benchmarks/resultados_cobertura.json)
+conserva los hashes de código, evaluador y datos y las diferencias por caso.
+Los tres corpus anteriores se evaluaron con sus entradas y etiquetas originales.
+La ampliación cubre RUT y NIT colombiano tras clasificar las 52 omisiones.
+
+| Corpus | Antes TP / FP / FN | Después TP / FP / FN |
+|---|---:|---:|
+| Histórico, 172 casos | 98 / 0 / 52 | 114 / 0 / 36 |
+| Desarrollo MX/BO, 96 casos | 55 / 0 / 0 | 55 / 0 / 0 |
+| Política MX, 60 casos | 29 / 0 / 0 | 29 / 0 / 0 |
+| Cobertura adicional, 60 casos | 6 / 2 / 29 | 35 / 0 / 0 |
+
+Las 16 diferencias históricas son detecciones correctas nuevas en T0013–T0020
+y T0033–T0040. La comparación exacta conserva los otros 156 casos y todos los
+98 aciertos anteriores. El recall aumenta de 65,33 % a 76 %. La precisión
+observada permanece en 100 % y el F1 pasa de 79,03 % a 86,36 %.
+
+Se incorporaron espacios alrededor del guion de RUT/NIT y agrupaciones con
+espacios en NIT colombiano, manteniendo sus verificadores. RUT sin guion
+requiere campo etiquetado, descriptor limitado y DV correcto. Los límites se
+reforzaron para evitar capturas parciales en números más largos o dentro de
+tokens y agrupaciones mixtas.
+
+Antes de modificar el detector se prepararon 60 casos de cobertura, con 35
+entidades y 28 negativos. En la primera ejecución de pytest, 32 casos pasaron
+y 28 fallaron. Tras el ajuste pasaron los 60. Se agregaron cinco grupos de
+mutaciones del verificador y una prueba de JSON preparado por el consumidor
+HTTP, incluyendo el verificador K de RUT. La suite completa obtuvo 484 pruebas
+aprobadas y 12 advertencias.
+El workflow ejecuta ahora los cuatro benchmarks.
+
+Los ejemplos nuevos y sus etiquetas fueron preparados por Codex. Su revisión
+independiente por otra persona queda pendiente. La comparación demuestra
+conservación de las detecciones correctas en los corpus evaluados y describe
+el comportamiento sobre esos datos de laboratorio.
+
+Las 36 omisiones restantes se distribuyen así:
+
+| Tipo | Omisiones | Motivo observado |
+|---|---:|---|
+| DIRECCION | 12 | Tipo pendiente de implementación. |
+| CURP | 8 | Cuatro con estructura incompatible y cuatro con verificador incorrecto sin contexto inmediato admitido. |
+| RFC | 4 | Clave genérica pública excluida por la política. |
+| CI_BO | 4 | Palabras intermedias fuera del contexto admitido. |
+| NIT_BO | 8 | Palabras intermedias fuera del contexto admitido. |
+
+Las discrepancias entre etiquetas históricas y política deben revisarse con una
+persona independiente antes de ampliar tolerancias de contexto o estructuras.
+Las direcciones requieren especificación y pruebas propias. El corpus histórico
+conserva tanto esas etiquetas como sus repeticiones.
+
+```bash
+.venv/bin/python -m pytest -q --tb=short tests/
+.venv/bin/python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_r3.jsonl
+.venv/bin/python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_bo.jsonl
+.venv/bin/python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_policy.jsonl
+.venv/bin/python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_coverage.jsonl
+```
+
 ## Corrección de los cuatro falsos positivos, 10 de noviembre de 2026
 
 La referencia anterior es `b7d0294bf95a2d9c89257d2ab42de8ba3b45efa3`.
