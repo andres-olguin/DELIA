@@ -93,11 +93,19 @@ _RFC_PATTERN = (
 
 # Etiqueta y valor en la misma línea, incluyendo claves y valores JSON citados.
 _ID_SEPARATOR = r'"?(?:[ \t]*[:=#][ \t]*|[ \t]+)"?'
+_ID_CONTEXT_SUFFIX = (
+    r"(?:[ \t]+(?ai:de[ \t]+(?:muestra|laboratorio|prueba|identidad|"
+    r"identificaci(?:[oóÓ]|\\u00[df]3)n)|del[ \t]+(?:titular|contribuyente)|"
+    r"n(?:[uúÚ]|\\u00[df]a)mero|nro\.?|no\.?|ficticio))?"
+)
 _MX_CONTEXT_PATTERNS = {
-    kind: re.compile(r"(?<![\w&-])(?ai:" + kind + ")" + _ID_SEPARATOR + r"\Z")
+    kind: re.compile(
+        r"(?<![\w&-])(?ai:" + kind + ")" + _ID_CONTEXT_SUFFIX + _ID_SEPARATOR + r"\Z"
+    )
     for kind in ("CURP", "RFC")
 }
 _NUMERIC_END = r"(?![\w-]|[.,/][0-9])(?![ \t]*-)"
+_BO_NUMERIC_END = _NUMERIC_END + r"(?![ \t]+[0-9])"
 _RUT_PATTERN = (
     r"(?<![\w.-])(?:[0-9]{1,2}(?:\.[0-9]{3}){2}|[0-9]{7,8})"
     r"[ \t]*-[ \t]*[0-9kK]" + _NUMERIC_END
@@ -115,17 +123,19 @@ _NIT_CO_PATTERN = (
 )
 _CI_BO_PATTERN = (
     r"(?<!\w)(?ai:ci(?:[ \t]+(?:bolivia|bo))?|c\.i\.|"
-    r"c(?:[eéÉ]|\\u00[ce]9)dula[ \t]+boliviana)"
+    r"c(?:[eéÉ]|\\u00[ce]9)dula(?:[ \t]+de[ \t]+identidad)?[ \t]+boliviana)"
+    + _ID_CONTEXT_SUFFIX
     + _ID_SEPARATOR
     + r"((?ai:[0-9]{5,10}(?:[ \t]*-[ \t]*[A-Z0-9]{2})?"
     r"(?:(?:[ \t]*-[ \t]*|[ \t]+)(?:BE|CB|CH|LP|OR|OU|PD|PT|SC|TJ))?))"
-    + _NUMERIC_END
+    + _BO_NUMERIC_END
 )
 _NIT_BO_PATTERN = (
     r"(?<!\w)(?ai:nit(?:[ \t]+(?:bolivia|boliviano|bo))?)"
+    + _ID_CONTEXT_SUFFIX
     + _ID_SEPARATOR
     + r"([0-9]{8,13})"
-    + _NUMERIC_END
+    + _BO_NUMERIC_END
 )
 _REGIONAL_TYPES = {"CURP", "RFC", "CI_BO", "NIT_BO", "RUT", "NIT"}
 
@@ -165,7 +175,7 @@ def detect(text: str) -> list[Finding]:
     found = []
     for kind, pattern, validate, group in _RULES:
         for m in re.finditer(pattern, text):
-            if kind in _REGIONAL_TYPES and _has_combining_boundary(text, m.start(group), m.end(group)):
+            if kind in _REGIONAL_TYPES and _has_combining_boundary(text, m.start(), m.end(group)):
                 continue
             if kind in _MX_CONTEXT_PATTERNS and not _valid_mx_checksum(kind, m.group(0)):
                 # La homonimia se obtiene de 000–999 dividido entre 34.

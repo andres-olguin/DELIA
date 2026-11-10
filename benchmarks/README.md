@@ -1,5 +1,12 @@
 # Corpus sintético de México y Bolivia
 
+La [validación ampliada de contextos](../docs/benchmarks/VALIDACION_CONTEXTOS.md)
+añadió 96 escenarios, 4.440 comprobaciones generadas y pruebas regionales en
+Python 3.11/3.13. El histórico pasó a 130 TP, 0 FP y 20 FN, conservando las
+detecciones correctas anteriores. Los cuatro corpus previos mantienen sus
+entradas y etiquetas. El [reporte ampliado](resultados_validacion_contextos.json)
+registra la comparación por caso y la procedencia de las pruebas.
+
 La [revisión técnica final](../docs/benchmarks/REVISION_FINAL_PR20.md) añadió
 comprobaciones de serialización y corrigió dos omisiones en rótulos JSON. Los
 cuatro benchmarks mantienen sus detecciones anteriores. La suite obtuvo 500

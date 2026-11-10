@@ -1,5 +1,9 @@
 # Revisión técnica adicional del PR #20
 
+La [validación ampliada de contextos](VALIDACION_CONTEXTOS.md) registra la
+revisión posterior con 611 pruebas y cinco benchmarks. Este documento conserva
+los resultados del paso previo.
+
 Fecha, 10 de noviembre de 2026. Revisión del diff desde `a3db7ff` hasta
 `ed8c24047f9075136cbd98919f1bbf99254dd2b7` y corrección de los hallazgos.
 El [reporte JSON](../../benchmarks/resultados_revision_final.json) registra el

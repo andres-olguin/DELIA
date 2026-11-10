@@ -106,6 +106,20 @@ def test_masks_identification_with_quoted_labels_in_serialized_json(label, value
     assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
 
 
+@pytest.mark.parametrize(("label", "value", "kind"), [
+    ("CI número", "65432109-3C SC", "CI_BO"),
+    ("NIT Bolivia de identificación", "38475916028", "NIT_BO"),
+    ("CURP de prueba", "PEQZ030415MNEBCDA0", "CURP"),
+    ("RFC número", "FUÑQ990214M20", "RFC"),
+    ("CÉDULA DE IDENTIDAD BOLIVIANA No.", "65432109-3C SC", "CI_BO"),
+])
+def test_masks_qualified_identity_fields_in_prepared_json(label, value, kind):
+    s, adapter = session()
+    s.post("https://x.test", json={label: value})
+    assert json.loads(adapter.sent.body) == {label: f"[[{kind}]]"}
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
+
+
 @pytest.mark.parametrize("as_bytes", [False, True])
 def test_masks_regional_identifiers_in_text_body(as_bytes):
     s, adapter = session()

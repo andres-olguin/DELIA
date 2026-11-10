@@ -13,6 +13,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seed", type=int, default=20261111)
     parser.add_argument("--out", type=Path)
+    parser.add_argument("--contexts", action="store_true", help="Check controlled context variants")
     args = parser.parse_args()
     randomizer = random.Random(args.seed)
     checks = 0
@@ -87,6 +88,22 @@ def main():
                 record(text, encoded, kind)
             record(f"{label}: {value}; {label}: {value}.", value, kind)
             record(f"{label}: ref_{value}_tail", None, kind)
+            if args.contexts and kind in {"CURP", "RFC", "CI_BO", "NIT_BO"}:
+                contextual_value = value
+                if kind in {"CURP", "RFC"}:
+                    contextual_value = value[:-1] + ("0" if value[-1] != "0" else "1")
+                for qualifier in ("de muestra", "del titular", "número", "de identificación", "No."):
+                    field = f"{label} {qualifier}"
+                    record(f"{field}: {contextual_value}.", contextual_value, kind)
+                    for escaped in (True, False):
+                        text = json.dumps({field: contextual_value}, ensure_ascii=escaped)
+                        encoded = json.dumps(contextual_value, ensure_ascii=escaped)[1:-1]
+                        record(text, encoded, kind)
+                for invalid_label in (
+                    f"{label} de contacto", f"{label} de compilación",
+                    f"{label}\n", f"\u0301{label}",
+                ):
+                    record(f"{invalid_label}: {contextual_value}.", None, kind)
 
     result = {"seed": args.seed, "checks": checks, "failures": failures}
     if args.out:

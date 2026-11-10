@@ -4,7 +4,7 @@ Paso 4 de la fase 2. La [investigación de formatos](ISSUE_16_FORMATOS_Y_FUENTES
 define la base de estas decisiones de diseño. El paso 5 convertirá la
 especificación en casos sintéticos con tipos e intervalos esperados.
 
-## Política propuesta tras la revisión de falsos positivos
+## Política de detección tras la revisión de falsos positivos
 
 Fecha de definición, 9 de noviembre de 2026. Estado, implementada y probada
 localmente, pendiente de revisión independiente. Esta sección define el ajuste de CURP y RFC para el
@@ -25,13 +25,30 @@ personal en el resto del identificador.
 | Formato, límites o fecha fuera de los requisitos actuales | Descartar el candidato de esa regla. |
 | RFC genérico nacional o extranjero | Mantener la excepción pública ya documentada. |
 
-Una etiqueta inmediata es la palabra completa `CURP` o `RFC`, sin distinguir
-mayúsculas, antes del candidato y en la misma línea. Se admiten espacios
+El contexto admitido contiene la palabra completa `CURP` o `RFC`, sin distinguir
+mayúsculas, antes del candidato y en la misma línea. Desde la ampliación del
+10 de noviembre admite también un descriptor del vocabulario indicado abajo.
+Se admiten espacios
 horizontales y los separadores `:`, `=` o `#`, con las comillas dobles opcionales
 que requiere un campo JSON. Por ejemplo, `CURP: valor`, `RFC valor` o
 `"rfc": "valor"`. La etiqueta debe corresponder al tipo del candidato.
-Las palabras intermedias, los saltos de línea y las etiquetas contenidas dentro
-de otra palabra quedan fuera de este contexto inmediato.
+Los descriptores ajenos al vocabulario, los saltos de línea y las etiquetas
+contenidas dentro de otra palabra quedan fuera de este contexto.
+
+La ampliación de contextos admite un descriptor por rótulo, separado por
+espacios horizontales. El vocabulario es «de muestra», «de laboratorio»,
+«de prueba», «de identidad», «de identificación», «del titular»,
+«del contribuyente», «número», «Nro.», «No.» y «ficticio». Esta decisión se aplica
+a CURP/RFC cuando falla el verificador y a los rótulos CI/NIT bolivianos.
+Los rótulos bolivianos conservan sus variantes de país y cédula admite
+«cédula de identidad boliviana». Número e identificación admiten las tildes
+escapadas de JSON.
+
+En CI/NIT bolivianos se rechaza un valor continuo seguido inmediatamente por
+otro bloque numérico separado solo por espacios. Se comprueba también el
+límite Unicode al principio del rótulo, para impedir que una marca combinante
+lo convierta en un fragmento de otro token. Las comprobaciones adicionales se
+documentan en la [validación de contextos](VALIDACION_CONTEXTOS.md).
 
 Expresiones como «inventario», «ejemplo» o «sin contexto» no conceden una
 exención adicional. Un valor que cumple los requisitos y el verificador se
