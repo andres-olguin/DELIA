@@ -91,6 +91,21 @@ def test_masks_spaced_rut_and_colombian_nit_in_prepared_json():
     assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
 
 
+@pytest.mark.parametrize(("label", "value", "kind"), [
+    ("cédula boliviana", "87654321 LP", "CI_BO"),
+    ("CÉDULA BOLIVIANA", "87654321 LP", "CI_BO"),
+    ("cédula", "2.345.678.901", "CEDULA"),
+    ("C.C.", "2.345.678.901", "CEDULA"),
+])
+@pytest.mark.parametrize("escaped", [True, False])
+def test_masks_identification_with_quoted_labels_in_serialized_json(label, value, kind, escaped):
+    s, adapter = session()
+    body = json.dumps({label: value}, ensure_ascii=escaped).encode("utf-8")
+    s.post("https://x.test", data=body, headers={"Content-Type": "application/json"})
+    assert json.loads(adapter.sent.body) == {label: f"[[{kind}]]"}
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
+
+
 @pytest.mark.parametrize("as_bytes", [False, True])
 def test_masks_regional_identifiers_in_text_body(as_bytes):
     s, adapter = session()

@@ -34,6 +34,8 @@ jobs:
           python -m pip check
       - name: Ejecutar la suite completa
         run: python -m pytest -q --tb=short tests/
+      - name: Comprobar escenarios de revisión
+        run: python -m benchmarks.check_review_scenarios --seed 20261111
       - name: Ejecutar los benchmarks sintéticos
         run: |
           python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_bo.jsonl

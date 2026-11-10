@@ -114,7 +114,8 @@ _NIT_CO_PATTERN = (
     r"[ \t]*-[ \t]*[0-9]" + _NUMERIC_END
 )
 _CI_BO_PATTERN = (
-    r"(?<!\w)(?ai:ci(?:[ \t]+(?:bolivia|bo))?|c\.i\.|c[eéÉ]dula[ \t]+boliviana)"
+    r"(?<!\w)(?ai:ci(?:[ \t]+(?:bolivia|bo))?|c\.i\.|"
+    r"c(?:[eéÉ]|\\u00[ce]9)dula[ \t]+boliviana)"
     + _ID_SEPARATOR
     + r"((?ai:[0-9]{5,10}(?:[ \t]*-[ \t]*[A-Z0-9]{2})?"
     r"(?:(?:[ \t]*-[ \t]*|[ \t]+)(?:BE|CB|CH|LP|OR|OU|PD|PT|SC|TJ))?))"
@@ -152,7 +153,7 @@ _RULES = (
     ("CEDULA",
      r"(?i)\b(?:c\.\s?c\.?|cc|c(?:[eé]|\\u00[ce]9)dula"
      r"(?:\s+de\s+ciudadan(?:[ií]|\\u00[ce]d)a)?)\s*"
-     r"(?:no\.?|n[oº°]\.?|n[uú]mero|#)?\s*:?\s*"
+     r'(?:no\.?|n[oº°]\.?|n[uú]mero|#)?"?\s*:?\s*"?'
      r"(\d(?:\.\d{3}){3}|\d{1,3}(?:\.\d{3}){1,2}|\d{6,10})"
      r"(?![\w-]|[.,/][0-9])", None, 1),
     # El verificador o el contexto inmediato se comprueban en detect().

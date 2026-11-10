@@ -1,5 +1,12 @@
 # Corpus sintético de México y Bolivia
 
+La [revisión técnica final](../docs/benchmarks/REVISION_FINAL_PR20.md) añadió
+comprobaciones de serialización y corrigió dos omisiones en rótulos JSON. Los
+cuatro benchmarks mantienen sus detecciones anteriores. La suite obtuvo 500
+pruebas aprobadas y los escenarios de revisión añadieron 700 comprobaciones.
+El [reporte de revisión](resultados_revision_final.json) registra el alcance,
+la procedencia y los hashes de las mediciones.
+
 La [ampliación de cobertura del 10 de noviembre](../docs/benchmarks/REVISION_VERIFICADORES_MX.md)
 obtuvo 114 TP, 0 FP y 36 FN en los 172 casos históricos. Se conservaron los
 98 aciertos anteriores y se agregaron 16 por formatos de RUT/NIT con espacios.

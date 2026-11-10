@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-10",
+  "reviewed_revision": "ed8c24047f9075136cbd98919f1bbf99254dd2b7",
+  "review_type": "additional_technical_self_review",
+  "after_detector_sha256": "8a114f2ef64f53af6657f58274e8fe35f667eb1e4cc35f83923d87f036552af9",
+  "scope": "detector_and_prepared_utf8_json_body_not_production_certification",
+  "additional_scenarios": {
+    "seed": 20261111,
+    "checks": 700,
+    "before_failures": 60,
+    "before_failures_by_type": {
+      "CI_BO": 20,
+      "CEDULA": 40
+    },
+    "after_failures": [],
+    "provenance": "generated_after_implementation_by_same_assistant_no_human_independence_claim"
+  },
+  "benchmarks": {
+    "synthetic_pii_r3.jsonl": {
+      "dataset_sha256": "191ae4de8598321402460e8367a2944a239f69a54d569a6065c287cef6bf4f3f",
+      "cases": 172,
+      "results": {
+        "tp": 114,
+        "fp": 0,
+        "fn": 36,
+        "precision": 1.0,
+        "recall": 0.76,
+        "f1": 0.8636363636363636
+      },
+      "case_changes": []
+    },
+    "synthetic_pii_mx_bo.jsonl": {
+      "dataset_sha256": "abb838ab22c23254f783e505e055ab317d2caa02ebcef233b139b29531aa0baf",
+      "cases": 96,
+      "results": {
+        "tp": 55,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "case_changes": []
+    },
+    "synthetic_pii_mx_policy.jsonl": {
+      "dataset_sha256": "75b1a97a50ab2610ed3544472905480b186abc1ccdd0b2f3b6c536b1eb49bf9e",
+      "cases": 60,
+      "results": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "case_changes": []
+    },
+    "synthetic_pii_coverage.jsonl": {
+      "dataset_sha256": "a73457c7482229be3fdefe844fa3421c895c962671f33f4354b52c946a3acb0a",
+      "cases": 60,
+      "results": {
+        "tp": 35,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "case_changes": []
+    }
+  },
+  "suite": {
+    "command": ".venv/bin/python -m pytest -q --tb=short tests/",
+    "passed": 500,
+    "warnings": 12
+  }
+}

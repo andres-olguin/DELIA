@@ -71,6 +71,8 @@ capturan completas. Se comprueban los límites del número para evitar
 truncamientos en agrupaciones incorrectas o valores más largos. La palabra
 cédula y su variante de ciudadanía admiten también las tildes escapadas
 de un cuerpo JSON preparado.
+Las claves JSON citadas de cédula colombiana y los rótulos de cédula boliviana
+admiten también las tildes escapadas, con los intervalos del cuerpo original.
 
 ### Ampliación de formatos RUT/NIT del 10 de noviembre
 
