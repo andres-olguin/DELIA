@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - feat/16-validadores-mx-bo
   pull_request:
     branches:
       - main
