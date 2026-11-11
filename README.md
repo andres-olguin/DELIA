@@ -7,6 +7,12 @@
 El nuevo [frontend de investigación](site/README.md) se implementa con HTML/CSS/JS y una **demostración de tres casos ficticios**. Su flujo [GitHub Pages](.github/workflows/public-site-pages.yml) publica únicamente `site/` después de validación. **Preparado para revisión**; la URL prevista `https://andres-olguin.github.io/DELIA/` no se declara operativa hasta activar Pages, fusionar y verificar HTTP 200. No integra backend, datos reales ni controles productivos.
 
 
+## Auditoría ejecutiva de venta y competencia (11/11/2026)
+
+**[Leer dictamen actualizado](docs/auditorias/AUDITORIA_DANREXO_2026-11-11.md):** investigación y tests sintéticos sólidos, pero **proxy operativo bloqueado con 503**, 8/8 controles SEC P0 pendientes y diferenciación aún no medida. **Vendible hoy solo un diagnóstico profesional E1 condicionado a contrato, datos ficticios y capacidad real; no una suscripción SaaS ni protección de datos reales.** Benchmark histórico 130 TP / 0 FP / 20 FN en corpus sintético; CI general 611 tests en Python 3.14.4, regional 455 en 3.11 y 3.13. Ningún claim de seguridad, ventas o exclusividad comercial implícito.
+
+---
+
 ## Punto de entrada ejecutivo y técnico — Base de desarrollo (09/11/2026)
 
 **[START HERE · Estado real de DELIA y siguiente trabajo](docs/foundation/README.md).** La prioridad no es crear más líneas de producto: es **arranque reproducible → autenticación/aislamiento → DLP antes de egreso → control E2E de herramientas → resultado contrastado → adopción y costo de segundo cliente**. Las publicaciones y escenarios financieros existentes son borradores e hipótesis, no tracción demostrada.
