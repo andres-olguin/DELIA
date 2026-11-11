@@ -1,3 +1,6 @@
+import json
+
+import pytest
 import requests
 from requests.adapters import BaseAdapter
 
@@ -51,3 +54,77 @@ def test_keeps_non_latin1_characters_as_utf8():
     s, adapter = session()
     s.post("https://x.test", data="→ Ñandú a@b.co".encode())
     assert adapter.sent.body == "→ Ñandú [[EMAIL]]".encode()
+
+
+def test_masks_regional_identifiers_in_json_body():
+    s, adapter = session()
+    s.post("https://x.test", json={
+        "curp": "AEXZ000229XQOBCDZ7",
+        "rfc": "BUÑQ920229M17",
+        "ci": "12345678-2B SC",
+        "nit": "1234567890128",
+    })
+    assert json.loads(adapter.sent.body) == {
+        "curp": "[[CURP]]",
+        "rfc": "[[RFC]]",
+        "ci": "[[CI_BO]]",
+        "nit": "[[NIT_BO]]",
+    }
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
+
+
+def test_masks_full_cedula_and_preserves_rejected_rfc_in_prepared_body():
+    s, adapter = session()
+    s.post("https://x.test", json={
+        "message": "cédula: 2.345.678.901; RFC: QQZ850224X20",
+    })
+    assert json.loads(adapter.sent.body) == {
+        "message": "cédula: [[CEDULA]]; RFC: QQZ850224X20",
+    }
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
+
+
+def test_masks_spaced_rut_and_colombian_nit_in_prepared_json():
+    s, adapter = session()
+    s.post("https://x.test", json={"rut": "8234567 1", "nit_co": "812 345 678 - 1"})
+    assert json.loads(adapter.sent.body) == {"rut": "[[RUT]]", "nit_co": "[[NIT]]"}
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
+
+
+@pytest.mark.parametrize(("label", "value", "kind"), [
+    ("cédula boliviana", "87654321 LP", "CI_BO"),
+    ("CÉDULA BOLIVIANA", "87654321 LP", "CI_BO"),
+    ("cédula", "2.345.678.901", "CEDULA"),
+    ("C.C.", "2.345.678.901", "CEDULA"),
+])
+@pytest.mark.parametrize("escaped", [True, False])
+def test_masks_identification_with_quoted_labels_in_serialized_json(label, value, kind, escaped):
+    s, adapter = session()
+    body = json.dumps({label: value}, ensure_ascii=escaped).encode("utf-8")
+    s.post("https://x.test", data=body, headers={"Content-Type": "application/json"})
+    assert json.loads(adapter.sent.body) == {label: f"[[{kind}]]"}
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
+
+
+@pytest.mark.parametrize(("label", "value", "kind"), [
+    ("CI número", "65432109-3C SC", "CI_BO"),
+    ("NIT Bolivia de identificación", "38475916028", "NIT_BO"),
+    ("CURP de prueba", "PEQZ030415MNEBCDA0", "CURP"),
+    ("RFC número", "FUÑQ990214M20", "RFC"),
+    ("CÉDULA DE IDENTIDAD BOLIVIANA No.", "65432109-3C SC", "CI_BO"),
+])
+def test_masks_qualified_identity_fields_in_prepared_json(label, value, kind):
+    s, adapter = session()
+    s.post("https://x.test", json={label: value})
+    assert json.loads(adapter.sent.body) == {label: f"[[{kind}]]"}
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)
+
+
+@pytest.mark.parametrize("as_bytes", [False, True])
+def test_masks_regional_identifiers_in_text_body(as_bytes):
+    s, adapter = session()
+    text = "RFC: BUÑQ920229M17; CI: 12345678 - 2B - SC"
+    expected = "RFC: [[RFC]]; CI: [[CI_BO]]"
+    s.post("https://x.test", data=text.encode("utf-8") if as_bytes else text)
+    assert adapter.sent.body == (expected.encode("utf-8") if as_bytes else expected)
+    assert int(adapter.sent.headers["Content-Length"]) == len(adapter.sent.body)

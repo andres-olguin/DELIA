@@ -1,0 +1,1579 @@
+{
+  "date": "2026-11-09",
+  "python": "3.14.4",
+  "before_revision": "f2e3f5a7c7fea090a5d1e68fc194403675fc4d4b",
+  "after_source": "working_tree",
+  "before_detector_sha256": "786f7f0b8e78bb21af86845ef4bf00cfb2fe1bf4a9387a101e0ac265ce9d7235",
+  "after_detector_sha256": "856eed3e4aaa3bced676f7b005696fcfcf5560499f7a70bd3afeae516dc28600",
+  "evaluator_sha256": "e69874d38c559c8ba35bb9f27490f91b14ff7c4a0983eecf6f188dfa4cc3d68f",
+  "matching": "exact_type_and_span",
+  "annotation_review": "authored_by_codex_human_independent_review_pending",
+  "evaluations": {
+    "historical_unchanged": {
+      "dataset_sha256": "191ae4de8598321402460e8367a2944a239f69a54d569a6065c287cef6bf4f3f",
+      "cases": 172,
+      "entities": 150,
+      "before": {
+        "tp": 99,
+        "fp": 5,
+        "fn": 51,
+        "precision": 0.9519230769230769,
+        "recall": 0.66,
+        "f1": 0.7795275590551181
+      },
+      "after": {
+        "tp": 95,
+        "fp": 4,
+        "fn": 55,
+        "precision": 0.9595959595959596,
+        "recall": 0.6333333333333333,
+        "f1": 0.7630522088353414
+      },
+      "after_by_country": {
+        "country/BO": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 15,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "country/CL": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.65625,
+          "f1": 0.7924528301886793
+        },
+        "country/CO": {
+          "tp": 32,
+          "fp": 3,
+          "fn": 14,
+          "precision": 0.9142857142857143,
+          "recall": 0.6956521739130435,
+          "f1": 0.7901234567901234
+        },
+        "country/GLOBAL": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "country/MX": {
+          "tp": 15,
+          "fp": 1,
+          "fn": 15,
+          "precision": 0.9375,
+          "recall": 0.5,
+          "f1": 0.6521739130434783
+        }
+      },
+      "case_changes": [
+        {
+          "id": "T0061",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0064",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0067",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0070",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0163",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              21,
+              39
+            ]
+          ]
+        }
+      ],
+      "after_case_errors": [
+        {
+          "id": "T0013",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "T0014",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ]
+        },
+        {
+          "id": "T0015",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "T0016",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ]
+        },
+        {
+          "id": "T0017",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "T0018",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ]
+        },
+        {
+          "id": "T0019",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "T0020",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ]
+        },
+        {
+          "id": "T0033",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0034",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ]
+        },
+        {
+          "id": "T0035",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0036",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ]
+        },
+        {
+          "id": "T0037",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0038",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ]
+        },
+        {
+          "id": "T0039",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0040",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ]
+        },
+        {
+          "id": "T0041",
+          "fp": [
+            [
+              "CEDULA",
+              8,
+              17
+            ]
+          ],
+          "fn": [
+            [
+              "CEDULA",
+              8,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "T0045",
+          "fp": [
+            [
+              "CEDULA",
+              8,
+              17
+            ]
+          ],
+          "fn": [
+            [
+              "CEDULA",
+              8,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "T0049",
+          "fp": [
+            [
+              "CEDULA",
+              8,
+              17
+            ]
+          ],
+          "fn": [
+            [
+              "CEDULA",
+              8,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "T0061",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0062",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0064",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0065",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0067",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0068",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0070",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0071",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0073",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0076",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0079",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0082",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0085",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "T0088",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              24
+            ]
+          ]
+        },
+        {
+          "id": "T0091",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "T0094",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              24
+            ]
+          ]
+        },
+        {
+          "id": "T0097",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0099",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0100",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0102",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0103",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0105",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0106",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0108",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0145",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0146",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0147",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0148",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0149",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0150",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0151",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0152",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0153",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0154",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0155",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0156",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0162",
+          "fp": [
+            [
+              "RFC",
+              4,
+              17
+            ]
+          ],
+          "fn": []
+        }
+      ]
+    },
+    "development_original": {
+      "dataset_sha256": "ae057daaf0f22b29ce3665a494c2bb90e834463c299f5230a64afdcb178b6b20",
+      "cases": 96,
+      "entities": 55,
+      "before": {
+        "tp": 55,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after": {
+        "tp": 36,
+        "fp": 0,
+        "fn": 19,
+        "precision": 1.0,
+        "recall": 0.6545454545454545,
+        "f1": 0.7912087912087912
+      },
+      "after_by_country": {
+        "country/BO": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "country/MX": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 19,
+          "precision": 1.0,
+          "recall": 0.2692307692307692,
+          "f1": 0.42424242424242425
+        }
+      },
+      "case_changes": [
+        {
+          "id": "MXBO-CURP-02",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              7,
+              25
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-03",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-04",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              5,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-05",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              7,
+              25
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-07",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              11,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-08",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              23,
+              41
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-09",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              31,
+              49
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-10",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              31,
+              49
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-12",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              10,
+              28
+            ],
+            [
+              "CURP",
+              31,
+              49
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-02",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-03",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              9,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-05",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              15,
+              28
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-07",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              17,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-08",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              11,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-09",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              10,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-10",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              13,
+              26
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-12",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              23,
+              41
+            ],
+            [
+              "RFC",
+              7,
+              20
+            ]
+          ]
+        }
+      ],
+      "after_case_errors": [
+        {
+          "id": "MXBO-CURP-02",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              7,
+              25
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-03",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-04",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              5,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-05",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              7,
+              25
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-07",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              11,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-08",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              23,
+              41
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-09",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              31,
+              49
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-10",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              31,
+              49
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-CURP-12",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              10,
+              28
+            ],
+            [
+              "CURP",
+              31,
+              49
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-02",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-03",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              9,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-05",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              15,
+              28
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-07",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              17,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-08",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              11,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-09",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              10,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-10",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              13,
+              26
+            ]
+          ]
+        },
+        {
+          "id": "MXBO-RFC-12",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              23,
+              41
+            ],
+            [
+              "RFC",
+              7,
+              20
+            ]
+          ]
+        }
+      ]
+    },
+    "development_revised": {
+      "dataset_sha256": "abb838ab22c23254f783e505e055ab317d2caa02ebcef233b139b29531aa0baf",
+      "cases": 96,
+      "entities": 55,
+      "before": {
+        "tp": 55,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after": {
+        "tp": 55,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after_by_country": {
+        "country/BO": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "country/MX": {
+          "tp": 26,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "case_changes": [],
+      "after_case_errors": []
+    },
+    "new_policy": {
+      "dataset_sha256": "75b1a97a50ab2610ed3544472905480b186abc1ccdd0b2f3b6c536b1eb49bf9e",
+      "cases": 60,
+      "entities": 29,
+      "before": {
+        "tp": 29,
+        "fp": 26,
+        "fn": 0,
+        "precision": 0.5272727272727272,
+        "recall": 1.0,
+        "f1": 0.6904761904761905
+      },
+      "after": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after_by_country": {
+        "country/MX": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "case_changes": [
+        {
+          "id": "MXPOL-004",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-006",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              11,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-007",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              6,
+              24
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-008",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              17,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-009",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              8,
+              26
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-010",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              5,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-014",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-016",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              11,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-017",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              6,
+              24
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-018",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              17,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-019",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              8,
+              26
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-020",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              5,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-024",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              19,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-026",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              11,
+              24
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-027",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              5,
+              18
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-028",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-029",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              7,
+              20
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-030",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              6,
+              19
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-034",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              19,
+              31
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-036",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              11,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-037",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              5,
+              17
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-038",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              16,
+              28
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-039",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              7,
+              19
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-040",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              6,
+              18
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-047",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              5,
+              23
+            ]
+          ]
+        },
+        {
+          "id": "MXPOL-057",
+          "added": [],
+          "removed": [
+            [
+              "CURP",
+              46,
+              64
+            ]
+          ]
+        }
+      ],
+      "after_case_errors": []
+    }
+  },
+  "validation": {
+    "suite_command": ".venv/bin/python -m pytest -q --tb=short tests/",
+    "before_main_sync": {
+      "passed": 390,
+      "warnings": 22
+    },
+    "after_main_sync": {
+      "passed": 393,
+      "warnings": 12
+    },
+    "main_revision_integrated": "a3db7ff32ac646fc914e5b9018f35c25fcbb2f9b"
+  }
+}

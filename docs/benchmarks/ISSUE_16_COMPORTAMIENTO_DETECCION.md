@@ -1,0 +1,262 @@
+# Issue #16 — comportamiento de detección y enmascaramiento
+
+Paso 4 de la fase 2. La [investigación de formatos](ISSUE_16_FORMATOS_Y_FUENTES.md)
+define la base de estas decisiones de diseño. El paso 5 convertirá la
+especificación en casos sintéticos con tipos e intervalos esperados.
+
+## Política de detección tras la revisión de falsos positivos
+
+Fecha de definición, 9 de noviembre de 2026. Estado, implementada y probada
+localmente, pendiente de revisión independiente. Esta sección define el ajuste de CURP y RFC para el
+PR #20. Los apartados posteriores describen el comportamiento que produjo las
+mediciones previas al ajuste. La [revisión de verificadores](REVISION_VERIFICADORES_MX.md)
+registra sus resultados y los cambios en los corpus.
+
+El objetivo es combinar la comprobación matemática con una señal explícita de
+identidad. Un error en el carácter verificador puede conservar información
+personal en el resto del identificador.
+
+| Condición del candidato CURP/RFC | Acción propuesta |
+|---|---|
+| Formato, límites, fecha y verificador correctos | Enmascarar, también cuando aparezca sin etiqueta o en un inventario. |
+| Formato, límites y fecha correctos, verificador incorrecto y etiqueta inmediata del mismo tipo | Enmascarar por el contexto explícito de identidad, salvo la excepción de homonimia RFC indicada abajo. |
+| Formato, límites y fecha correctos, verificador incorrecto y ausencia de etiqueta inmediata del mismo tipo | Descartar el candidato de esa regla. Otras reglas pueden detectar el texto. |
+| RFC con verificador incorrecto y homonimia iniciada en W/X/Y/Z | Descartar como RFC, incluso con etiqueta inmediata. Refinamiento del 10 de noviembre. |
+| Formato, límites o fecha fuera de los requisitos actuales | Descartar el candidato de esa regla. |
+| RFC genérico nacional o extranjero | Mantener la excepción pública ya documentada. |
+
+El contexto admitido contiene la palabra completa `CURP` o `RFC`, sin distinguir
+mayúsculas, antes del candidato y en la misma línea. Desde la ampliación del
+10 de noviembre admite también un descriptor del vocabulario indicado abajo.
+Se admiten espacios
+horizontales y los separadores `:`, `=` o `#`, con las comillas dobles opcionales
+que requiere un campo JSON. Por ejemplo, `CURP: valor`, `RFC valor` o
+`"rfc": "valor"`. La etiqueta debe corresponder al tipo del candidato.
+Los descriptores ajenos al vocabulario, los saltos de línea y las etiquetas
+contenidas dentro de otra palabra quedan fuera de este contexto.
+
+La ampliación de contextos admite un descriptor por rótulo, separado por
+espacios horizontales. El vocabulario es «de muestra», «de laboratorio»,
+«de prueba», «de identidad», «de identificación», «del titular»,
+«del contribuyente», «número», «Nro.», «No.» y «ficticio». Esta decisión se aplica
+a CURP/RFC cuando falla el verificador y a los rótulos CI/NIT bolivianos.
+Los rótulos bolivianos conservan sus variantes de país y cédula admite
+«cédula de identidad boliviana». Número e identificación admiten las tildes
+escapadas de JSON.
+
+En CI/NIT bolivianos se rechaza un valor continuo seguido inmediatamente por
+otro bloque numérico separado solo por espacios. Se comprueba también el
+límite Unicode al principio del rótulo, para impedir que una marca combinante
+lo convierta en un fragmento de otro token. Las comprobaciones adicionales se
+documentan en la [validación de contextos](VALIDACION_CONTEXTOS.md).
+
+Expresiones como «inventario», «ejemplo» o «sin contexto» no conceden una
+exención adicional. Un valor que cumple los requisitos y el verificador se
+protege incluso si el texto circundante lo presenta como una referencia interna.
+Los errores de longitud, fecha o estructura requieren una política adicional
+antes de ampliar el reconocimiento de errores de captura.
+
+El cálculo del verificador debe verificarse con ejemplos de referencia, incluidos
+RFC de personas físicas y morales, Ñ, ampersand, minúsculas y escapes JSON.
+La normalización para calcularlo debe conservar los índices sobre el texto
+original. Se mantienen las etiquetas `[[CURP]]` y `[[RFC]]` y la precedencia
+actual de correos y solapes. Las reglas de CI/NIT bolivianos conservan su
+comportamiento contextual.
+
+### Efecto esperado sobre los casos históricos
+
+| Caso | Evidencia revisada | Salida propuesta |
+|---|---|---|
+| T0162 | RFC aparente con verificador incorrecto y homonimia iniciada en X, fuera de la cota admitida para la protección por contexto. | Descartar como RFC tras el refinamiento del 10 de noviembre. |
+| T0163 | Valor con forma de CURP y verificador que falla, presentado como código de inventario sin etiqueta inmediata `CURP`. | Descartar como CURP. |
+
+La revisión previa contrastó el cálculo con el código de
+[python-stdnum para CURP](https://github.com/arthurdejong/python-stdnum/blob/master/stdnum/mx/curp.py)
+y con una
+[copia del documento técnico SAT para RFC](https://www.mariovaldez.net/files/IFAI%200610100135506%20065%20Algoritmo%20para%20generar%20el%20RFC%20con%20homoclave%20para%20personas%20fisicas%20y%20morales.pdf).
+El control matemático comprueba consistencia interna. La titularidad y la
+inscripción requieren evidencia distinta.
+
+El refinamiento del 10 de noviembre aplica la cota de homonimia a los RFC
+con verificador incorrecto. T0162 deja de producir el falso positivo.
+Los candidatos con verificador coherente conservan la protección. La
+[revisión de resultados](REVISION_VERIFICADORES_MX.md) documenta la evidencia,
+la compatibilidad y los límites de esta decisión.
+
+Las cédulas colombianas con diez dígitos agrupados como `1.234.567.890` se
+capturan completas. Se comprueban los límites del número para evitar
+truncamientos en agrupaciones incorrectas o valores más largos. La palabra
+cédula y su variante de ciudadanía admiten también las tildes escapadas
+de un cuerpo JSON preparado.
+Las claves JSON citadas de cédula colombiana y los rótulos de cédula boliviana
+admiten también las tildes escapadas, con los intervalos del cuerpo original.
+
+### Ampliación de formatos RUT/NIT del 10 de noviembre
+
+La revisión de cobertura incorpora formatos adicionales de los tipos heredados.
+RUT admite cuerpo continuo o agrupado con puntos y espacios horizontales a
+ambos lados del guion. NIT colombiano admite nueve dígitos continuos o tres
+grupos de tres separados consistentemente por puntos o espacios horizontales,
+con guion explícito antes del verificador.
+
+Un RUT continuo de siete u ocho dígitos puede llevar su verificador separado
+solo por espacio cuando aparece en un campo rotulado RUT. El rótulo admite
+hasta tres palabras descriptivas de 24 letras cada una, en la misma línea.
+El intervalo enmascarado incluye el número y su verificador. Se exige siempre
+coincidencia del DV, también en esta vía contextual.
+
+Los límites impiden capturar sufijos de tokens más largos, valores con
+agrupaciones incorrectas, dígitos adicionales, marcas combinantes o saltos de
+línea dentro del número. La normalización quita puntos, espacios y tabuladores
+únicamente para calcular el DV, conservando el intervalo sobre el texto original.
+El RUT agrupado con espacios y sin guion queda fuera de esta ampliación.
+
+### Criterios para implementar y validar
+
+- Agregar ejemplos nuevos que crucen tipo, contexto, verificador y límites,
+  incluyendo un mismo candidato con y sin etiqueta y un inventario con un
+  verificador correcto. Registrar la procedencia y revisión de las etiquetas.
+- Distinguir en el corpus de desarrollo los positivos con verificador correcto
+  y los errores de captura que se protegen por contexto. Conservar las
+  revisiones anteriores para reproducir las métricas publicadas.
+- Mantener el corpus histórico y evaluar cada diferencia, incluidos los
+  aciertos que se perderían al exigir verificador sin contexto.
+- Ejecutar las pruebas de detección y enmascaramiento, los dos benchmarks y
+  GitHub Actions antes de considerar implementada esta política.
+
+## Contrato de salida
+
+`detect(text)` devuelve hallazgos `Finding(type, start, end)` ordenados por
+posición y sin solapes. Los índices se refieren a caracteres del texto original
+con inicio inclusivo y fin exclusivo. `redact(text)` reemplaza cada intervalo
+por `[[TIPO]]` y devuelve el texto enmascarado junto con los mismos hallazgos.
+Las etiquetas, comillas y signos externos al identificador se conservan. El
+intervalo incluye el complemento y la extensión de una CI cuando se reconocen
+como parte del valor.
+
+Los cuatro tipos nuevos son `CURP`, `RFC`, `CI_BO` y `NIT_BO`. Las etiquetas
+existentes, entre ellas `CEDULA` y `NIT` de Colombia, conservan sus contratos.
+`LoggedSession` seguirá usando el texto devuelto por `redact()` para el cuerpo
+de la solicitud.
+
+## Reglas por tipo
+
+| Tipo | Requisitos para enmascarar | Contexto |
+|---|---|---|
+| `CURP` | 18 caracteres con los bloques del paso 3. Cuatro letras iniciales con vocal o `X` en segunda posición, fecha real, marcador `H/M/X`, lugar del catálogo acordado, tres consonantes internas, diferenciador y dígito final. Para la fecha, un diferenciador numérico usa 1900–1999 y uno alfabético usa 2000–2099 como ventanas del detector. | Basta la estructura completa de un valor independiente. |
+| `RFC` | Bloque inicial de 3 o 4 caracteres entre `A–Z`, `Ñ` y `&`, fecha AAMMDD posible y tres caracteres alfanuméricos. Una fecha es posible si existe en 1900–1999 o 2000–2099, dado que el RFC solo incluye dos cifras del año. Las dos claves genéricas se tratan aparte. | Basta la estructura completa de un valor independiente. |
+| `CI_BO` | Raíz de 5 a 10 dígitos, con complemento de dos caracteres alfanuméricos tras guion cuando aparezca y extensión opcional. | Exige `CI`, `C.I.`, `CI Bolivia`, `CI BO` o `cédula boliviana` como etiqueta inmediata. La etiqueta genérica `cédula` conserva su uso actual. |
+| `NIT_BO` | Secuencia continua de 8 a 13 dígitos. Las terminaciones de emisión del paso 3 sirven para estratificar las pruebas, mientras que la detección admite también otras terminaciones con el contexto indicado. | Exige `NIT Bolivia`, `NIT BO`, `NIT boliviano` o `NIT` como etiqueta inmediata. Con `NIT` sin país, la secuencia continua es la señal de formato boliviano de DELIA. El NIT colombiano con guion y dígito verificador conserva su regla. |
+
+La validación de CURP y RFC se limita al formato y al calendario. El cálculo de
+sus verificadores y la comprobación de titularidad o inscripción quedan fuera
+del alcance inicial descrito en el paso 3. Los dos RFC genéricos del SAT,
+`XAXX010101000` y `XEXX010101000`, se conservan tal cual y no producen hallazgo
+`RFC`, incluso si vienen etiquetados. Son claves públicas de uso compartido y el
+objetivo de esta regla es proteger identificadores de titulares. El corpus
+revisado los tratará como negativos deliberados.
+
+## Contexto e intervalos
+
+- Admitir etiquetas y valores sin distinguir mayúsculas de minúsculas. Usar
+  dígitos ASCII y conservar los ceros iniciales. Evaluar una copia normalizada
+  del candidato y calcular el intervalo sobre el texto original.
+- La etiqueta boliviana debe preceder al valor en la misma línea. Admitir un
+  espacio o tabulador, o un separador `:`, `=` o `#` con espacios opcionales.
+  Admitir comillas dobles en claves y valores, como en un cuerpo JSON serializado.
+  La etiqueta debe ser completa y el separador debe estar presente, de modo que
+  una palabra que contenga `CI` o `NIT` y un rótulo en otra línea no activen la regla.
+- Para CI, un tramo `-XY` de dos caracteres alfanuméricos unido a la raíz
+  se enmascara completo. Si ambos caracteres coinciden con una abreviatura
+  departamental, como `SC`, la misma salida sirve para ambas interpretaciones.
+  Si hay un segundo tramo departamental, capturarlo también. Los códigos
+  admitidos tras un espacio o después del complemento son `BE`, `CB`, `CH`,
+  `LP`, `OR`, `OU`, `PD`, `PT`, `SC` y `TJ`. Es una lista operativa de
+  DELIA basada en las abreviaturas de expedición de AJ y en la variante `OR`
+  de la nomenclatura del SENASAG. Admitir espacio horizontal o guion antes del
+  tramo departamental.
+  [AJ, tabla del campo de expedición](https://aj.gob.bo/uploads/docs/doc_20220622_093444.pdf) ·
+  [SENASAG, manual SINAVE](https://www.senasag.gob.bo/index.php/institucional/unidades-organizacionales/unidad-nacional-de-sanidad-animal/area-nacional-de-epidemiologia-veterinaria?download=3127%3Amanual-sinave)
+- Impedir coincidencias parciales dentro de palabras, secuencias más largas o
+  valores con sufijos unidos no admitidos. En RFC, tratar `&` como carácter
+  del candidato al verificar los límites. No permitir que un número demasiado
+  largo entre por recorte a 10 o 13 dígitos.
+- La fecha del candidato se comprueba con calendario. Las ventanas de año son
+  convenciones para detección y admiten, por ejemplo, el 29 de febrero de 2000
+  cuando la variante permite ese siglo. No se contrasta la fecha con un padrón.
+- Los espacios y tabuladores alrededor de los guiones de CI forman parte del
+  intervalo enmascarado. Un sufijo unido mediante guion debe cumplir la forma
+  admitida antes de que se pueda aceptar el candidato completo. Las etiquetas
+  usan las letras latinas indicadas y se rechazan coincidencias pegadas a marcas
+  combinantes Unicode. Se evitan recortes de números unidos a otros dígitos
+  mediante punto, coma o barra.
+- La Ñ y la ñ del bloque inicial de RFC también se reconocen cuando aparecen
+  como escapes JSON `\u00d1` y `\u00f1`. El intervalo incluye la secuencia escapada
+  del cuerpo original. Los correos con esos escapes o con `&` en la parte local
+  se enmascaran completos. Otros mecanismos de escape requieren cobertura
+  adicional antes de considerarse admitidos.
+
+## Precedencia
+
+Conservar el orden actual por inicio más temprano y, al compartir inicio, por
+intervalo más largo. Un identificador mexicano dentro de un correo reconocido
+queda cubierto por el enmascaramiento del correo completo. Cuando un `CI_BO`
+o `NIT_BO` contextual y una regla existente produzcan **el mismo inicio y fin**,
+gana la categoría respaldada por la etiqueta. Esto resuelve, por ejemplo, un
+NIT de 13 dígitos que también pasa Luhn. Si solo coincide una regla existente,
+aplica el comportamiento actual, aunque el rótulo sugiera otro tipo.
+
+## Casos para el corpus y las pruebas
+
+Los ejemplos siguientes expresan salidas esperadas una vez implementado el
+diseño. Las cadenas numéricas se eligieron para los casos de prueba y no se
+vincularon a personas ni se consultaron en padrones.
+
+| Entrada | Salida esperada | Qué cubre |
+|---|---|---|
+| `CURP: AEXZ000229XQOBCDZ7` | `CURP: [[CURP]]` | Marcador `X`, código `QO` y fecha bisiesta. |
+| `CURP: AEXZ000229XQOBCD07` | Sin hallazgo nuevo | Diferenciador numérico y fecha imposible en 1900. |
+| `RFC: A&Z0002291A2` | `RFC: [[RFC]]` | Persona moral, `&` y fecha posible en 2000. |
+| `RFC: XAXX010101000` | Sin hallazgo nuevo | Clave genérica pública. Repetir con la clave genérica extranjera. |
+| `"ci": "12345678-2B SC"` | `"ci": "[[CI_BO]]"` | Contexto JSON, complemento y extensión. |
+| `Pedido 12345678-2B` | Sin hallazgo nuevo | Número parecido sin etiqueta de identidad. |
+| `NIT BO: 1234567890128` | `NIT BO: [[NIT_BO]]` | Límite superior y colisión exacta con tarjeta. |
+| `NIT: 800197268-4` | `NIT: [[NIT]]` | Regresión del NIT colombiano. |
+| `NIT: 12345678901234` | Sin hallazgo nuevo | Exceso de longitud para `NIT_BO`. |
+| `NIT:\n12345018` con salto real | Sin hallazgo nuevo | El contexto no atraviesa líneas. |
+
+El corpus histórico conserva sus etiquetas para reproducir la medición inicial.
+En el corpus del paso 5 se revisarán los positivos genéricos de RFC y los
+negativos de CURP que solo dependían de la ausencia de una etiqueta. Un valor
+completo que satisfaga la forma de CURP seguirá siendo candidato dentro de una
+referencia de inventario. Añadir casos negativos con fecha, caracteres o límites
+inválidos y medir los falsos positivos estructurales como limitación del diseño.
+
+La comprobación inicial se ejecutó con
+`.venv/bin/python -m pytest -q tests/test_pii.py` y obtuvo **6 pruebas aprobadas**.
+También se comprobó que el detector actual clasifica la cadena sintética de
+13 dígitos de la tabla como `TARJETA`. Los ejemplos de salida nueva quedan como
+criterios de aceptación para la implementación.
+
+## Verificación ampliada
+
+Se ejecutó el siguiente grupo con Python 3.14.4, pytest 9.2.0, SQLAlchemy 2.1.8
+y requests 2.34.2 instalado dentro de `.venv` para el consumidor HTTP.
+
+```bash
+.venv/bin/python -m pytest -q --tb=short tests/test_pii.py tests/test_pii_mx_bo.py tests/test_replay_session.py tests/test_logger.py tests/test_models.py
+```
+
+Resultado de la revisión ampliada, **157 pruebas aprobadas y 12 advertencias**.
+Las advertencias proceden de `declarative_base()` y `datetime.utcnow()` en los
+modelos existentes. Se verificaron detección, intervalos con prefijos Unicode,
+valores repetidos, idempotencia, texto, bytes UTF-8 y JSON preparado por
+`LoggedSession`. El adaptador de prueba captura las solicitudes en memoria.
+
+La ejecución `.venv/bin/python -m pytest -q --tb=short tests/` se interrumpió
+durante la recolección de `tests/test_api.py` porque falta `fastapi` en el entorno.
+Los 157 resultados corresponden al comando de selección anterior. En una
+ejecución posterior, con FastAPI y HTTPX instalados y las rutas de importación
+corregidas, pasaron los cuatro casos API. La suite completa más reciente y
+su entorno se documentan en [los resultados](RESULTADOS_MX_BO.md) y en la
+[guía de pruebas](../../CONTRIBUTING.md#pruebas).

@@ -1,0 +1,695 @@
+{
+  "dataset": "benchmarks/synthetic_pii_mx_bo.jsonl",
+  "dataset_sha256": "ae057daaf0f22b29ce3665a494c2bb90e834463c299f5230a64afdcb178b6b20",
+  "detector_revision": "0c3ea173624c2c6565f4822848310bc1629c6f1f",
+  "detector_source": "git_revision",
+  "detector_sha256": "a1bd0c1af4e75547a9b9f4aa2414c352e5655ce45a5262ba67496496e780799f",
+  "evaluator_sha256": "e69874d38c559c8ba35bb9f27490f91b14ff7c4a0983eecf6f188dfa4cc3d68f",
+  "python": "3.14.4",
+  "cases": 96,
+  "entities": 55,
+  "negative_cases": 45,
+  "matching": "exact_type_and_span",
+  "comparators": {
+    "Presidio": "NO EJECUTADO",
+    "Cloudflare DLP": "NO EJECUTADO",
+    "Google Model Armor": "NO EJECUTADO"
+  },
+  "results": {
+    "country/BO": {
+      "tp": 4,
+      "fp": 1,
+      "fn": 25,
+      "precision": 0.8,
+      "recall": 0.13793103448275862,
+      "f1": 0.23529411764705882
+    },
+    "country/BO/entity/CEDULA": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country/BO/entity/CI_BO": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 14,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country/BO/entity/NIT": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country/BO/entity/NIT_BO": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 11,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country/BO/entity/TARJETA": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "country/MX": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 24,
+      "precision": 1.0,
+      "recall": 0.07692307692307693,
+      "f1": 0.14285714285714285
+    },
+    "country/MX/entity/CURP": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 13,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "country/MX/entity/EMAIL": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "country/MX/entity/RFC": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 11,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/CEDULA": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "entity/CI_BO": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 14,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/CURP": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 13,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/EMAIL": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "entity/NIT": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "entity/NIT_BO": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 11,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/RFC": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 11,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "entity/TARJETA": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    "total": {
+      "tp": 6,
+      "fp": 1,
+      "fn": 49,
+      "precision": 0.8571428571428571,
+      "recall": 0.10909090909090909,
+      "f1": 0.1935483870967742
+    }
+  },
+  "case_errors": [
+    {
+      "id": "MXBO-CURP-01",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          6,
+          24
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-02",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          7,
+          25
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-03",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          16,
+          34
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-04",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          5,
+          23
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-05",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          7,
+          25
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-06",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          9,
+          27
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-07",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          11,
+          29
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-08",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          23,
+          41
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-09",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          31,
+          49
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-10",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          31,
+          49
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CURP-12",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          10,
+          28
+        ],
+        [
+          "CURP",
+          31,
+          49
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-01",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          5,
+          17
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-02",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          16,
+          29
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-03",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          9,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-04",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          5,
+          17
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-05",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          15,
+          28
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-06",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          8,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-07",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          17,
+          30
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-08",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          11,
+          23
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-09",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          10,
+          23
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-10",
+      "fp": [],
+      "fn": [
+        [
+          "RFC",
+          13,
+          26
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-RFC-12",
+      "fp": [],
+      "fn": [
+        [
+          "CURP",
+          23,
+          41
+        ],
+        [
+          "RFC",
+          7,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-01",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          4,
+          9
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-02",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          6,
+          16
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-03",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          13,
+          27
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-04",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          7,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-05",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          17,
+          28
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-06",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          3,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-07",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          3,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-08",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          7,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-09",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          4,
+          15
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-10",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          13,
+          24
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-11",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          4,
+          12
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-CI_BO-12",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          4,
+          12
+        ],
+        [
+          "CI_BO",
+          19,
+          27
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-01",
+      "fp": [],
+      "fn": [
+        [
+          "NIT_BO",
+          5,
+          13
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-02",
+      "fp": [],
+      "fn": [
+        [
+          "NIT_BO",
+          13,
+          22
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-03",
+      "fp": [],
+      "fn": [
+        [
+          "NIT_BO",
+          14,
+          24
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-04",
+      "fp": [],
+      "fn": [
+        [
+          "NIT_BO",
+          9,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-05",
+      "fp": [],
+      "fn": [
+        [
+          "NIT_BO",
+          5,
+          17
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-06",
+      "fp": [
+        [
+          "TARJETA",
+          8,
+          21
+        ]
+      ],
+      "fn": [
+        [
+          "NIT_BO",
+          8,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-07",
+      "fp": [],
+      "fn": [
+        [
+          "NIT_BO",
+          8,
+          19
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-08",
+      "fp": [],
+      "fn": [
+        [
+          "NIT_BO",
+          4,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-09",
+      "fp": [],
+      "fn": [
+        [
+          "NIT_BO",
+          5,
+          15
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-10",
+      "fp": [],
+      "fn": [
+        [
+          "NIT_BO",
+          5,
+          15
+        ]
+      ]
+    },
+    {
+      "id": "MXBO-NIT_BO-11",
+      "fp": [],
+      "fn": [
+        [
+          "CI_BO",
+          6,
+          14
+        ],
+        [
+          "NIT_BO",
+          25,
+          36
+        ]
+      ]
+    }
+  ]
+}

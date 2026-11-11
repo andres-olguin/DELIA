@@ -1,0 +1,795 @@
+{
+  "date": "2026-11-10",
+  "python": "3.14.4",
+  "before_revision": "b7d0294bf95a2d9c89257d2ab42de8ba3b45efa3",
+  "before_detector_sha256": "856eed3e4aaa3bced676f7b005696fcfcf5560499f7a70bd3afeae516dc28600",
+  "after_source": "working_tree",
+  "after_detector_sha256": "c381a15460ed98035c95b304394e74729d4cdea880e322ec93e032fd6f59179b",
+  "evaluator_sha256": "e69874d38c559c8ba35bb9f27490f91b14ff7c4a0983eecf6f188dfa4cc3d68f",
+  "matching": "exact_type_and_span",
+  "evaluations": {
+    "synthetic_pii_r3.jsonl": {
+      "dataset_sha256": "191ae4de8598321402460e8367a2944a239f69a54d569a6065c287cef6bf4f3f",
+      "cases": 172,
+      "entities": 150,
+      "before": {
+        "tp": 95,
+        "fp": 4,
+        "fn": 55,
+        "precision": 0.9595959595959596,
+        "recall": 0.6333333333333333,
+        "f1": 0.7630522088353414
+      },
+      "after": {
+        "tp": 98,
+        "fp": 0,
+        "fn": 52,
+        "precision": 1.0,
+        "recall": 0.6533333333333333,
+        "f1": 0.7903225806451613
+      },
+      "after_by_country": {
+        "country/BO": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 15,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "country/CL": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.65625,
+          "f1": 0.7924528301886793
+        },
+        "country/CO": {
+          "tp": 35,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.7608695652173914,
+          "f1": 0.8641975308641975
+        },
+        "country/GLOBAL": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "country/MX": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 15,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        }
+      },
+      "lost_true_positive_cases": [],
+      "case_changes": [
+        {
+          "id": "T0041",
+          "added": [
+            [
+              "CEDULA",
+              8,
+              21
+            ]
+          ],
+          "removed": [
+            [
+              "CEDULA",
+              8,
+              17
+            ]
+          ]
+        },
+        {
+          "id": "T0045",
+          "added": [
+            [
+              "CEDULA",
+              8,
+              21
+            ]
+          ],
+          "removed": [
+            [
+              "CEDULA",
+              8,
+              17
+            ]
+          ]
+        },
+        {
+          "id": "T0049",
+          "added": [
+            [
+              "CEDULA",
+              8,
+              21
+            ]
+          ],
+          "removed": [
+            [
+              "CEDULA",
+              8,
+              17
+            ]
+          ]
+        },
+        {
+          "id": "T0162",
+          "added": [],
+          "removed": [
+            [
+              "RFC",
+              4,
+              17
+            ]
+          ]
+        }
+      ],
+      "after_case_errors": [
+        {
+          "id": "T0013",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "T0014",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ]
+        },
+        {
+          "id": "T0015",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "T0016",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ]
+        },
+        {
+          "id": "T0017",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "T0018",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ]
+        },
+        {
+          "id": "T0019",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              35
+            ]
+          ]
+        },
+        {
+          "id": "T0020",
+          "fp": [],
+          "fn": [
+            [
+              "RUT",
+              21,
+              31
+            ]
+          ]
+        },
+        {
+          "id": "T0033",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0034",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ]
+        },
+        {
+          "id": "T0035",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0036",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ]
+        },
+        {
+          "id": "T0037",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0038",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ]
+        },
+        {
+          "id": "T0039",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0040",
+          "fp": [],
+          "fn": [
+            [
+              "NIT",
+              14,
+              27
+            ]
+          ]
+        },
+        {
+          "id": "T0061",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0062",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0064",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0065",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0067",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0068",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0070",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              16,
+              34
+            ]
+          ]
+        },
+        {
+          "id": "T0071",
+          "fp": [],
+          "fn": [
+            [
+              "CURP",
+              19,
+              37
+            ]
+          ]
+        },
+        {
+          "id": "T0073",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0076",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0079",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0082",
+          "fp": [],
+          "fn": [
+            [
+              "RFC",
+              16,
+              29
+            ]
+          ]
+        },
+        {
+          "id": "T0085",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "T0088",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              24
+            ]
+          ]
+        },
+        {
+          "id": "T0091",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              21
+            ]
+          ]
+        },
+        {
+          "id": "T0094",
+          "fp": [],
+          "fn": [
+            [
+              "CI_BO",
+              14,
+              24
+            ]
+          ]
+        },
+        {
+          "id": "T0097",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0099",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0100",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0102",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0103",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0105",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0106",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              22,
+              32
+            ]
+          ]
+        },
+        {
+          "id": "T0108",
+          "fp": [],
+          "fn": [
+            [
+              "NIT_BO",
+              20,
+              30
+            ]
+          ]
+        },
+        {
+          "id": "T0145",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0146",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0147",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0148",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0149",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0150",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0151",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0152",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0153",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0154",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        },
+        {
+          "id": "T0155",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              69
+            ]
+          ]
+        },
+        {
+          "id": "T0156",
+          "fp": [],
+          "fn": [
+            [
+              "DIRECCION",
+              35,
+              67
+            ]
+          ]
+        }
+      ]
+    },
+    "synthetic_pii_mx_bo.jsonl": {
+      "dataset_sha256": "abb838ab22c23254f783e505e055ab317d2caa02ebcef233b139b29531aa0baf",
+      "cases": 96,
+      "entities": 55,
+      "before": {
+        "tp": 55,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after": {
+        "tp": 55,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after_by_country": {
+        "country/BO": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "country/MX": {
+          "tp": 26,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "lost_true_positive_cases": [],
+      "case_changes": [],
+      "after_case_errors": []
+    },
+    "synthetic_pii_mx_policy.jsonl": {
+      "dataset_sha256": "75b1a97a50ab2610ed3544472905480b186abc1ccdd0b2f3b6c536b1eb49bf9e",
+      "cases": 60,
+      "entities": 29,
+      "before": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "after_by_country": {
+        "country/MX": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "lost_true_positive_cases": [],
+      "case_changes": [],
+      "after_case_errors": []
+    }
+  },
+  "validation": {
+    "suite_command": ".venv/bin/python -m pytest -q --tb=short tests/",
+    "passed": 418,
+    "warnings": 12
+  }
+}

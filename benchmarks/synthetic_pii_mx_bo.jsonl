@@ -1,0 +1,96 @@
+{"id":"MXBO-CURP-01","country":"MX","target":"CURP","text":"CURP: AEXZ000229XQOBCDZ0.","entities":[{"type":"CURP","start":6,"end":24}],"difficulty":"positivo","note":"Fecha bisiesta, marcador X y código QO."}
+{"id":"MXBO-CURP-02","country":"MX","target":"CURP","text":"Clave (BIQX840229HQTNRL02).","entities":[{"type":"CURP","start":7,"end":25}],"difficulty":"positivo","note":"Año bisiesto con diferenciador numérico y código QT."}
+{"id":"MXBO-CURP-03","country":"MX","target":"CURP","text":"Identificación: COXB951231MDFMPR19.","entities":[{"type":"CURP","start":16,"end":34}],"difficulty":"positivo","note":"Último día del año y código DF."}
+{"id":"MXBO-CURP-04","country":"MX","target":"CURP","text":"Dato duez030915xnezrsa6, recibido.","entities":[{"type":"CURP","start":5,"end":23}],"difficulty":"positivo","note":"Minúsculas, marcador X y código NE."}
+{"id":"MXBO-CURP-05","country":"MX","target":"CURP","text":"Valor: EXQA010101HASTLCA5.","entities":[{"type":"CURP","start":7,"end":25}],"difficulty":"positivo","note":"X en segunda posición y año 2001."}
+{"id":"MXBO-CURP-06","country":"MX","target":"CURP","text":"{\"curp\":\"FAXQ781106MBCVRL28\"}","entities":[{"type":"CURP","start":9,"end":27}],"difficulty":"positivo","note":"Valor citado dentro de JSON."}
+{"id":"MXBO-CURP-07","country":"MX","target":"CURP","text":"Inventario GEZB920315HCLDRS03.","entities":[{"type":"CURP","start":11,"end":29}],"difficulty":"ambiguo","note":"Forma completa aunque el contexto sea inventario."}
+{"id":"MXBO-CURP-08","country":"MX","target":"CURP","text":"CURP: AEXZ000229XQOBCDZ8.","entities":[{"type":"CURP","start":6,"end":24}],"difficulty":"positivo","note":"Verificador incorrecto protegido por la etiqueta inmediata CURP."}
+{"id":"MXBO-CURP-09","country":"MX","target":"CURP","text":"Límite inferior de la ventana: HIQX000101MCMNRS00.","entities":[{"type":"CURP","start":31,"end":49}],"difficulty":"positivo","note":"Diferenciador numérico y fecha posible en 1900."}
+{"id":"MXBO-CURP-10","country":"MX","target":"CURP","text":"Límite superior de la ventana: JEZQ991231HNLDTRK1.","entities":[{"type":"CURP","start":31,"end":49}],"difficulty":"positivo","note":"Diferenciador alfabético y fecha posible en 2099."}
+{"id":"MXBO-CURP-11","country":"MX","target":"CURP","text":"Contacto AEXZ000229XQOBCDZ7@correo.invalid.","entities":[{"type":"EMAIL","start":9,"end":42}],"difficulty":"ambiguo","note":"El correo cubre la clave completa."}
+{"id":"MXBO-CURP-12","country":"MX","target":"CURP","text":"Titulares KAXQ640229MPLBRC13 y LOXZ041031HQRGRDA6.","entities":[{"type":"CURP","start":10,"end":28},{"type":"CURP","start":31,"end":49}],"difficulty":"positivo","note":"Dos claves distintas en el mismo texto."}
+{"id":"MXBO-CURP-13","country":"MX","target":"CURP","text":"CURP: AEXZ000229XQOBCD07.","entities":[],"difficulty":"negativo","note":"El 29 de febrero de 1900 es imposible."}
+{"id":"MXBO-CURP-14","country":"MX","target":"CURP","text":"CURP: BIQX841331HQTNRL08.","entities":[],"difficulty":"negativo","note":"Mes 13."}
+{"id":"MXBO-CURP-15","country":"MX","target":"CURP","text":"CURP: COXB950431MDFMPR14.","entities":[],"difficulty":"negativo","note":"Abril no tiene día 31."}
+{"id":"MXBO-CURP-16","country":"MX","target":"CURP","text":"CURP: DUEZ030915XZZZRSA1.","entities":[],"difficulty":"negativo","note":"Código de lugar fuera del catálogo."}
+{"id":"MXBO-CURP-17","country":"MX","target":"CURP","text":"CURP: DUEZ030915FNEZRSA1.","entities":[],"difficulty":"negativo","note":"Marcador no admitido."}
+{"id":"MXBO-CURP-18","country":"MX","target":"CURP","text":"CURP: AEXZ000229XQOBCDZX.","entities":[],"difficulty":"negativo","note":"El último carácter debe ser numérico."}
+{"id":"MXBO-CURP-19","country":"MX","target":"CURP","text":"CURP: ABXZ000229XQOBCDZ7.","entities":[],"difficulty":"negativo","note":"Segunda letra fuera del conjunto de vocales y X."}
+{"id":"MXBO-CURP-20","country":"MX","target":"CURP","text":"CURP: AEXZ000229XQOBADZ7.","entities":[],"difficulty":"negativo","note":"Vocal en el bloque de consonantes."}
+{"id":"MXBO-CURP-21","country":"MX","target":"CURP","text":"SKU ref_AEXZ000229XQOBCDZ7.","entities":[],"difficulty":"negativo","note":"La clave aparente está dentro de un token."}
+{"id":"MXBO-CURP-22","country":"MX","target":"CURP","text":"SKU AEXZ000229XQOBCDZ77.","entities":[],"difficulty":"negativo","note":"Prohibido detectar un prefijo de un token largo."}
+{"id":"MXBO-CURP-23","country":"MX","target":"CURP","text":"CURP: AEXZ000229XQOBCDZ.","entities":[],"difficulty":"negativo","note":"Falta el último dígito."}
+{"id":"MXBO-CURP-24","country":"MX","target":"CURP","text":"CURP: AEXZ００0229XQOBCDZ7.","entities":[],"difficulty":"negativo","note":"Dígitos de ancho completo."}
+{"id":"MXBO-RFC-01","country":"MX","target":"RFC","text":"RFC: A&Z0002291A3.","entities":[{"type":"RFC","start":5,"end":17}],"difficulty":"positivo","note":"Persona moral, ampersand y fecha posible en 2000."}
+{"id":"MXBO-RFC-02","country":"MX","target":"RFC","text":"RFC de contacto BUÑQ920229M14.","entities":[{"type":"RFC","start":16,"end":29}],"difficulty":"positivo","note":"Persona física con Ñ y fecha bisiesta."}
+{"id":"MXBO-RFC-03","country":"MX","target":"RFC","text":"Registro ñ&k791201z99.","entities":[{"type":"RFC","start":9,"end":21}],"difficulty":"positivo","note":"Persona moral en minúsculas con Ñ y ampersand."}
+{"id":"MXBO-RFC-04","country":"MX","target":"RFC","text":"RFC: &AZ050131C02.","entities":[{"type":"RFC","start":5,"end":17}],"difficulty":"positivo","note":"Ampersand al inicio del valor."}
+{"id":"MXBO-RFC-05","country":"MX","target":"RFC","text":"Código fiscal (TEQZ991231X34).","entities":[{"type":"RFC","start":15,"end":28}],"difficulty":"positivo","note":"Persona física y puntuación exterior."}
+{"id":"MXBO-RFC-06","country":"MX","target":"RFC","text":"{\"rfc\":\"NQZ0402293D1\"}","entities":[{"type":"RFC","start":8,"end":20}],"difficulty":"positivo","note":"Persona moral en JSON."}
+{"id":"MXBO-RFC-07","country":"MX","target":"RFC","text":"Datos de febrero PEXZ9602299A0.","entities":[{"type":"RFC","start":17,"end":30}],"difficulty":"positivo","note":"Persona física sin rótulo inmediato."}
+{"id":"MXBO-RFC-08","country":"MX","target":"RFC","text":"Inventario VQZ971028MZ2.","entities":[{"type":"RFC","start":11,"end":23}],"difficulty":"ambiguo","note":"La forma completa se detecta sin etiqueta."}
+{"id":"MXBO-RFC-09","country":"MX","target":"RFC","text":"Operación ROQZ001231A75.","entities":[{"type":"RFC","start":10,"end":23}],"difficulty":"positivo","note":"Verificador correcto en el bloque final."}
+{"id":"MXBO-RFC-10","country":"MX","target":"RFC","text":"RFC: RAQZ010101000.","entities":[{"type":"RFC","start":5,"end":18}],"difficulty":"positivo","note":"La terminación 000 no es una excepción general."}
+{"id":"MXBO-RFC-11","country":"MX","target":"RFC","text":"Contacto BUÑQ920229M17@correo.invalid.","entities":[{"type":"EMAIL","start":9,"end":37}],"difficulty":"ambiguo","note":"El correo cubre el RFC aparente."}
+{"id":"MXBO-RFC-12","country":"MX","target":"RFC","text":"Claves SEÑQ6902153Z8 y AEXZ000229XQOBCDZ0.","entities":[{"type":"RFC","start":7,"end":20},{"type":"CURP","start":23,"end":41}],"difficulty":"positivo","note":"Dos tipos nuevos en el mismo texto."}
+{"id":"MXBO-RFC-13","country":"MX","target":"RFC","text":"RFC: XAXX010101000.","entities":[],"difficulty":"negativo","note":"Clave genérica nacional del SAT."}
+{"id":"MXBO-RFC-14","country":"MX","target":"RFC","text":"RFC: xexx010101000.","entities":[],"difficulty":"negativo","note":"Clave genérica extranjera con minúsculas."}
+{"id":"MXBO-RFC-15","country":"MX","target":"RFC","text":"RFC: NQZ0102293D1.","entities":[],"difficulty":"negativo","note":"El 29 de febrero es imposible para ambos siglos."}
+{"id":"MXBO-RFC-16","country":"MX","target":"RFC","text":"RFC: TEQZ991332X38.","entities":[],"difficulty":"negativo","note":"Mes y día fuera de rango."}
+{"id":"MXBO-RFC-17","country":"MX","target":"RFC","text":"RFC: TÉQZ991231X38.","entities":[],"difficulty":"negativo","note":"Letra con tilde fuera del bloque admitido."}
+{"id":"MXBO-RFC-18","country":"MX","target":"RFC","text":"RFC: ROQZ001231A-B.","entities":[],"difficulty":"negativo","note":"Guion dentro del bloque alfanumérico final."}
+{"id":"MXBO-RFC-19","country":"MX","target":"RFC","text":"RFC: ROQZ００1231A7B.","entities":[],"difficulty":"negativo","note":"Dígitos de ancho completo."}
+{"id":"MXBO-RFC-20","country":"MX","target":"RFC","text":"Lote XTEQZ991231X38.","entities":[],"difficulty":"negativo","note":"Valor aparente embebido en un token más largo."}
+{"id":"MXBO-RFC-21","country":"MX","target":"RFC","text":"Lote &TEQZ991231X38.","entities":[],"difficulty":"negativo","note":"Ampersand contiguo a un bloque de cuatro caracteres."}
+{"id":"MXBO-RFC-22","country":"MX","target":"RFC","text":"Lote BUÑQ920229M17&.","entities":[],"difficulty":"negativo","note":"Ampersand unido al extremo derecho."}
+{"id":"MXBO-RFC-23","country":"MX","target":"RFC","text":"RFC: QZ971028MZ9.","entities":[],"difficulty":"negativo","note":"Solo dos caracteres iniciales."}
+{"id":"MXBO-RFC-24","country":"MX","target":"RFC","text":"RFC: VQZ971028MZ.","entities":[],"difficulty":"negativo","note":"Bloque final incompleto."}
+{"id":"MXBO-CI_BO-01","country":"BO","target":"CI_BO","text":"CI: 01234.","entities":[{"type":"CI_BO","start":4,"end":9}],"difficulty":"positivo","note":"Límite inferior y cero inicial."}
+{"id":"MXBO-CI_BO-02","country":"BO","target":"CI_BO","text":"C.I. #1098765432.","entities":[{"type":"CI_BO","start":6,"end":16}],"difficulty":"positivo","note":"Límite superior y separador numeral."}
+{"id":"MXBO-CI_BO-03","country":"BO","target":"CI_BO","text":"CI Bolivia = 12345001-2B SC.","entities":[{"type":"CI_BO","start":13,"end":27}],"difficulty":"positivo","note":"Complemento y extensión separados por espacio."}
+{"id":"MXBO-CI_BO-04","country":"BO","target":"CI_BO","text":"CI BO: 12345002-3C-LP.","entities":[{"type":"CI_BO","start":7,"end":21}],"difficulty":"positivo","note":"Complemento y extensión unidos con guiones."}
+{"id":"MXBO-CI_BO-05","country":"BO","target":"CI_BO","text":"Cédula boliviana 12345003-4d.","entities":[{"type":"CI_BO","start":17,"end":28}],"difficulty":"positivo","note":"Complemento en minúscula."}
+{"id":"MXBO-CI_BO-06","country":"BO","target":"CI_BO","text":"CI 12345004-SC.","entities":[{"type":"CI_BO","start":3,"end":14}],"difficulty":"positivo","note":"Sufijo único que también es código departamental."}
+{"id":"MXBO-CI_BO-07","country":"BO","target":"CI_BO","text":"ci\t12345005 or.","entities":[{"type":"CI_BO","start":3,"end":14}],"difficulty":"positivo","note":"Tabulador y extensión departamental en minúscula."}
+{"id":"MXBO-CI_BO-08","country":"BO","target":"CI_BO","text":"{\"ci\":\"12345006-5E OU\"}","entities":[{"type":"CI_BO","start":7,"end":21}],"difficulty":"positivo","note":"Clave y valor JSON con extensión OU."}
+{"id":"MXBO-CI_BO-09","country":"BO","target":"CI_BO","text":"CI: 12345007 PD.","entities":[{"type":"CI_BO","start":4,"end":15}],"difficulty":"positivo","note":"Extensión Pando separada por espacio."}
+{"id":"MXBO-CI_BO-10","country":"BO","target":"CI_BO","text":"Registro CI \"12345008-6F\".","entities":[{"type":"CI_BO","start":13,"end":24}],"difficulty":"positivo","note":"Comillas exteriores al valor."}
+{"id":"MXBO-CI_BO-11","country":"BO","target":"CI_BO","text":"CI: 12345009 gracias.","entities":[{"type":"CI_BO","start":4,"end":12}],"difficulty":"ambiguo","note":"Preserva la palabra siguiente."}
+{"id":"MXBO-CI_BO-12","country":"BO","target":"CI_BO","text":"CI: 12345010 y CI: 12345010.","entities":[{"type":"CI_BO","start":4,"end":12},{"type":"CI_BO","start":19,"end":27}],"difficulty":"positivo","note":"Mismo valor en dos posiciones independientes."}
+{"id":"MXBO-CI_BO-13","country":"BO","target":"CI_BO","text":"Pedido 12345001-2B SC.","entities":[],"difficulty":"negativo","note":"Falta una etiqueta de identidad."}
+{"id":"MXBO-CI_BO-14","country":"BO","target":"CI_BO","text":"Inventario 12345004-SC.","entities":[],"difficulty":"negativo","note":"Extensión aparente sin etiqueta."}
+{"id":"MXBO-CI_BO-15","country":"BO","target":"CI_BO","text":"CI: 1234.","entities":[],"difficulty":"negativo","note":"Raíz de cuatro dígitos."}
+{"id":"MXBO-CI_BO-16","country":"BO","target":"CI_BO","text":"CI: 10987654321.","entities":[],"difficulty":"negativo","note":"Raíz de once dígitos."}
+{"id":"MXBO-CI_BO-17","country":"BO","target":"CI_BO","text":"CI: 12345001-2BX.","entities":[],"difficulty":"negativo","note":"Complemento de tres caracteres unido al valor."}
+{"id":"MXBO-CI_BO-18","country":"BO","target":"CI_BO","text":"CI: 12345002-3C-XYZ.","entities":[],"difficulty":"negativo","note":"Extensión unida fuera de la lista operativa."}
+{"id":"MXBO-CI_BO-19","country":"BO","target":"CI_BO","text":"CI: 12345003XYZ.","entities":[],"difficulty":"negativo","note":"Sufijo pegado a la raíz."}
+{"id":"MXBO-CI_BO-20","country":"BO","target":"CI_BO","text":"SKU_CI: 12345004.","entities":[],"difficulty":"negativo","note":"Rótulo dentro de una palabra."}
+{"id":"MXBO-CI_BO-21","country":"BO","target":"CI_BO","text":"CI12345005.","entities":[],"difficulty":"negativo","note":"Falta separador entre etiqueta y valor."}
+{"id":"MXBO-CI_BO-22","country":"BO","target":"CI_BO","text":"CI:\n12345006.","entities":[],"difficulty":"negativo","note":"El contexto no atraviesa líneas."}
+{"id":"MXBO-CI_BO-23","country":"BO","target":"CI_BO","text":"CI: １２345007.","entities":[],"difficulty":"negativo","note":"Raíz con dígitos de ancho completo."}
+{"id":"MXBO-CI_BO-24","country":"BO","target":"CI_BO","text":"Cédula 52123456.","entities":[{"type":"CEDULA","start":7,"end":15}],"difficulty":"regresion","note":"La etiqueta genérica conserva el tipo colombiano."}
+{"id":"MXBO-NIT_BO-01","country":"BO","target":"NIT_BO","text":"NIT: 12345018.","entities":[{"type":"NIT_BO","start":5,"end":13}],"difficulty":"positivo","note":"Ocho dígitos y terminación de persona natural."}
+{"id":"MXBO-NIT_BO-02","country":"BO","target":"NIT_BO","text":"NIT Bolivia: 123450026.","entities":[{"type":"NIT_BO","start":13,"end":22}],"difficulty":"positivo","note":"Nueve dígitos y terminación de persona jurídica."}
+{"id":"MXBO-NIT_BO-03","country":"BO","target":"NIT_BO","text":"NIT boliviano 1234500045.","entities":[{"type":"NIT_BO","start":14,"end":24}],"difficulty":"positivo","note":"Diez dígitos y terminación documentada para extranjero."}
+{"id":"MXBO-NIT_BO-04","country":"BO","target":"NIT_BO","text":"NIT BO = 12345000019.","entities":[{"type":"NIT_BO","start":9,"end":20}],"difficulty":"positivo","note":"Once dígitos y terminación personal."}
+{"id":"MXBO-NIT_BO-05","country":"BO","target":"NIT_BO","text":"nit #123450000027.","entities":[{"type":"NIT_BO","start":5,"end":17}],"difficulty":"positivo","note":"Doce dígitos, rótulo en minúscula y separador numeral."}
+{"id":"MXBO-NIT_BO-06","country":"BO","target":"NIT_BO","text":"NIT BO: 1234567890128.","entities":[{"type":"NIT_BO","start":8,"end":21}],"difficulty":"ambiguo","note":"Trece dígitos que también pasan Luhn."}
+{"id":"MXBO-NIT_BO-07","country":"BO","target":"NIT_BO","text":"{\"nit\":\"01234567890\"}","entities":[{"type":"NIT_BO","start":8,"end":19}],"difficulty":"positivo","note":"Cero inicial y formato JSON."}
+{"id":"MXBO-NIT_BO-08","country":"BO","target":"NIT_BO","text":"NIT\t1234500299.","entities":[{"type":"NIT_BO","start":4,"end":14}],"difficulty":"positivo","note":"Etiqueta seguida de tabulador."}
+{"id":"MXBO-NIT_BO-09","country":"BO","target":"NIT_BO","text":"NIT \"1234500381\".","entities":[{"type":"NIT_BO","start":5,"end":15}],"difficulty":"positivo","note":"Comillas exteriores al valor."}
+{"id":"MXBO-NIT_BO-10","country":"BO","target":"NIT_BO","text":"NIT: 1234500382.","entities":[{"type":"NIT_BO","start":5,"end":15}],"difficulty":"ambiguo","note":"Terminación fuera de los ejemplos de emisión, con etiqueta."}
+{"id":"MXBO-NIT_BO-11","country":"BO","target":"NIT_BO","text":"C.I.: 12345042 y NIT BO: 12345042018.","entities":[{"type":"CI_BO","start":6,"end":14},{"type":"NIT_BO","start":25,"end":36}],"difficulty":"positivo","note":"CI y NIT en la misma línea."}
+{"id":"MXBO-NIT_BO-12","country":"BO","target":"NIT_BO","text":"NIT: 800197268-4.","entities":[{"type":"NIT","start":5,"end":16}],"difficulty":"regresion","note":"NIT colombiano con guion y verificador."}
+{"id":"MXBO-NIT_BO-13","country":"BO","target":"NIT_BO","text":"NIT: 800.197.268-4.","entities":[{"type":"NIT","start":5,"end":18}],"difficulty":"regresion","note":"NIT colombiano con separadores de miles."}
+{"id":"MXBO-NIT_BO-14","country":"BO","target":"NIT_BO","text":"Tarjeta 1234567890128.","entities":[{"type":"TARJETA","start":8,"end":21}],"difficulty":"regresion","note":"La misma secuencia Luhn mantiene su tipo con rótulo de tarjeta."}
+{"id":"MXBO-NIT_BO-15","country":"BO","target":"NIT_BO","text":"Serie 12345018.","entities":[],"difficulty":"negativo","note":"Número continuo sin contexto tributario."}
+{"id":"MXBO-NIT_BO-16","country":"BO","target":"NIT_BO","text":"NIT: 1234501.","entities":[],"difficulty":"negativo","note":"Siete dígitos."}
+{"id":"MXBO-NIT_BO-17","country":"BO","target":"NIT_BO","text":"NIT: 12345678901234.","entities":[],"difficulty":"negativo","note":"Catorce dígitos, sin recorte."}
+{"id":"MXBO-NIT_BO-18","country":"BO","target":"NIT_BO","text":"NIT: 12345018XYZ.","entities":[],"difficulty":"negativo","note":"Valor aparente dentro de un token más largo."}
+{"id":"MXBO-NIT_BO-19","country":"BO","target":"NIT_BO","text":"NIT: 12345018-XYZ.","entities":[],"difficulty":"negativo","note":"Sufijo unido fuera del formato continuo."}
+{"id":"MXBO-NIT_BO-20","country":"BO","target":"NIT_BO","text":"SKU_NIT: 12345018.","entities":[],"difficulty":"negativo","note":"Rótulo incrustado dentro de otra palabra."}
+{"id":"MXBO-NIT_BO-21","country":"BO","target":"NIT_BO","text":"NIT12345018.","entities":[],"difficulty":"negativo","note":"Falta separador."}
+{"id":"MXBO-NIT_BO-22","country":"BO","target":"NIT_BO","text":"NIT:\n12345018.","entities":[],"difficulty":"negativo","note":"Rótulo en la línea anterior."}
+{"id":"MXBO-NIT_BO-23","country":"BO","target":"NIT_BO","text":"NIT: １２345018.","entities":[],"difficulty":"negativo","note":"Dígitos de ancho completo."}
+{"id":"MXBO-NIT_BO-24","country":"BO","target":"NIT_BO","text":"NIT: 1234 5018.","entities":[],"difficulty":"negativo","note":"Número fragmentado por espacio."}

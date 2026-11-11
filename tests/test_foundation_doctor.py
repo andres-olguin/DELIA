@@ -57,6 +57,22 @@ class FoundationDoctorTests(unittest.TestCase):
             findings = {x["id"] for x in static_signals(base)}
             self.assertIn("RAW_UPSTREAM_PAYLOAD", findings)
 
+    def test_static_flags_broken_import_until_module_exists(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            route = root / "app/api/proxy.py"
+            route.parent.mkdir(parents=True)
+            route.write_text("from app.models.chat import ChatRequest\n", encoding="utf-8")
+
+            broken_imports = [signal["path"] for signal in static_signals(root)
+                              if signal["id"] == "BROKEN_IMPORT"]
+            self.assertEqual(broken_imports, ["app/api/proxy.py"])
+
+            module = root / "app/models/chat.py"
+            module.parent.mkdir(parents=True)
+            module.write_text("class ChatRequest:\n    pass\n", encoding="utf-8")
+            self.assertNotIn("BROKEN_IMPORT", {signal["id"] for signal in static_signals(root)})
+
     def test_no_customer_claim_from_lab(self):
         self.assertEqual(evaluate()["research_demo"], "SYNTHETIC_ONLY")
         self.assertEqual(evaluate()["professional_diagnostic"],
