@@ -20,7 +20,7 @@ Las 12 advertencias de la suite completa corresponden a dos avisos de deprecaci�
 | `synthetic_pii_coverage.jsonl` | 60 | 35 | 0 | 0 |
 | `synthetic_pii_contexts.jsonl` | 96 | 48 | 0 | 0 |
 
-En el histórico, el detector encontró 130 de 150 entidades anotadas. La precisión observada fue 100 % y el recall, 86,67 %. Estas métricas se limitan a los corpus sintéticos. El workflow aún no genera un reporte de cobertura de líneas.
+En el histórico, el detector encontró 130 de 150 entidades anotadas. La precisión observada fue 100 % y el recall, 86,67 %. Estas métricas se limitan a los corpus sintéticos. La ejecución de referencia no generó un reporte de cobertura de líneas.
 
 ## Matriz de pruebas del issue #11
 
@@ -32,6 +32,12 @@ En el histórico, el detector encontró 130 de 150 entidades anotadas. La precis
 Cada job ejecuta `pip check` tras instalar sus dependencias. Para reproducir la suite en un entorno virtual limpio con el intérprete elegido, instala el manifiesto correspondiente con `python -m pip install -r ARCHIVO`, ejecuta `python -m pip check` y luego `python -m pytest -q --tb=short tests/`.
 
 La validación local previa al cambio del workflow obtuvo 611 pruebas aprobadas tanto en Python 3.11.18 como en 3.13.18. Las dependencias instaladas en esas dos ejecuciones se fijaron en `requirements-test-compat.txt`. La tabla inicial conserva los resultados históricos de GitHub Actions anteriores a la ampliación.
+
+## Reportes de GitHub Actions
+
+La sección **Artifacts** de cada ejecución guarda los reportes por 30 días. Cada versión de Python publica `pytest.xml` en formato JUnit. El artefacto de Python 3.14.4 también incluye `coverage.xml`, `coverage.json` y un JSON por cada corpus sintético. Coverage.py mide líneas y ramas en `app/` y `backend/`.
+
+Si falla una prueba, el workflow conserva el resultado de fallo e intenta subir los reportes que alcanzó a generar. Los benchmarks se ejecutan tras una suite exitosa.
 
 ## Secuencia de trabajo del issue #11
 

@@ -31,19 +31,40 @@ jobs:
         run: |
           python -m pip install -r requirements-test.txt
           python -m pip check
-      - name: Ejecutar la suite completa
-        run: python -m pytest -q --tb=short tests/
+      - name: Ejecutar la suite completa con cobertura
+        id: pytest
+        run: |
+          mkdir -p ci-reports
+          python -m coverage run --branch --source=app,backend -m pytest -q --tb=short --junitxml=ci-reports/pytest.xml tests/
+      - name: Generar reportes de cobertura
+        if: ${{ !cancelled() && (steps.pytest.outcome == 'success' || steps.pytest.outcome == 'failure') }}
+        run: |
+          python -m coverage report -m
+          python -m coverage xml -o ci-reports/coverage.xml
+          python -m coverage json -o ci-reports/coverage.json
       - name: Comprobar escenarios de revisión
         run: |
           python -m benchmarks.check_review_scenarios --contexts --seed 20261111
           python -m benchmarks.check_review_scenarios --contexts --seed 20261112
       - name: Ejecutar los benchmarks sintéticos
         run: |
-          python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_bo.jsonl
-          python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_mx_policy.jsonl
-          python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_r3.jsonl
-          python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_coverage.jsonl
-          python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_contexts.jsonl
+          mkdir -p ci-reports/benchmarks
+          for corpus in mx_bo mx_policy r3 coverage contexts; do
+            python -m benchmarks.evaluate \
+              --dataset "benchmarks/synthetic_pii_${corpus}.jsonl" \
+              --out "ci-reports/benchmarks/${corpus}.json"
+          done
+      - name: Publicar resultados de pruebas, cobertura y benchmarks
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: delia-ci-python-3.14.4
+          path: |
+            ci-reports/pytest.xml
+            ci-reports/coverage.xml
+            ci-reports/coverage.json
+            ci-reports/benchmarks/*.json
+          retention-days: 30
 
   regional-compatibility:
     name: Suite completa (Python ${{ matrix.python-version }})
@@ -69,6 +90,13 @@ jobs:
           python -m pip install -r requirements-test-compat.txt
           python -m pip check
       - name: Ejecutar la suite completa
-        run: python -m pytest -q --tb=short tests/
+        run: python -m pytest -q --tb=short --junitxml=ci-reports/pytest.xml tests/
       - name: Comprobar contextos generados
         run: python -m benchmarks.check_review_scenarios --contexts --seed 20261112
+      - name: Publicar resultados de pruebas
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: delia-ci-python-${{ matrix.python-version }}
+          path: ci-reports/pytest.xml
+          retention-days: 30
