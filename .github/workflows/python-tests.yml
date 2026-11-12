@@ -46,7 +46,7 @@ jobs:
           python -m benchmarks.evaluate --dataset benchmarks/synthetic_pii_contexts.jsonl
 
   regional-compatibility:
-    name: Detectores regionales (Python ${{ matrix.python-version }})
+    name: Suite completa (Python ${{ matrix.python-version }})
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     strategy:
@@ -68,11 +68,7 @@ jobs:
         run: |
           python -m pip install -r requirements-test-compat.txt
           python -m pip check
-      - name: Comprobar pruebas de detección y consumidor HTTP
-        run: >
-          python -m pytest -q --tb=short
-          tests/test_pii.py tests/test_pii_mx_bo.py tests/test_pii_regressions.py
-          tests/test_pii_coverage.py tests/test_pii_contexts.py
-          tests/test_replay_session.py tests/test_benchmark.py
+      - name: Ejecutar la suite completa
+        run: python -m pytest -q --tb=short tests/
       - name: Comprobar contextos generados
         run: python -m benchmarks.check_review_scenarios --contexts --seed 20261112

@@ -22,6 +22,17 @@ Las 12 advertencias de la suite completa corresponden a dos avisos de deprecaci�
 
 En el histórico, el detector encontró 130 de 150 entidades anotadas. La precisión observada fue 100 % y el recall, 86,67 %. Estas métricas se limitan a los corpus sintéticos. El workflow aún no genera un reporte de cobertura de líneas.
 
+## Matriz de pruebas del issue #11
+
+| Python | Dependencias fijadas | Qué ejecuta CI |
+|---|---|---|
+| 3.11 y 3.13 | `requirements-test-compat.txt` | Suite completa y escenarios generados con semilla `20261112` |
+| 3.14.4 | `requirements-test.txt` | Suite completa, escenarios generados con ambas semillas y cinco benchmarks sintéticos |
+
+Cada job ejecuta `pip check` tras instalar sus dependencias. Para reproducir la suite en un entorno virtual limpio con el intérprete elegido, instala el manifiesto correspondiente con `python -m pip install -r ARCHIVO`, ejecuta `python -m pip check` y luego `python -m pytest -q --tb=short tests/`.
+
+La validación local previa al cambio del workflow obtuvo 611 pruebas aprobadas tanto en Python 3.11.18 como en 3.13.18. Las dependencias instaladas en esas dos ejecuciones se fijaron en `requirements-test-compat.txt`. La tabla inicial conserva los resultados históricos de GitHub Actions anteriores a la ampliación.
+
 ## Secuencia de trabajo del issue #11
 
 1. **Referencia:** verificar la ejecución de `main` ✓, registrar los resultados ✓ y crear la rama de trabajo desde `main` actualizado (pendiente).
